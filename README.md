@@ -1,2 +1,2 @@
-# story-tab
+# StoryTab 📑
 Generate documentation in Storybook tab 📑
