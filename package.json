@@ -13,7 +13,14 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts",
-  "bugs": "https://github.com/mkosir/story-tab/issues",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "storytab",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.13.3",
@@ -40,16 +47,9 @@
     "/oclif.manifest.json"
   ],
   "homepage": "https://github.com/mkosir/story-tab",
+  "bugs": "https://github.com/mkosir/story-tab/issues",
   "license": "MIT",
   "author": "Marko Kosir <kosir.mar@gmail.com>",
-  "main": "lib/index.js",
-  "oclif": {
-    "commands": "./lib/commands",
-    "bin": "storytab",
-    "plugins": [
-      "@oclif/plugin-help"
-    ]
-  },
   "repository": "mkosir/story-tab",
   "keywords": [
     "oclif"
