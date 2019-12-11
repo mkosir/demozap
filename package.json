@@ -9,7 +9,10 @@
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/",
+    "lint-prettier": "prettier --config .prettierrc -l  src/**/*.ts{,x}",
+    "prettier": "prettier --config .prettierrc --write src/**/*.ts{,x}"
   },
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
