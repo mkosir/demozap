@@ -2,9 +2,8 @@
   "name": "story-tab",
   "description": "Generate documentation in Storybook tab",
   "version": "1.0.0",
-  "bin": {
-    "storytab": "./bin/run"
-  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
@@ -14,8 +13,9 @@
     "prettier": "prettier --config .prettierrc --write src/**/*.ts{,x}",
     "validate": "npm run lint && npm run lint-prettier"
   },
-  "types": "lib/index.d.ts",
-  "main": "lib/index.js",
+  "bin": {
+    "storytab": "./bin/run"
+  },
   "oclif": {
     "commands": "./lib/commands",
     "bin": "storytab",
