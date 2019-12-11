@@ -8,14 +8,16 @@ Generate documentation in Storybook tab 📑
 [![License](https://img.shields.io/npm/l/story-tab.svg)](https://github.com/mkosir/story-tab/blob/master/package.json)
 
 <!-- toc -->
-* [StoryTab 📑](#storytab-)
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [StoryTab 📑](#storytab-)
+- [Usage](#usage)
+- [Commands](#commands)
+  <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g story-tab
 $ storytab COMMAND
@@ -27,14 +29,15 @@ USAGE
   $ storytab COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`storytab generate [FILE]`](#storytab-generate-file)
-* [`storytab hello [FILE]`](#storytab-hello-file)
-* [`storytab help [COMMAND]`](#storytab-help-command)
+
+- [`storytab generate [FILE]`](#storytab-generate-file)
+- [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate [FILE]`
 
@@ -52,26 +55,6 @@ OPTIONS
 
 _See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.0/src/commands/generate.ts)_
 
-## `storytab hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ storytab hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ storytab hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/mkosir/story-tab/blob/v1.0.0/src/commands/hello.ts)_
-
 ## `storytab help [COMMAND]`
 
 display help for storytab
@@ -88,4 +71,5 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
+
 <!-- commandsstop -->
