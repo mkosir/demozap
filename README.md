@@ -8,16 +8,14 @@ Generate documentation in Storybook tab 📑
 [![License](https://img.shields.io/npm/l/story-tab.svg)](https://github.com/mkosir/story-tab/blob/master/package.json)
 
 <!-- toc -->
-
-- [StoryTab 📑](#storytab-)
-- [Usage](#usage)
-- [Commands](#commands)
-  <!-- tocstop -->
+* [StoryTab 📑](#storytab-)
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g story-tab
 $ storytab COMMAND
@@ -29,15 +27,13 @@ USAGE
   $ storytab COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`storytab generate [FILE]`](#storytab-generate-file)
-- [`storytab help [COMMAND]`](#storytab-help-command)
+* [`storytab generate [FILE]`](#storytab-generate-file)
+* [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate [FILE]`
 
@@ -71,5 +67,4 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
 <!-- commandsstop -->
