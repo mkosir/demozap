@@ -3,19 +3,20 @@
 Generate documentation in Storybook tab 📑
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/story-tab.svg)](https://npmjs.org/package/story-tab)
-[![Downloads/week](https://img.shields.io/npm/dw/story-tab.svg)](https://npmjs.org/package/story-tab)
-[![License](https://img.shields.io/npm/l/story-tab.svg)](https://github.com/mkosir/story-tab/blob/master/package.json)
+[![npm version][npm-badge]][npm-url]
+[![TypeScript][typescript-badge]][typescript-url]
 
 <!-- toc -->
-* [StoryTab 📑](#storytab-)
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [StoryTab 📑](#storytab-)
+- [Usage](#usage)
+- [Commands](#commands)
+  <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g story-tab
 $ storytab COMMAND
@@ -27,13 +28,15 @@ USAGE
   $ storytab COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`storytab generate [FILE]`](#storytab-generate-file)
-* [`storytab help [COMMAND]`](#storytab-help-command)
+
+- [`storytab generate [FILE]`](#storytab-generate-file)
+- [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate [FILE]`
 
@@ -67,4 +70,10 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
+
 <!-- commandsstop -->
+
+[npm-url]: https://www.npmjs.com/package/story-tab
+[npm-badge]: https://img.shields.io/npm/v/story-tab.svg
+[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
+[typescript-url]: https://github.com/microsoft/TypeScript
