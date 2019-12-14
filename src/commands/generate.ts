@@ -1,7 +1,7 @@
 import { Command, flags } from '@oclif/command';
 
 export default class Generate extends Command {
-  static description = 'describe the command here';
+  static description = 'generate documentation';
 
   static flags = {
     help: flags.help({ char: 'h' }),

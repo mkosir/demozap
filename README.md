@@ -7,16 +7,14 @@ Generate documentation in Storybook tab 📑
 [![TypeScript][typescript-badge]][typescript-url]
 
 <!-- toc -->
-
-- [StoryTab 📑](#storytab-)
-- [Usage](#usage)
-- [Commands](#commands)
-  <!-- tocstop -->
+* [StoryTab 📑](#storytab-)
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g story-tab
 $ storytab COMMAND
@@ -28,19 +26,17 @@ USAGE
   $ storytab COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`storytab generate [FILE]`](#storytab-generate-file)
-- [`storytab help [COMMAND]`](#storytab-help-command)
+* [`storytab generate [FILE]`](#storytab-generate-file)
+* [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate [FILE]`
 
-describe the command here
+generate documentation
 
 ```
 USAGE
@@ -70,7 +66,6 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
