@@ -1,4 +1,5 @@
 import { Command, flags } from '@oclif/command';
+import cli from 'cli-ux';
 
 export default class Generate extends Command {
   static description = 'generate documentation';
@@ -14,7 +15,8 @@ export default class Generate extends Command {
   static args = [{ name: 'file' }];
 
   async run() {
-    this.log(`Generating...`);
+    cli.action.start('Generating...');
+    await new Promise(res => setTimeout(res, 3000));
 
     const { args, flags } = this.parse(Generate);
 
