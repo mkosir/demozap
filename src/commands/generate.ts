@@ -1,7 +1,7 @@
 import { Command, flags } from '@oclif/command';
 const chalk = require('chalk');
 
-import { generateStoryTabReact } from '../StoryTabReact/generateStoryTabReact';
+import { copyStoryTabComponent } from '../StoryTabComponent/copyStoryTabComponent';
 
 export default class Generate extends Command {
   static description = 'generate documentation';
@@ -14,10 +14,10 @@ export default class Generate extends Command {
     const { flags } = this.parse(Generate);
 
     if (flags.react) {
-      this.log('Generating Storytab for React...');
-      generateStoryTabReact();
-      this.log('StoryTab component was copied to destination');
-      await new Promise(res => setTimeout(res, 2000));
+      this.log(chalk.blue('Generating Storytab for React...'));
+      await copyStoryTabComponent('React');
+      this.log(chalk.green('StoryTab component was copied to destination'));
+      this.log(chalk.green('Completed!'));
       this.exit();
     }
 
