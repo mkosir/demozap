@@ -3,13 +3,13 @@ const fs = require('fs-extra');
 type SupportedFrameworks = 'react';
 
 export const copyStoryTabTemplate = async (framework: SupportedFrameworks) => {
-  const CURR_DIR = process.cwd();
-  let storyTabTemplateSourcePath: string | null = null;
-  const storyTabTemplateDestinationPath = `${CURR_DIR}/stories/StoryTab`;
+  const DESTINATION_DIR = process.cwd();
+  let storyTabTemplateSourcePath = __dirname + '/StoryTabTemplate';
+  const storyTabTemplateDestinationPath = `${DESTINATION_DIR}/stories/StoryTab`;
 
   switch (framework) {
     case 'react':
-      storyTabTemplateSourcePath = `${CURR_DIR}/src/StoryTabTemplate/${framework}`;
+      storyTabTemplateSourcePath = `${storyTabTemplateSourcePath}/${framework}`;
       break;
 
     default:
