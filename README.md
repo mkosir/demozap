@@ -7,32 +7,23 @@ Generate documentation in Storybook tab 📑
 [![TypeScript][typescript-badge]][typescript-url]
 
 <!-- toc -->
-* [StoryTab 📑](#storytab-)
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
 
-# Usage
+- [StoryTab 📑](#storytab-)
+- [Usage](#usage)
+- [Commands](#commands)
+  <!-- tocstop -->
 
-<!-- usage -->
-```sh-session
-$ npm install -g story-tab
-$ storytab COMMAND
-running command...
-$ storytab (-v|--version|version)
-story-tab/1.0.1 darwin-x64 node-v12.12.0
-$ storytab --help [COMMAND]
-USAGE
-  $ storytab COMMAND
-...
-```
-<!-- usagestop -->
+## Install
+
+- npm `npm install story-tab`
+- yarn `yarn add story-tab`
 
 # Commands
 
 <!-- commands -->
-* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-* [`storytab help [COMMAND]`](#storytab-help-command)
+
+- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+- [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -64,6 +55,7 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
+
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
