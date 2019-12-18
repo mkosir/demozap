@@ -20,7 +20,7 @@ $ npm install -g story-tab
 $ storytab COMMAND
 running command...
 $ storytab (-v|--version|version)
-story-tab/1.0.0 darwin-x64 node-v12.12.0
+story-tab/1.0.1 darwin-x64 node-v12.12.0
 $ storytab --help [COMMAND]
 USAGE
   $ storytab COMMAND
@@ -31,24 +31,22 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`storytab generate [FILE]`](#storytab-generate-file)
+* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
 * [`storytab help [COMMAND]`](#storytab-help-command)
 
-## `storytab generate [FILE]`
+## `storytab generate FRAMEWORK`
 
 generate documentation
 
 ```
 USAGE
-  $ storytab generate [FILE]
+  $ storytab generate FRAMEWORK
 
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+ARGUMENTS
+  FRAMEWORK  (react) generate StoryTab for desired framework
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.1/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 

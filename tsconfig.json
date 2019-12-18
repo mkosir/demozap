@@ -9,5 +9,6 @@
     "target": "es2017",
     "noImplicitAny": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["src/StoryTabTemplate/*"]
 }

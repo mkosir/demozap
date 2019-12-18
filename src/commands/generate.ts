@@ -1,26 +1,28 @@
-import { Command, flags } from '@oclif/command';
+import { Command } from '@oclif/command';
 const chalk = require('chalk');
 
-import { copyStoryTabComponent } from '../StoryTabComponent/copyStoryTabComponent';
+import { copyStoryTabTemplate } from '../copyStoryTabTemplate';
 
 export default class Generate extends Command {
   static description = 'generate documentation';
 
-  static flags = {
-    react: flags.boolean({ description: 'generate StoryTab for React' }),
-  };
+  static args = [
+    {
+      name: 'framework',
+      description: 'generate StoryTab for desired framework',
+      required: true,
+      options: ['react'],
+    },
+  ];
 
   async run() {
-    const { flags } = this.parse(Generate);
+    const { args } = this.parse(Generate);
 
-    if (flags.react) {
-      this.log(chalk.blue('Generating Storytab for React...'));
-      await copyStoryTabComponent('React');
-      this.log(chalk.green('StoryTab component was copied to destination'));
-      this.log(chalk.green('Completed!'));
-      this.exit();
-    }
-
-    this.warn(chalk.yellow('Please provide project option (React, Vue...)'));
+    const frameworkCapitalize = args.framework[0].toUpperCase() + args.framework.slice(1);
+    this.log(chalk.blue(`Generating Storytab for ${frameworkCapitalize}...`));
+    await copyStoryTabTemplate(args.framework);
+    this.log(chalk.blue('StoryTab component was copied to destination'));
+    this.log(chalk.green('Completed!'));
+    this.exit();
   }
 }
