@@ -30,6 +30,7 @@
     "@oclif/plugin-help": "^2.2.2",
     "chalk": "^3.0.0",
     "cli-ux": "^5.4.1",
+    "inquirer": "^7.0.1",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
