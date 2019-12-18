@@ -18,7 +18,7 @@ export default class Generate extends Command {
     const { flags } = this.parse(Generate);
 
     if (flags.react) {
-      cli.action.start(chalk.blue('Generating Storytab for React...'));
+      cli.action.start('Generating Storytab for React...');
       await new Promise(res => setTimeout(res, 2000));
       this.exit();
     }
