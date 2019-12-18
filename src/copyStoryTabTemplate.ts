@@ -4,7 +4,11 @@ type SupportedFrameworks = 'react';
 
 export const copyStoryTabTemplate = async (framework: SupportedFrameworks) => {
   const DESTINATION_DIR = process.cwd();
-  let storyTabTemplateSourcePath = __dirname + '/StoryTabTemplate';
+  let storyTabTemplateSourcePath = __dirname + '/../bin/StoryTabTemplate';
+  console.log(
+    'Log: copyStoryTabTemplate -> storyTabTemplateSourcePath',
+    storyTabTemplateSourcePath,
+  );
   const storyTabTemplateDestinationPath = `${DESTINATION_DIR}/stories/StoryTab`;
 
   switch (framework) {
