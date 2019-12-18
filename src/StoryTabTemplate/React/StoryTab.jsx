@@ -8,35 +8,16 @@ import imgJSX from './img/jsx.png';
 import imgSass from './img/sass.png';
 import './StoryTab.scss';
 
-type LocalStorage = {
-  mainTabIndex: number;
-  codeTabIndex: number;
-};
-
-function useLocalStorage<T>(
-  key: string,
-  initialValue: T = null,
-): [T, React.Dispatch<React.SetStateAction<T>>] {
-  const [value, setValue] = useState<T>(JSON.parse(localStorage.getItem(key)) || initialValue);
+function useLocalStorage(key, initialValue) {
+  const [value, setValue] = useState(JSON.parse(localStorage.getItem(key)) || initialValue);
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(value));
   });
   return [value, setValue];
 }
 
-type Props = {
-  /**
-   * JSX code.
-   */
-  jsx: string;
-  /**
-   * SCSS code.
-   */
-  scss?: string;
-};
-
-const StoryTab: FC<Props> = ({ jsx, scss, children }) => {
-  const [tabIndex, setTabIndex] = useLocalStorage<LocalStorage>('storybook-rpt', {
+const StoryTab = ({ jsx, scss, children }) => {
+  const [tabIndex, setTabIndex] = useLocalStorage('storybook-rpt', {
     mainTabIndex: 0,
     codeTabIndex: 0,
   });
