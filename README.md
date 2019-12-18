@@ -13,8 +13,8 @@ Generate documentation in Storybook tab 📑
 
 ## Install
 
-- npm `npm install story-tab`
-- yarn `yarn add story-tab`
+- npm `npm install story-tab --save-dev`
+- yarn `yarn add story-tab --dev`
 
 # Commands
 
@@ -32,9 +32,12 @@ USAGE
 
 ARGUMENTS
   FRAMEWORK  (react) generate StoryTab for desired framework
+
+OPTIONS
+  --ts  generate StoryTab in TypeScript
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.1/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.2/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 
