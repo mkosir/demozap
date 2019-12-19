@@ -16,7 +16,7 @@ function useLocalStorage(key, initialValue) {
   return [value, setValue];
 }
 
-const Template = ({ jsx, scss, children }) => {
+const Template = ({ jsx, css, children }) => {
   const [tabIndex, setTabIndex] = useLocalStorage('storybook-rpt', {
     mainTabIndex: 0,
     codeTabIndex: 0,
@@ -51,7 +51,7 @@ const Template = ({ jsx, scss, children }) => {
             <Tab>
               <img src={imgJSX} height="30" />
             </Tab>
-            {scss && (
+            {css && (
               <Tab>
                 <img src={imgSass} height="30" />
               </Tab>
@@ -62,10 +62,10 @@ const Template = ({ jsx, scss, children }) => {
               {jsx}
             </SyntaxHighlighter>
           </TabPanel>
-          {scss && (
+          {css && (
             <TabPanel>
-              <SyntaxHighlighter language="scss" style={prism}>
-                {scss}
+              <SyntaxHighlighter language="css" style={prism}>
+                {css}
               </SyntaxHighlighter>
             </TabPanel>
           )}

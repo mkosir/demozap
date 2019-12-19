@@ -30,12 +30,12 @@ type Props = {
    */
   jsx: string;
   /**
-   * SCSS code.
+   * CSS code.
    */
-  scss?: string;
+  css?: string;
 };
 
-const StoryTab: FC<Props> = ({ jsx, scss, children }) => {
+const StoryTab: FC<Props> = ({ jsx, css, children }) => {
   const [tabIndex, setTabIndex] = useLocalStorage<LocalStorage>('storybook-rpt', {
     mainTabIndex: 0,
     codeTabIndex: 0,
@@ -70,7 +70,7 @@ const StoryTab: FC<Props> = ({ jsx, scss, children }) => {
             <Tab>
               <img src={imgJSX} height="30" />
             </Tab>
-            {scss && (
+            {css && (
               <Tab>
                 <img src={imgSass} height="30" />
               </Tab>
@@ -81,10 +81,10 @@ const StoryTab: FC<Props> = ({ jsx, scss, children }) => {
               {jsx}
             </SyntaxHighlighter>
           </TabPanel>
-          {scss && (
+          {css && (
             <TabPanel>
-              <SyntaxHighlighter language="scss" style={prism}>
-                {scss}
+              <SyntaxHighlighter language="css" style={prism}>
+                {css}
               </SyntaxHighlighter>
             </TabPanel>
           )}
