@@ -37,7 +37,7 @@ OPTIONS
   --ts  generate StoryTab in TypeScript
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.2/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.3/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 

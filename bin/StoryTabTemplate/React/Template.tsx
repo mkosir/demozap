@@ -6,7 +6,7 @@ import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import imgJSX from './img/jsx.png';
 import imgSass from './img/sass.png';
-import './StoryTab.scss';
+import './Template.css';
 
 type LocalStorage = {
   mainTabIndex: number;
