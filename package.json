@@ -1,7 +1,7 @@
 {
   "name": "story-tab",
   "description": "Generate documentation in Storybook tab",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -32,6 +32,7 @@
     "@oclif/plugin-help": "^2.2.2",
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
     "inquirer": "^7.0.1",
     "tslib": "^1.10.0"
   },
