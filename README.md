@@ -29,8 +29,7 @@ To generate StoryTab components in your project:
 
 Import generated StoryTab components into Storybook. 🎉
 
-#### Generated StoryTab files
-
+**Generated StoryTab files**  
 By default generated files will be prefixed with `_` for example:  
 `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`  
 You can set custom prefix with `--prefix` flag:  
