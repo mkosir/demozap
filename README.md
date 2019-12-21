@@ -29,6 +29,8 @@ To generate StoryTab components in your project:
 
 Import generated StoryTab components into Storybook. 🎉
 
+#### Generated StoryTab files
+
 By default generated files will be prefixed with `_` for example:  
 `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`  
 You can set custom prefix with `--prefix` flag:  
@@ -37,8 +39,9 @@ You can set custom prefix with `--prefix` flag:
 # Commands
 
 <!-- commands -->
-* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-* [`storytab help [COMMAND]`](#storytab-help-command)
+
+- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+- [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -73,6 +76,7 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
+
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
