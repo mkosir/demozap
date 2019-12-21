@@ -26,6 +26,20 @@ _React_
 - npm `npm install story-tab-template-react`
 - yarn `yarn add story-tab-template-react`
 
+## Usage
+
+To generate StoryTab components in your project:
+
+- name files as `[file name].storytab.[ext]`
+- in your terminal run `storytab generate react`
+
+Use generated storytab components in Storybook.
+
+All generated files will be prefixed with `_` for example:
+
+- `MyComponent.storytab.jsx` -> `\_MyComponent.jsx`
+- `MyComponent.storytab.css` -> `\_MyComponent.css`
+
 # Commands
 
 <!-- commands -->
