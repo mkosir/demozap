@@ -5,6 +5,7 @@ import { StoryTabFileInfo, SupportedFrameworks } from './types';
 export const createStoryTabComponents = async (
   storyTabFilesInfo: [StoryTabFileInfo],
   framework: SupportedFrameworks,
+  prefix: string,
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
@@ -21,7 +22,7 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesInfo.map(async storyTabFileInfo => {
-      const storyTabComponentFilename = `${storyTabFileInfo.codeFilename.base}.${storyTabFileInfo.codeFilename.ext}`;
+      const storyTabComponentFilename = `${prefix}${storyTabFileInfo.codeFilename.base}.${storyTabFileInfo.codeFilename.ext}`;
       const storyTabComponentDestinationPath = `${storyTabFileInfo.dirname}/${storyTabComponentFilename}`;
       await fs.copy(storyTabTemplateComponentSourcePath, storyTabComponentDestinationPath);
       numOfCreatedStoryTabComponents++;

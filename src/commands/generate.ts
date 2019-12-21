@@ -25,7 +25,6 @@ export default class Generate extends Command {
 
   async run() {
     const { args, flags } = this.parse(Generate);
-    console.log('Log: flags.prefix', flags.prefix);
 
     const frameworkCapitalize = args.framework[0].toUpperCase() + args.framework.slice(1);
     this.log(chalk.blue(`Generating Storytab for ${frameworkCapitalize}...`));
@@ -34,6 +33,7 @@ export default class Generate extends Command {
     const numOfCreatedStoryTabComponents = await createStoryTabComponents(
       storyTabFilesInfo,
       args.framework,
+      flags.prefix,
     );
     this.log(chalk.blue(`Created ${numOfCreatedStoryTabComponents} StoryTab components`));
     this.log(chalk.green('Completed!'));
