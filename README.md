@@ -30,8 +30,16 @@ _React_
 
 To generate StoryTab components in your project:
 
-- name files as `[file name].storytab.[ext]`
-- in your terminal run `storytab generate react`
+- name files as **`[file name].storytab.[ext]`**
+- in your terminal run **`$ storytab generate react`**
+- From the command-line:
+
+```
+$ cd ubuntu-lamp-xdebug
+$ vagrant up
+...
+$ vagrant ssh
+```
 
 Use generated storytab components in Storybook.
 
