@@ -1,6 +1,6 @@
 const glob = require('glob');
 
-export const findStoryTabFiles = () => {
-  const files = glob.sync(process.cwd() + '/**/*.storytab.*', {});
-  return files;
+export const findStoryTabFiles = (): Array<string> => {
+  const storyTabFiles = glob.sync(process.cwd() + '/**/*.storytab.*', {});
+  return storyTabFiles;
 };
