@@ -1,7 +1,7 @@
 {
   "name": "story-tab",
   "description": "Generate documentation in Storybook tab",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -65,9 +65,13 @@
   "author": "Marko Kosir <kosir.mar@gmail.com>",
   "repository": "mkosir/story-tab",
   "keywords": [
-    "oclif",
     "story-tab",
     "storytab",
-    "storybook"
+    "storybook",
+    "cli",
+    "cli-tool",
+    "documentation",
+    "documentation-tool",
+    "oclif"
   ]
 }

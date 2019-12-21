@@ -37,9 +37,8 @@ You can set custom prefix with `--prefix` flag:
 # Commands
 
 <!-- commands -->
-
-- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-- [`storytab help [COMMAND]`](#storytab-help-command)
+* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+* [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -56,7 +55,7 @@ OPTIONS
   --prefix=prefix  [default: _] generate StoryTab components with filename prefix
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.8/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.9/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 
@@ -74,7 +73,6 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
