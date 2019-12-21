@@ -8,13 +8,6 @@ _Generate documentation in Storybook tab 📑_
 [![npm version][npm-badge]][npm-url]
 [![TypeScript][typescript-badge]][typescript-url]
 
-<!-- toc -->
-
-- [pre-alpha (non-working) version](#pre-alpha-non-working-version)
-- [StoryTab 📑](#storytab-)
-- [Commands](#commands)
-  <!-- tocstop -->
-
 ## Install
 
 Install StoryTab  
