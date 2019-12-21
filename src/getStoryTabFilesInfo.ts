@@ -3,7 +3,7 @@ const path = require('path');
 
 import { StoryTabFileInfo } from './types';
 
-export const getStoryTabFileInfo = (): [StoryTabFileInfo] => {
+export const getStoryTabFilesInfo = (): [StoryTabFileInfo] => {
   const findStoryTabFilePaths = glob.sync(process.cwd() + '/**/*.storytab.*', {});
   const storyTabFilesInfo: [StoryTabFileInfo] = findStoryTabFilePaths.map(storyTabFilePath => {
     const dirname = path.dirname(storyTabFilePath);
@@ -11,7 +11,8 @@ export const getStoryTabFileInfo = (): [StoryTabFileInfo] => {
     const filenameArray = filename.split('.');
     const storyTabFileInfo: StoryTabFileInfo = {
       dirname,
-      filename: { base: filenameArray[0], ext: filenameArray[2] },
+      codeFilename: { base: filenameArray[0], ext: filenameArray[2] },
+      styleFilename: null,
     };
     return storyTabFileInfo;
   });

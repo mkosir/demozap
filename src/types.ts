@@ -2,5 +2,6 @@ export type SupportedFrameworks = 'react';
 
 export type StoryTabFileInfo = {
   dirname: string;
-  filename: { base: string; ext: string };
+  codeFilename: { base: string; ext: string };
+  styleFilename: { base: string; ext: string } | null;
 };
