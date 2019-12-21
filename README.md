@@ -35,7 +35,7 @@ To generate StoryTab components in your project:
 - name files as **`[file name].storytab.[ext]`**
 - from your terminal cd into your project and run **`$ storytab generate react`**
 
-Use generated storytab components in Storybook. 🎉
+Import generated StoryTab components into Storybook. 🎉
 
 Generated files will be prefixed with `_` for example:  
 `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`
