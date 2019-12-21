@@ -1,7 +1,7 @@
 import React from 'react';
 
 import StoryTabTemplate from 'story-tab-template-react';
-import Demo from './REPLACE_FILE_NAME.storytab';
+import Demo from './REPLACE_FILENAME.storytab';
 
 const code = `REPLACE_CODE`;
 
