@@ -10,14 +10,15 @@ _Generate documentation in Storybook tab 📑_
 
 ## Install
 
-Install StoryTab  
-&nbsp;&nbsp;npm `npm install story-tab --save-dev`  
-&nbsp;&nbsp;yarn `yarn add story-tab --dev`
+Install:
 
-Install StoryTab Template for intended _framework_:  
-&nbsp;&nbsp;_React_  
-&nbsp;&nbsp;npm `npm install story-tab-template-react --save-dev`  
-&nbsp;&nbsp;yarn `yarn add story-tab-template-react --dev`
+- StoryTab  
+  &nbsp;&nbsp;npm `npm install story-tab --save-dev`  
+  &nbsp;&nbsp;yarn `yarn add story-tab --dev`
+- StoryTab Template for intended _framework_:  
+  &nbsp;&nbsp;_React_  
+  &nbsp;&nbsp;npm `npm install story-tab-template-react --save-dev`  
+  &nbsp;&nbsp;yarn `yarn add story-tab-template-react --dev`
 
 ## Usage
 
@@ -34,8 +35,9 @@ Generated files will be prefixed with `_` for example:
 # Commands
 
 <!-- commands -->
-* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-* [`storytab help [COMMAND]`](#storytab-help-command)
+
+- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+- [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -70,6 +72,7 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
+
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
