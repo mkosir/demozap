@@ -8,13 +8,11 @@ export const createStoryTabComponents = async (
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
-  let storyTabTemplateComponentPath = __dirname + '/../bin/story-tab-template-component';
-  // const DESTINATION_DIR = process.cwd();
-  // const storyTabTemplateDestinationPath = `${DESTINATION_DIR}/story-tab/_Template`;
+  let storyTabTemplateComponentSourcePath = __dirname + '/../bin/story-tab-template-component';
 
   switch (framework) {
     case 'react':
-      storyTabTemplateComponentPath = `${storyTabTemplateComponentPath}/${framework}/filename.tsx`;
+      storyTabTemplateComponentSourcePath = `${storyTabTemplateComponentSourcePath}/${framework}/filename.tsx`;
       break;
 
     default:
@@ -23,10 +21,8 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesInfo.map(async storyTabFileInfo => {
-      await fs.copy(
-        storyTabTemplateComponentPath,
-        `${storyTabFileInfo.dirname}/${storyTabFileInfo.filename.base}.${storyTabFileInfo.filename.ext}`,
-      );
+      const storyTabComponentDestinationPath = `${storyTabFileInfo.dirname}/${storyTabFileInfo.filename.base}.${storyTabFileInfo.filename.ext}`;
+      await fs.copy(storyTabTemplateComponentSourcePath, storyTabComponentDestinationPath);
       numOfCreatedStoryTabComponents++;
     }),
   );
