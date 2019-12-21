@@ -1,4 +1,4 @@
-import { Command } from '@oclif/command';
+import { Command, flags } from '@oclif/command';
 const chalk = require('chalk');
 
 import { findStoryTabFiles } from '../findStoryTabFiles';
@@ -15,8 +15,16 @@ export default class Generate extends Command {
     },
   ];
 
+  static flags = {
+    prefix: flags.string({
+      description: 'generate StoryTab components with filename prefix',
+      default: '_',
+    }),
+  };
+
   async run() {
-    const { args } = this.parse(Generate);
+    const { args, flags } = this.parse(Generate);
+    console.log('Log: flags.prefix', flags.prefix);
 
     const frameworkCapitalize = args.framework[0].toUpperCase() + args.framework.slice(1);
     this.log(chalk.blue(`Generating Storytab for ${frameworkCapitalize}...`));

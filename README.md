@@ -9,10 +9,10 @@ _Generate documentation in Storybook tab 📑_
 [![TypeScript][typescript-badge]][typescript-url]
 
 <!-- toc -->
-
-- [StoryTab 📑](#storytab-)
-- [Commands](#commands)
-  <!-- tocstop -->
+* [pre-alpha (non-working) version](#pre-alpha-non-working-version)
+* [StoryTab 📑](#storytab-)
+* [Commands](#commands)
+<!-- tocstop -->
 
 ## Install
 
@@ -43,9 +43,8 @@ Generated files will be prefixed with `_` for example:
 # Commands
 
 <!-- commands -->
-
-- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-- [`storytab help [COMMAND]`](#storytab-help-command)
+* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+* [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -59,10 +58,10 @@ ARGUMENTS
   FRAMEWORK  (react) generate StoryTab for desired framework
 
 OPTIONS
-  --ts  generate StoryTab in TypeScript
+  --prefix=prefix  [default: _] generate StoryTab components with filename prefix
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.5/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.6/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 
@@ -80,7 +79,6 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
