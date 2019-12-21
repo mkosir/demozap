@@ -1,6 +1,6 @@
 # StoryTab 📑
 
-Generate documentation in Storybook tab 📑
+_Generate documentation in Storybook tab 📑_
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![npm version][npm-badge]][npm-url]
@@ -19,9 +19,9 @@ Install StoryTab
 - npm `npm install story-tab --save-dev`
 - yarn `yarn add story-tab --dev`
 
-Install StoryTab Template for framework that you are using:
+Install StoryTab Template for _framework_ that you are using:
 
-React
+_React_
 
 - npm `npm install story-tab-template-react`
 - yarn `yarn add story-tab-template-react`
