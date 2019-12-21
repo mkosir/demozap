@@ -31,7 +31,7 @@ export default class Generate extends Command {
     this.log(chalk.blue(`Generating Storytab for ${frameworkCapitalize}...`));
     const storyTabFilePaths = findStoryTabFilePaths();
     this.log(chalk.blue(`Found ${storyTabFilePaths.length} StoryTab files`));
-    const numOfCreatedStoryTabComponents = createStoryTabComponents(
+    const numOfCreatedStoryTabComponents = await createStoryTabComponents(
       storyTabFilePaths,
       args.framework,
     );
