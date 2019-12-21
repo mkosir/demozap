@@ -8,10 +8,12 @@ export const getStoryTabFileInfo = (): [StoryTabFileInfo] => {
   const storyTabFilesInfo: [StoryTabFileInfo] = findStoryTabFilePaths.map(storyTabFilePath => {
     const dirname = path.dirname(storyTabFilePath);
     const filename = path.basename(storyTabFilePath);
-    return {
+    const filenameArray = filename.split('.');
+    const storyTabFileInfo: StoryTabFileInfo = {
       dirname,
-      filename,
+      filename: { base: filenameArray[0], ext: filenameArray[2] },
     };
+    return storyTabFileInfo;
   });
   return storyTabFilesInfo;
 };

@@ -9,7 +9,7 @@ export const createStoryTabComponents = async (
   let numOfCreatedStoryTabComponents = 0;
 
   let storyTabTemplateComponentPath = __dirname + '/../bin/story-tab-template-component';
-  const DESTINATION_DIR = process.cwd();
+  // const DESTINATION_DIR = process.cwd();
   // const storyTabTemplateDestinationPath = `${DESTINATION_DIR}/story-tab/_Template`;
 
   switch (framework) {
@@ -23,7 +23,10 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesInfo.map(async storyTabFileInfo => {
-      await fs.copy(storyTabTemplateComponentPath, storyTabFileInfo.dirname);
+      await fs.copy(
+        storyTabTemplateComponentPath,
+        `${storyTabFileInfo.dirname}/${storyTabFileInfo.filename.base}.${storyTabFileInfo.filename.ext}`,
+      );
       numOfCreatedStoryTabComponents++;
     }),
   );
