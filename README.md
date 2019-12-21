@@ -38,7 +38,7 @@ To generate StoryTab components in your project:
 Use generated storytab components in Storybook. 🎉
 
 Generated files will be prefixed with `_` for example:  
-`MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `\_MyComponent.jsx`
+`MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`
 
 # Commands
 
