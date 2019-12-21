@@ -34,9 +34,8 @@ Generated files will be prefixed with `_` for example:
 # Commands
 
 <!-- commands -->
-
-- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-- [`storytab help [COMMAND]`](#storytab-help-command)
+* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+* [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -71,7 +70,6 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
