@@ -9,24 +9,22 @@ _Generate documentation in Storybook tab 📑_
 [![TypeScript][typescript-badge]][typescript-url]
 
 <!-- toc -->
-* [pre-alpha (non-working) version](#pre-alpha-non-working-version)
-* [StoryTab 📑](#storytab-)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [pre-alpha (non-working) version](#pre-alpha-non-working-version)
+- [StoryTab 📑](#storytab-)
+- [Commands](#commands)
+  <!-- tocstop -->
 
 ## Install
 
-Install StoryTab
+Install StoryTab  
+&nbsp;&nbsp;npm `npm install story-tab --save-dev`  
+&nbsp;&nbsp;yarn `yarn add story-tab --dev`
 
-- npm `npm install story-tab --save-dev`
-- yarn `yarn add story-tab --dev`
-
-Install StoryTab Template for _framework_ that you are using:
-
-_React_
-
-- npm `npm install story-tab-template-react`
-- yarn `yarn add story-tab-template-react`
+Install StoryTab Template for _framework_ that you are using:  
+&nbsp;&nbsp;_React_  
+&nbsp;&nbsp;npm `npm install story-tab-template-react`  
+&nbsp;&nbsp;yarn `yarn add story-tab-template-react`
 
 ## Usage
 
@@ -43,8 +41,9 @@ Generated files will be prefixed with `_` for example:
 # Commands
 
 <!-- commands -->
-* [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-* [`storytab help [COMMAND]`](#storytab-help-command)
+
+- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
+- [`storytab help [COMMAND]`](#storytab-help-command)
 
 ## `storytab generate FRAMEWORK`
 
@@ -61,7 +60,7 @@ OPTIONS
   --prefix=prefix  [default: _] generate StoryTab components with filename prefix
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.7/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.8/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 
@@ -79,6 +78,7 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
+
 <!-- commandsstop -->
 
 [npm-url]: https://www.npmjs.com/package/story-tab
