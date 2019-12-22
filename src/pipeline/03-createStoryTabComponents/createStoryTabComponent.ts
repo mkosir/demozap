@@ -1,4 +1,4 @@
-const fsExtra = require('fsExtra-extra');
+const fsExtra = require('fs-extra');
 
 import { replaceStoryTabTemplateContent } from './replaceStoryTabTemplateContent';
 import { StoryTabFileMeta } from '../../types';
