@@ -22,7 +22,7 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesMeta.map(async storyTabFileMeta => {
-      createStoryTabComponent(storyTabFileMeta, storyTabTemplateComponentSourcePath, prefix);
+      await createStoryTabComponent(storyTabFileMeta, storyTabTemplateComponentSourcePath, prefix);
       numOfCreatedStoryTabComponents++;
     }),
   );
