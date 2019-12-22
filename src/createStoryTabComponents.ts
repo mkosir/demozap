@@ -22,8 +22,8 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesInfo.map(async storyTabFileInfo => {
-      const storyTabComponentFilename = `${prefix}${storyTabFileInfo.codeFilename.base}.${storyTabFileInfo.codeFilename.ext}`;
-      const storyTabComponentDestinationPath = `${storyTabFileInfo.dirname}/${storyTabComponentFilename}`;
+      const storyTabComponentFilename = `${prefix}${storyTabFileInfo.code.filename.base}.${storyTabFileInfo.code.filename.ext}`;
+      const storyTabComponentDestinationPath = `${storyTabFileInfo.code.dirname}/${storyTabComponentFilename}`;
       await fs.copy(storyTabTemplateComponentSourcePath, storyTabComponentDestinationPath);
       numOfCreatedStoryTabComponents++;
     }),

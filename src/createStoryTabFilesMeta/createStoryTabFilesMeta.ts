@@ -9,25 +9,28 @@ const createStoryTabFileMeta = (
   const storyTabCodeFilePathInfo = extractStoryTabFilePathInfo(storyTabCodeFilePath);
 
   const storyTabFileInfo: StoryTabFileMeta = {
-    dirname: storyTabCodeFilePathInfo.dirname,
-    codeFilename: {
-      base: storyTabCodeFilePathInfo.filenameBase,
-      ext: storyTabCodeFilePathInfo.filenameExt,
+    code: {
+      dirname: storyTabCodeFilePathInfo.dirname,
+      filename: {
+        base: storyTabCodeFilePathInfo.filename.base,
+        ext: storyTabCodeFilePathInfo.filename.ext,
+      },
     },
-    styleFilename: { base: null, ext: null },
+    style: { dirname: null, filename: { base: null, ext: null } },
   };
 
   const associateStoryTabStyleFilePaths = findAssociateStoryTabFilesByName(
     storyTabStyleFilePaths,
-    storyTabFileInfo.codeFilename.base,
+    storyTabFileInfo.code.filename.base,
   );
   if (associateStoryTabStyleFilePaths) {
     // per one code file only one style file is possible
     const storyTabStyleFilePathInfo = extractStoryTabFilePathInfo(
       associateStoryTabStyleFilePaths[0],
     );
-    storyTabFileInfo.styleFilename.base = storyTabStyleFilePathInfo.filenameBase;
-    storyTabFileInfo.styleFilename.ext = storyTabStyleFilePathInfo.filenameExt;
+    storyTabFileInfo.style.dirname = storyTabStyleFilePathInfo.dirname;
+    storyTabFileInfo.style.filename.base = storyTabStyleFilePathInfo.filename.base;
+    storyTabFileInfo.style.filename.ext = storyTabStyleFilePathInfo.filename.ext;
   }
 
   return storyTabFileInfo;

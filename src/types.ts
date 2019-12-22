@@ -1,7 +1,6 @@
 export type SupportedFrameworks = 'react';
 
 export type StoryTabFileMeta = {
-  dirname: string;
-  codeFilename: { base: string; ext: string };
-  styleFilename: { base: string | null; ext: string | null };
+  code: { dirname: string; filename: { base: string; ext: string } };
+  style: { dirname: string | null; filename: { base: string | null; ext: string | null } };
 };
