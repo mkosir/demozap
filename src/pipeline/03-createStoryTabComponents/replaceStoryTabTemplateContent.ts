@@ -3,6 +3,10 @@ const replace = require('replace-in-file');
 import { StoryTabFileMeta } from '../../types';
 
 export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabFileMeta) => {
+  const replacePropStyleExt = storyTabFileMeta.style.filename.ext
+    ? `styleExt="${storyTabFileMeta.style.filename.ext}"`
+    : '';
+
   const options = [
     {
       files: storyTabFileMeta.destinationPath,
@@ -12,12 +16,12 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     {
       files: storyTabFileMeta.destinationPath,
       from: '@CODE',
-      to: storyTabFileMeta.code.filename.ext,
+      to: '<@WORKS_1>',
     },
     {
       files: storyTabFileMeta.destinationPath,
       from: '@STYLE',
-      to: storyTabFileMeta.style.filename.ext,
+      to: '<@WORKS_2>',
     },
     {
       files: storyTabFileMeta.destinationPath,
@@ -27,15 +31,14 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     {
       files: storyTabFileMeta.destinationPath,
       from: '@CODE_EXT',
-      to: '<@WORKS_4>',
+      to: storyTabFileMeta.code.filename.ext,
     },
     {
       files: storyTabFileMeta.destinationPath,
       from: '@STYLE_EXT',
-      to: '<@WORKS_5>',
+      to: replacePropStyleExt,
     },
   ];
-
   for (const option of options) {
     await replace(option);
   }

@@ -12,7 +12,7 @@ const @COMPONENT_NAME = () => (
     code={code}
     style={style}
     codeExt="@CODE_EXT"
-    styleExt="@STYLE_EXT"
+    @STYLE_EXT
   >
     <Demo />
   </StoryTabTemplate>
