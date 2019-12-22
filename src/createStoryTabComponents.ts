@@ -1,9 +1,9 @@
 const fs = require('fs-extra');
 
-import { StoryTabFileInfo, SupportedFrameworks } from './types';
+import { StoryTabFileMeta, SupportedFrameworks } from './types';
 
 export const createStoryTabComponents = async (
-  storyTabFilesInfo: [StoryTabFileInfo],
+  storyTabFilesInfo: StoryTabFileMeta[],
   framework: SupportedFrameworks,
   prefix: string,
 ): Promise<number> => {

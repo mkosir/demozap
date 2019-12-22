@@ -1,7 +1,8 @@
 import { Command, flags } from '@oclif/command';
 const chalk = require('chalk');
 
-import { getStoryTabFilesInfo } from '../getStoryTabFilesInfo';
+import { getStoryTabFilePaths } from '../getStoryTabFilePaths';
+import { createStoryTabFilesMeta } from '../createStoryTabFilesMeta/createStoryTabFilesMeta';
 import { createStoryTabComponents } from '../createStoryTabComponents';
 
 export default class Generate extends Command {
@@ -28,8 +29,19 @@ export default class Generate extends Command {
 
     const frameworkCapitalize = args.framework[0].toUpperCase() + args.framework.slice(1);
     this.log(chalk.blue(`Generating Storytab for ${frameworkCapitalize}...`));
-    const { storyTabFilesInfo, numOfStoryTabFiles } = getStoryTabFilesInfo();
-    this.log(chalk.blue(`Found ${numOfStoryTabFiles} StoryTab files`));
+    const { storyTabCodeFilePaths, storyTabStyleFilePaths } = getStoryTabFilePaths();
+    this.log(
+      chalk.blue(
+        `Found ${storyTabCodeFilePaths.length +
+          storyTabStyleFilePaths.length} StoryTab files (code: ${
+          storyTabCodeFilePaths.length
+        }, style: ${storyTabStyleFilePaths.length})`,
+      ),
+    );
+    const storyTabFilesInfo = createStoryTabFilesMeta(
+      storyTabCodeFilePaths,
+      storyTabStyleFilePaths,
+    );
     const numOfCreatedStoryTabComponents = await createStoryTabComponents(
       storyTabFilesInfo,
       args.framework,
