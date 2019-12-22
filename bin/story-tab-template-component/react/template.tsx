@@ -8,7 +8,7 @@ const code = `@CODE`;
 const style = `@STYLE`;
 
 const @COMPONENT_NAME = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="@CODE_EXT"@STYLE_EXT>
+  <StoryTabTemplate code={code}@PROP_STYLE@PROP_CODE_EXT@PROP_STYLE_EXT>
     <Demo />
   </StoryTabTemplate>
 );
