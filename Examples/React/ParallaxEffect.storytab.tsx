@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffect.scss';
+import './ParallaxEffect.storytab.scss';
 
 const ParallaxEffect = () => (
   <Tilt className="parallax-effect" perspective={500}>
