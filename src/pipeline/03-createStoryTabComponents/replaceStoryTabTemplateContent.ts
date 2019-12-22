@@ -11,9 +11,10 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     : '';
 
   const code = await fsExtra.readFile(storyTabFileMeta.code.path);
-  let style = null;
+  let replaceStyle = '';
   if (storyTabFileMeta.style.path) {
-    style = await fsExtra.readFile(storyTabFileMeta.style.path);
+    const style = await fsExtra.readFile(storyTabFileMeta.style.path);
+    replaceStyle = `const style = \`${style}\`;`;
   }
 
   const options = [
@@ -30,7 +31,7 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     {
       files: storyTabFileMeta.path,
       from: '@STYLE',
-      to: style,
+      to: replaceStyle,
     },
     {
       files: storyTabFileMeta.path,

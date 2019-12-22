@@ -5,7 +5,7 @@ import Demo from './@FILENAME.storytab';
 
 const code = `@CODE`;
 
-const style = `@STYLE`;
+@STYLE
 
 const @COMPONENT_NAME = () => (
   <StoryTabTemplate code={code}@PROP_STYLE@PROP_CODE_EXT@PROP_STYLE_EXT>
