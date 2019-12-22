@@ -22,7 +22,7 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     {
       files: storyTabFileMeta.destinationPath,
       from: /@COMPONENT_NAME/g,
-      to: '<@WORKS_3>',
+      to: storyTabFileMeta.componentName,
     },
     {
       files: storyTabFileMeta.destinationPath,

@@ -10,11 +10,13 @@ const createStoryTabFileMeta = (
   const storyTabCodeFilePathInfo = extractStoryTabFilePathInfo(storyTabCodeFilePath);
 
   const storyTabComponentFilename = `${prefix}${storyTabCodeFilePathInfo.filename.base}.${storyTabCodeFilePathInfo.filename.ext}`;
+  const storyTabComponentName = `${prefix}${storyTabCodeFilePathInfo.filename.base}`;
   const storyTabComponentDestinationPath = `${storyTabCodeFilePathInfo.dirname}/${storyTabComponentFilename}`;
 
   const storyTabFileMeta: StoryTabFileMeta = {
     destinationPath: storyTabComponentDestinationPath,
     filename: storyTabComponentFilename,
+    componentName: storyTabComponentName,
     code: {
       dirname: storyTabCodeFilePathInfo.dirname,
       filename: {
