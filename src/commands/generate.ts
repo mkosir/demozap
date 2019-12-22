@@ -1,9 +1,9 @@
 import { Command, flags } from '@oclif/command';
 const chalk = require('chalk');
 
-import { getStoryTabFilePaths } from '../getStoryTabFilePaths';
-import { createStoryTabFilesMeta } from '../createStoryTabFilesMeta/createStoryTabFilesMeta';
-import { createStoryTabComponents } from '../createStoryTabComponents';
+import { getStoryTabFilePaths } from '../pipeline/getStoryTabFilePaths';
+import { createStoryTabFilesMeta } from '../pipeline/createStoryTabFilesMeta/createStoryTabFilesMeta';
+import { createStoryTabComponents } from '../pipeline/createStoryTabComponents';
 
 export default class Generate extends Command {
   static description = 'generate documentation';
