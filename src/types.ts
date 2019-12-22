@@ -1,9 +1,13 @@
 export type SupportedFrameworks = 'react';
 
 export type StoryTabFileMeta = {
-  destinationPath: string;
+  path: string;
   filename: string;
   componentName: string;
-  code: { dirname: string; filename: { base: string; ext: string } };
-  style: { dirname: string | null; filename: { base: string | null; ext: string | null } };
+  code: { path: string; dirname: string; filename: { base: string; ext: string } };
+  style: {
+    path: string | null;
+    dirname: string | null;
+    filename: { base: string | null; ext: string | null };
+  };
 };

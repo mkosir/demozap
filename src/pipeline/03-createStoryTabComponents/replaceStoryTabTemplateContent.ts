@@ -1,3 +1,4 @@
+const fsExtra = require('fs-extra');
 const replace = require('replace-in-file');
 
 import { StoryTabFileMeta } from '../../types';
@@ -7,34 +8,37 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     ? ` styleExt="${storyTabFileMeta.style.filename.ext}"`
     : '';
 
+  const code = await fsExtra.readFile(storyTabFileMeta.code.path);
+  const style = await fsExtra.readFile(storyTabFileMeta.style.path);
+
   const options = [
     {
-      files: storyTabFileMeta.destinationPath,
+      files: storyTabFileMeta.path,
       from: '@FILENAME',
       to: storyTabFileMeta.code.filename.base,
     },
     {
-      files: storyTabFileMeta.destinationPath,
+      files: storyTabFileMeta.path,
       from: '@CODE',
-      to: '<@WORKS_1>',
+      to: code,
     },
     {
-      files: storyTabFileMeta.destinationPath,
+      files: storyTabFileMeta.path,
       from: '@STYLE',
-      to: '<@WORKS_2>',
+      to: style,
     },
     {
-      files: storyTabFileMeta.destinationPath,
+      files: storyTabFileMeta.path,
       from: /@COMPONENT_NAME/g,
       to: storyTabFileMeta.componentName,
     },
     {
-      files: storyTabFileMeta.destinationPath,
+      files: storyTabFileMeta.path,
       from: '@CODE_EXT',
       to: storyTabFileMeta.code.filename.ext,
     },
     {
-      files: storyTabFileMeta.destinationPath,
+      files: storyTabFileMeta.path,
       from: '@STYLE_EXT',
       to: replacePropStyleExt,
     },

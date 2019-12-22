@@ -14,17 +14,18 @@ const createStoryTabFileMeta = (
   const storyTabComponentDestinationPath = `${storyTabCodeFilePathInfo.dirname}/${storyTabComponentFilename}`;
 
   const storyTabFileMeta: StoryTabFileMeta = {
-    destinationPath: storyTabComponentDestinationPath,
+    path: storyTabComponentDestinationPath,
     filename: storyTabComponentFilename,
     componentName: storyTabComponentName,
     code: {
+      path: storyTabCodeFilePath,
       dirname: storyTabCodeFilePathInfo.dirname,
       filename: {
         base: storyTabCodeFilePathInfo.filename.base,
         ext: storyTabCodeFilePathInfo.filename.ext,
       },
     },
-    style: { dirname: null, filename: { base: null, ext: null } },
+    style: { path: null, dirname: null, filename: { base: null, ext: null } },
   };
 
   const associateStoryTabStyleFilePaths = findAssociateStoryTabFilesByName(
@@ -36,6 +37,7 @@ const createStoryTabFileMeta = (
     const storyTabStyleFilePathInfo = extractStoryTabFilePathInfo(
       associateStoryTabStyleFilePaths[0],
     );
+    storyTabFileMeta.style.path = associateStoryTabStyleFilePaths[0];
     storyTabFileMeta.style.dirname = storyTabStyleFilePathInfo.dirname;
     storyTabFileMeta.style.filename.base = storyTabStyleFilePathInfo.filename.base;
     storyTabFileMeta.style.filename.ext = storyTabStyleFilePathInfo.filename.ext;

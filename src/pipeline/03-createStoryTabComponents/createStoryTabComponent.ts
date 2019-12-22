@@ -1,4 +1,4 @@
-const fs = require('fs-extra');
+const fsExtra = require('fsExtra-extra');
 
 import { replaceStoryTabTemplateContent } from './replaceStoryTabTemplateContent';
 import { StoryTabFileMeta } from '../../types';
@@ -7,6 +7,6 @@ export const createStoryTabComponent = async (
   storyTabFileMeta: StoryTabFileMeta,
   storyTabTemplateComponentSourcePath: string,
 ) => {
-  await fs.copy(storyTabTemplateComponentSourcePath, storyTabFileMeta.destinationPath);
+  await fsExtra.copy(storyTabTemplateComponentSourcePath, storyTabFileMeta.path);
   replaceStoryTabTemplateContent(storyTabFileMeta);
 };
