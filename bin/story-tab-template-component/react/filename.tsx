@@ -1,21 +1,21 @@
 import React from 'react';
 
 import StoryTabTemplate from 'story-tab-template-react';
-import Demo from './REPLACE_FILENAME.storytab';
+import Demo from './@FILENAME.storytab';
 
-const code = `REPLACE_CODE`;
+const code = `@CODE`;
 
-const style = `REPLACE_STYLE`;
+const style = `@STYLE`;
 
-const REPLACE_COMPONENT_NAME = () => (
+const @COMPONENT_NAME = () => (
   <StoryTabTemplate
     code={code}
     style={style}
-    codeExt="REPLACE_CODE_EXT"
-    styleExt="REPLACE_STYLE_EXT"
+    codeExt="@CODE_EXT"
+    styleExt="@STYLE_EXT"
   >
     <Demo />
   </StoryTabTemplate>
 );
 
-export default REPLACE_COMPONENT_NAME;
+export default @COMPONENT_NAME;
