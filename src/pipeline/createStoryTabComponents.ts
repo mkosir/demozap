@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 import { StoryTabFileMeta, SupportedFrameworks } from '../types';
 
 export const createStoryTabComponents = async (
-  storyTabFilesInfo: StoryTabFileMeta[],
+  storyTabFilesMeta: StoryTabFileMeta[],
   framework: SupportedFrameworks,
   prefix: string,
 ): Promise<number> => {
@@ -21,9 +21,9 @@ export const createStoryTabComponents = async (
   }
 
   await Promise.all(
-    storyTabFilesInfo.map(async storyTabFileInfo => {
-      const storyTabComponentFilename = `${prefix}${storyTabFileInfo.code.filename.base}.${storyTabFileInfo.code.filename.ext}`;
-      const storyTabComponentDestinationPath = `${storyTabFileInfo.code.dirname}/${storyTabComponentFilename}`;
+    storyTabFilesMeta.map(async storyTabFileMeta => {
+      const storyTabComponentFilename = `${prefix}${storyTabFileMeta.code.filename.base}.${storyTabFileMeta.code.filename.ext}`;
+      const storyTabComponentDestinationPath = `${storyTabFileMeta.code.dirname}/${storyTabComponentFilename}`;
       await fs.copy(storyTabTemplateComponentSourcePath, storyTabComponentDestinationPath);
       numOfCreatedStoryTabComponents++;
     }),

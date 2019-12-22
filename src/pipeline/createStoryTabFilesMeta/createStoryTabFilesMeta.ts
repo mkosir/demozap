@@ -1,5 +1,5 @@
-import { findAssociateStoryTabFilesByName } from './findAssociateStoryTabFilesByName';
-import { extractStoryTabFilePathInfo } from './extractStoryTabFilePathInfo';
+import { findAssociateStoryTabFilesByName } from './utils/findAssociateStoryTabFilesByName';
+import { extractStoryTabFilePathInfo } from './utils/extractStoryTabFilePathInfo';
 import { StoryTabFileMeta } from '../../types';
 
 const createStoryTabFileMeta = (
@@ -8,7 +8,7 @@ const createStoryTabFileMeta = (
 ): StoryTabFileMeta => {
   const storyTabCodeFilePathInfo = extractStoryTabFilePathInfo(storyTabCodeFilePath);
 
-  const storyTabFileInfo: StoryTabFileMeta = {
+  const storyTabFileMeta: StoryTabFileMeta = {
     code: {
       dirname: storyTabCodeFilePathInfo.dirname,
       filename: {
@@ -21,19 +21,19 @@ const createStoryTabFileMeta = (
 
   const associateStoryTabStyleFilePaths = findAssociateStoryTabFilesByName(
     storyTabStyleFilePaths,
-    storyTabFileInfo.code.filename.base,
+    storyTabFileMeta.code.filename.base,
   );
   if (associateStoryTabStyleFilePaths) {
     // per one code file only one style file is possible
     const storyTabStyleFilePathInfo = extractStoryTabFilePathInfo(
       associateStoryTabStyleFilePaths[0],
     );
-    storyTabFileInfo.style.dirname = storyTabStyleFilePathInfo.dirname;
-    storyTabFileInfo.style.filename.base = storyTabStyleFilePathInfo.filename.base;
-    storyTabFileInfo.style.filename.ext = storyTabStyleFilePathInfo.filename.ext;
+    storyTabFileMeta.style.dirname = storyTabStyleFilePathInfo.dirname;
+    storyTabFileMeta.style.filename.base = storyTabStyleFilePathInfo.filename.base;
+    storyTabFileMeta.style.filename.ext = storyTabStyleFilePathInfo.filename.ext;
   }
 
-  return storyTabFileInfo;
+  return storyTabFileMeta;
 };
 
 export const createStoryTabFilesMeta = (
@@ -44,6 +44,5 @@ export const createStoryTabFilesMeta = (
     return createStoryTabFileMeta(storyTabCodeFilePath, storyTabStyleFilePaths);
   });
 
-  console.log('Log: storyTabFilesInfo', storyTabFilesInfo);
   return storyTabFilesInfo;
 };
