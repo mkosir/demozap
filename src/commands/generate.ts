@@ -41,12 +41,12 @@ export default class Generate extends Command {
     const storyTabFilesInfo = createStoryTabFilesMeta(
       storyTabCodeFilePaths,
       storyTabStyleFilePaths,
+      flags.prefix,
     );
     try {
       const numOfCreatedStoryTabComponents = await createStoryTabComponents(
         storyTabFilesInfo,
         args.framework,
-        flags.prefix,
       );
       this.log(chalk.blue(`Created ${numOfCreatedStoryTabComponents} StoryTab components`));
     } catch (err) {

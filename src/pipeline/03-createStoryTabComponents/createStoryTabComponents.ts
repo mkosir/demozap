@@ -4,7 +4,6 @@ import { StoryTabFileMeta, SupportedFrameworks } from '../../types';
 export const createStoryTabComponents = async (
   storyTabFilesMeta: StoryTabFileMeta[],
   framework: SupportedFrameworks,
-  prefix: string,
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
@@ -22,7 +21,7 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesMeta.map(async storyTabFileMeta => {
-      await createStoryTabComponent(storyTabFileMeta, storyTabTemplateComponentSourcePath, prefix);
+      await createStoryTabComponent(storyTabFileMeta, storyTabTemplateComponentSourcePath);
       numOfCreatedStoryTabComponents++;
     }),
   );

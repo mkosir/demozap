@@ -5,10 +5,16 @@ import { StoryTabFileMeta } from '../../types';
 const createStoryTabFileMeta = (
   storyTabCodeFilePath: string,
   storyTabStyleFilePaths: string[],
+  prefix: string,
 ): StoryTabFileMeta => {
   const storyTabCodeFilePathInfo = extractStoryTabFilePathInfo(storyTabCodeFilePath);
 
+  const storyTabComponentFilename = `${prefix}${storyTabCodeFilePathInfo.filename.base}.${storyTabCodeFilePathInfo.filename.ext}`;
+  const storyTabComponentDestinationPath = `${storyTabCodeFilePathInfo.dirname}/${storyTabComponentFilename}`;
+
   const storyTabFileMeta: StoryTabFileMeta = {
+    destinationPath: storyTabComponentDestinationPath,
+    filename: storyTabComponentFilename,
     code: {
       dirname: storyTabCodeFilePathInfo.dirname,
       filename: {
@@ -39,9 +45,10 @@ const createStoryTabFileMeta = (
 export const createStoryTabFilesMeta = (
   storyTabCodeFilePaths: string[],
   storyTabStyleFilePaths: string[],
+  prefix: string,
 ): StoryTabFileMeta[] => {
   const storyTabFilesInfo = storyTabCodeFilePaths.map(storyTabCodeFilePath => {
-    return createStoryTabFileMeta(storyTabCodeFilePath, storyTabStyleFilePaths);
+    return createStoryTabFileMeta(storyTabCodeFilePath, storyTabStyleFilePaths, prefix);
   });
 
   return storyTabFilesInfo;

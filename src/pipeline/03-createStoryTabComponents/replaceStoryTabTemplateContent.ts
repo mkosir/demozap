@@ -2,38 +2,35 @@ const replace = require('replace-in-file');
 
 import { StoryTabFileMeta } from '../../types';
 
-export const replaceStoryTabTemplateContent = async (
-  storyTabTemplatePath: string,
-  storyTabFileMeta: StoryTabFileMeta,
-) => {
+export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabFileMeta) => {
   const options = [
     {
-      files: storyTabTemplatePath,
+      files: storyTabFileMeta.destinationPath,
       from: '@FILENAME',
-      to: '<@WORKS_0>',
+      to: storyTabFileMeta.code.filename.base,
     },
     {
-      files: storyTabTemplatePath,
+      files: storyTabFileMeta.destinationPath,
       from: '@CODE',
       to: '<@WORKS_1>',
     },
     {
-      files: storyTabTemplatePath,
+      files: storyTabFileMeta.destinationPath,
       from: '@STYLE',
       to: '<@WORKS_2>',
     },
     {
-      files: storyTabTemplatePath,
+      files: storyTabFileMeta.destinationPath,
       from: /@COMPONENT_NAME/g,
       to: '<@WORKS_3>',
     },
     {
-      files: storyTabTemplatePath,
+      files: storyTabFileMeta.destinationPath,
       from: '@CODE_EXT',
       to: '<@WORKS_4>',
     },
     {
-      files: storyTabTemplatePath,
+      files: storyTabFileMeta.destinationPath,
       from: '@STYLE_EXT',
       to: '<@WORKS_5>',
     },

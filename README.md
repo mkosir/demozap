@@ -56,7 +56,7 @@ OPTIONS
   --prefix=prefix  [default: _] generate StoryTab components with filename prefix
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.9/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.10/src/commands/generate.ts)_
 
 ## `storytab help [COMMAND]`
 
