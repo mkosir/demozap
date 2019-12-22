@@ -7,12 +7,11 @@ export const createStoryTabComponents = async (
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
-  let storyTabTemplateComponentSourcePath =
-    __dirname + '/../../../bin/story-tab-template-component';
+  let storyTabTemplateSourcePath = __dirname + '/../../../bin/story-tab-template-component';
 
   switch (framework) {
     case 'react':
-      storyTabTemplateComponentSourcePath = `${storyTabTemplateComponentSourcePath}/${framework}/template.tsx`;
+      storyTabTemplateSourcePath = `${storyTabTemplateSourcePath}/${framework}/template`;
       break;
 
     default:
@@ -21,7 +20,8 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesMeta.map(async storyTabFileMeta => {
-      await createStoryTabComponent(storyTabFileMeta, storyTabTemplateComponentSourcePath);
+      const storyTabTemplate = `${storyTabTemplateSourcePath}.${storyTabFileMeta.code.filename.ext}`;
+      await createStoryTabComponent(storyTabFileMeta, storyTabTemplate);
       numOfCreatedStoryTabComponents++;
     }),
   );

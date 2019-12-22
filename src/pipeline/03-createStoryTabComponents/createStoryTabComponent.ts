@@ -5,8 +5,8 @@ import { StoryTabFileMeta } from '../../types';
 
 export const createStoryTabComponent = async (
   storyTabFileMeta: StoryTabFileMeta,
-  storyTabTemplateComponentSourcePath: string,
+  storyTabTemplateSourcePath: string,
 ) => {
-  await fsExtra.copy(storyTabTemplateComponentSourcePath, storyTabFileMeta.path);
+  await fsExtra.copy(storyTabTemplateSourcePath, storyTabFileMeta.path);
   replaceStoryTabTemplateContent(storyTabFileMeta);
 };
