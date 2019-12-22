@@ -9,7 +9,7 @@ export const createStoryTabComponents = async (
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
-  let storyTabTemplateComponentSourcePath = __dirname + '/../bin/story-tab-template-component';
+  let storyTabTemplateComponentSourcePath = __dirname + '/../../bin/story-tab-template-component';
 
   switch (framework) {
     case 'react':
