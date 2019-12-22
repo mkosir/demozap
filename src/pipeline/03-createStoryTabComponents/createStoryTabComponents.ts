@@ -13,7 +13,7 @@ export const createStoryTabComponents = async (
 
   switch (framework) {
     case 'react':
-      storyTabTemplateComponentSourcePath = `${storyTabTemplateComponentSourcePath}/${framework}/filename.tsx`;
+      storyTabTemplateComponentSourcePath = `${storyTabTemplateComponentSourcePath}/${framework}/template.tsx`;
       break;
 
     default:
