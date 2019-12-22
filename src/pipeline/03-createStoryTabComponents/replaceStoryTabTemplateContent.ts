@@ -4,7 +4,7 @@ import { StoryTabFileMeta } from '../../types';
 
 export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabFileMeta) => {
   const replacePropStyleExt = storyTabFileMeta.style.filename.ext
-    ? `styleExt="${storyTabFileMeta.style.filename.ext}"`
+    ? ` styleExt="${storyTabFileMeta.style.filename.ext}"`
     : '';
 
   const options = [
