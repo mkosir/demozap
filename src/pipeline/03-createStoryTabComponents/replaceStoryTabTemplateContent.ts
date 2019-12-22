@@ -12,12 +12,12 @@ export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabF
     {
       files: storyTabFileMeta.destinationPath,
       from: '@CODE',
-      to: '<@WORKS_1>',
+      to: storyTabFileMeta.code.filename.ext,
     },
     {
       files: storyTabFileMeta.destinationPath,
       from: '@STYLE',
-      to: '<@WORKS_2>',
+      to: storyTabFileMeta.style.filename.ext,
     },
     {
       files: storyTabFileMeta.destinationPath,
