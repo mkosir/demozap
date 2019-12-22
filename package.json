@@ -33,6 +33,7 @@
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "inquirer": "^7.0.1",
+    "replace-in-file": "^5.0.2",
     "tslib": "^1.10.0"
   },
   "devDependencies": {

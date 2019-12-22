@@ -42,13 +42,17 @@ export default class Generate extends Command {
       storyTabCodeFilePaths,
       storyTabStyleFilePaths,
     );
-    const numOfCreatedStoryTabComponents = await createStoryTabComponents(
-      storyTabFilesInfo,
-      args.framework,
-      flags.prefix,
-    );
-    this.log(chalk.blue(`Created ${numOfCreatedStoryTabComponents} StoryTab components`));
+    try {
+      const numOfCreatedStoryTabComponents = await createStoryTabComponents(
+        storyTabFilesInfo,
+        args.framework,
+        flags.prefix,
+      );
+      this.log(chalk.blue(`Created ${numOfCreatedStoryTabComponents} StoryTab components`));
+    } catch (err) {
+      console.error('Error occurred:', err);
+      this.exit();
+    }
     this.log(chalk.green('Completed!'));
-    this.exit();
   }
 }
