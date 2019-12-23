@@ -22,8 +22,11 @@ Install:
 
 To generate StoryTab components in your project:
 
-- name files as **`[filename].storytab.[ext]`**
-- from your terminal cd into your project and run **`$ storytab generate react`**
+- name files as:
+  - **`[filename].storytab.[ext]`**
+- from your terminal:
+  - cd into your project
+  - run **`$ storytab generate react`**
 
 Import generated StoryTab components into Storybook. 🎉
 
