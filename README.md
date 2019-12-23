@@ -55,46 +55,14 @@ Import generated StoryTab components into Storybook. 🎉
 
 # Commands
 
-<!-- commands -->
-
-- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-- [`storytab help [COMMAND]`](#storytab-help-command)
-
-## `storytab generate FRAMEWORK`
-
-generate documentation
-
-```
-USAGE
-  $ storytab generate FRAMEWORK
-
-ARGUMENTS
-  FRAMEWORK  (react) generate StoryTab for desired framework
-
-OPTIONS
-  --prefix=prefix  [default: _] generate StoryTab components with filename prefix
-```
-
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.11/src/commands/generate.ts)_
-
-## `storytab help [COMMAND]`
-
-display help for storytab
-
-```
-USAGE
-  $ storytab help [COMMAND]
-
-ARGUMENTS
-  COMMAND  command to show help for
-
-OPTIONS
-  --all  see all commands in CLI
-```
-
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
-<!-- commandsstop -->
+- list StoryTab possible commands
+  ```console
+  $ storytab help
+  ```
+- list StoryTab command options
+  ```console
+  $ storytab help [name of command]
+  ```
 
 [npm-url]: https://www.npmjs.com/package/story-tab
 [npm-badge]: https://img.shields.io/npm/v/story-tab.svg
