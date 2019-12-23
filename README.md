@@ -28,25 +28,25 @@ To generate StoryTab components in your project:
 Import generated StoryTab components into Storybook. 🎉
 
 ## Generated StoryTab Files
-By default generated files will be prefixed with `_` for example:  
+- By default generated files will be prefixed with `_` for example:  
 `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`  
-You can set custom prefix with `--prefix` flag:  
+- You can set custom prefix with `--prefix` flag:  
 `$ storytab generate react --prefix=CustomPrefix`
 
-Import generated StoryTab component and use it in story:
-```
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+- Import generated StoryTab component and use it in story:
+  ```jsx
+  import React from 'react';
+  import { storiesOf } from '@storybook/react';
 
-import GreenButton from './_GreenButton';
-import RedButton from './_RedButton';
+  import GreenButton from './_GreenButton';
+  import RedButton from './_RedButton';
 
-const stories = storiesOf('Button', module);
+  const stories = storiesOf('Button', module);
 
-stories
-  .add('Green Button', () => <GreenButton />)
-  .add('Red Button', () => <RedButton />);
-```
+  stories
+    .add('Green Button', () => <GreenButton />)
+    .add('Red Button', () => <RedButton />);
+  ```
 
 <!-- GIF -->
 
