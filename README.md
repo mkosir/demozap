@@ -59,7 +59,7 @@ Import generated StoryTab components into Storybook. 🎉
   ```console
   $ storytab help
   ```
-- list StoryTab command options
+- list StoryTab command details
   ```console
   $ storytab help [name of command]
   ```
