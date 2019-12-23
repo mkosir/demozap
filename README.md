@@ -22,7 +22,7 @@ Install:
 
 To generate StoryTab components in your project:
 
-- name files as:
+-  default export component and name file as:
   - **`[filename].storytab.[ext]`**
 - from your terminal:
   - cd into your project
