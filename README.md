@@ -11,8 +11,8 @@ _Generate documentation in Storybook tab 📑_
 Install:
 
 - StoryTab  
-  &nbsp;&nbsp;npm `npm install story-tab --save-dev`  
-  &nbsp;&nbsp;yarn `yarn add story-tab --dev`
+  &nbsp;&nbsp;npm `npm install story-tab -g | --save-dev` or globally `npm install story-tab -g`  
+  &nbsp;&nbsp;yarn `yarn add story-tab --dev` or globally `yarn global add story-tab`
 - StoryTab Template for intended _framework_:  
   &nbsp;&nbsp;_React_  
   &nbsp;&nbsp;npm `npm install story-tab-template-react --save-dev`  
