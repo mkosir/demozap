@@ -53,7 +53,7 @@ Import generated StoryTab components into Storybook. 🎉
 
 <!-- GIF -->
 
-# Commands
+## Commands
 
 - list StoryTab possible commands
   ```console
