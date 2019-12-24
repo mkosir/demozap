@@ -1,5 +1,6 @@
-import { createStoryTabComponent } from '../02-createStoryTabComponent/createStoryTabComponent';
-import { StoryTabFileMeta, SupportedFrameworks } from '../../../types';
+import { createStoryTabComponent } from './02-createStoryTabComponent/createStoryTabComponent';
+import { getFrameworkTemplatePath } from './01-getFrameworkTemplate/getFrameworkTemplate';
+import { StoryTabFileMeta, SupportedFrameworks } from '../../types';
 
 export const createStoryTabComponents = async (
   storyTabFilesMeta: StoryTabFileMeta[],
@@ -7,16 +8,7 @@ export const createStoryTabComponents = async (
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
-  let storyTabTemplateSourcePath = __dirname + '/../../../../bin/story-tab-template-component';
-
-  switch (framework) {
-    case 'react':
-      storyTabTemplateSourcePath = `${storyTabTemplateSourcePath}/${framework}/template`;
-      break;
-
-    default:
-      throw new Error(`Framework '${framework}' not supported`);
-  }
+  const storyTabTemplateSourcePath = getFrameworkTemplatePath(framework);
 
   await Promise.all(
     storyTabFilesMeta.map(async storyTabFileMeta => {
