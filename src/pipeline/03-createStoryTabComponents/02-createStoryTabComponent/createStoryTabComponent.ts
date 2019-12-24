@@ -1,7 +1,7 @@
 const fsExtra = require('fs-extra');
 
-import { replaceStoryTabTemplateContent } from './replaceStoryTabTemplateContent';
-import { StoryTabFileMeta } from '../../types';
+import { replaceStoryTabTemplateContent } from '../03-replaceStoryTabTemplateContent/replaceStoryTabTemplateContent';
+import { StoryTabFileMeta } from '../../../types';
 
 export const createStoryTabComponent = async (
   storyTabFileMeta: StoryTabFileMeta,

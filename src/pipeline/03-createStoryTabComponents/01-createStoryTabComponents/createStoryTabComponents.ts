@@ -1,5 +1,5 @@
-import { createStoryTabComponent } from './createStoryTabComponent';
-import { StoryTabFileMeta, SupportedFrameworks } from '../../types';
+import { createStoryTabComponent } from '../02-createStoryTabComponent/createStoryTabComponent';
+import { StoryTabFileMeta, SupportedFrameworks } from '../../../types';
 
 export const createStoryTabComponents = async (
   storyTabFilesMeta: StoryTabFileMeta[],
@@ -7,7 +7,7 @@ export const createStoryTabComponents = async (
 ): Promise<number> => {
   let numOfCreatedStoryTabComponents = 0;
 
-  let storyTabTemplateSourcePath = __dirname + '/../../../bin/story-tab-template-component';
+  let storyTabTemplateSourcePath = __dirname + '/../../../../bin/story-tab-template-component';
 
   switch (framework) {
     case 'react':

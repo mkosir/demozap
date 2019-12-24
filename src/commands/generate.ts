@@ -3,7 +3,7 @@ const chalk = require('chalk');
 
 import { getStoryTabFilePaths } from '../pipeline/01-getStoryTabFilePaths/getStoryTabFilePaths';
 import { createStoryTabFilesMeta } from '../pipeline/02-createStoryTabFilesMeta/createStoryTabFilesMeta';
-import { createStoryTabComponents } from '../pipeline/03-createStoryTabComponents/createStoryTabComponents';
+import { createStoryTabComponents } from '../pipeline/03-createStoryTabComponents/01-createStoryTabComponents/createStoryTabComponents';
 
 export default class Generate extends Command {
   static description = 'generate documentation';
