@@ -12,8 +12,7 @@ export const createStoryTabComponents = async (
 
   await Promise.all(
     storyTabFilesMeta.map(async storyTabFileMeta => {
-      const storyTabTemplate = `${storyTabTemplateSourcePath}.${storyTabFileMeta.code.filename.ext}`;
-      await createStoryTabComponent(storyTabFileMeta, storyTabTemplate);
+      await createStoryTabComponent(storyTabFileMeta, storyTabTemplateSourcePath);
       numOfCreatedStoryTabComponents++;
     }),
   );

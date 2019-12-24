@@ -7,6 +7,7 @@ export const createStoryTabComponent = async (
   storyTabFileMeta: StoryTabFileMeta,
   storyTabTemplateSourcePath: string,
 ) => {
-  await fsExtra.copy(storyTabTemplateSourcePath, storyTabFileMeta.path);
+  const storyTabTemplate = `${storyTabTemplateSourcePath}.${storyTabFileMeta.code.filename.ext}`;
+  await fsExtra.copy(storyTabTemplate, storyTabFileMeta.path);
   replaceStoryTabTemplateContent(storyTabFileMeta);
 };
