@@ -1,5 +1,5 @@
-import { findAssociateStoryTabFilesByName } from './utils/findAssociateStoryTabFilesByName';
-import { extractStoryTabFilePathInfo } from './utils/extractStoryTabFilePathInfo';
+import { extractStoryTabFilePathInfo } from './01-extractStoryTabFilePathInfo/extractStoryTabFilePathInfo';
+import { findAssociateStoryTabFilesByName } from './02-findAssociateStoryTabFilesByName/findAssociateStoryTabFilesByName';
 import { StoryTabFileMeta } from '../../types';
 
 const createStoryTabFileMeta = (
