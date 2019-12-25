@@ -3,9 +3,9 @@
 _Generate documentation in Storybook tab 📑_
 
 [![npm version][npm-badge]][npm-url]
-[![Build Status][build-badge]][build-url]
+[![build status][build-badge]][build-url]
 [![oclif][oclif-badge]](oclif-url)
-![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)
+[![storybook][storybook-badge]](storybook-url)
 
 ## Install
 
@@ -71,3 +71,5 @@ Import generated StoryTab components into Storybook. 🎉
 [build-url]: https://travis-ci.com/mkosir/story-tab
 [oclif-badge]: https://img.shields.io/badge/cli-oclif-brightgreen.svg
 [oclif-url]: https://oclif.io
+[storybook-badge]: https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg
+[storybook-url]: https://github.com/storybookjs/storybook
