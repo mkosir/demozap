@@ -1,21 +1,21 @@
-import { createStoryTabComponent } from './02-createStoryTabComponent/createStoryTabComponent';
 import { getFrameworkTemplatePath } from './01-getFrameworkTemplate/getFrameworkTemplate';
+import { createStoryTabTemplate } from './02-createStoryTabTemplate/createStoryTabTemplate';
 import { StoryTabFileMeta, SupportedFrameworks } from '../../types';
 
-export const createStoryTabComponents = async (
+export const createStoryTabTemplates = async (
   storyTabFilesMeta: StoryTabFileMeta[],
   framework: SupportedFrameworks,
 ): Promise<number> => {
-  let numOfCreatedStoryTabComponents = 0;
+  let numOfCreatedStoryTabTemplates = 0;
 
   const storyTabTemplateSourcePath = getFrameworkTemplatePath(framework);
 
   await Promise.all(
     storyTabFilesMeta.map(async storyTabFileMeta => {
-      await createStoryTabComponent(storyTabFileMeta, storyTabTemplateSourcePath);
-      numOfCreatedStoryTabComponents++;
+      await createStoryTabTemplate(storyTabFileMeta, storyTabTemplateSourcePath);
+      numOfCreatedStoryTabTemplates++;
     }),
   );
 
-  return numOfCreatedStoryTabComponents;
+  return numOfCreatedStoryTabTemplates;
 };

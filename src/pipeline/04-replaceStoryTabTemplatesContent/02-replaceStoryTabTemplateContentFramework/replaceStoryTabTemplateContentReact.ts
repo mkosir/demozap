@@ -4,7 +4,7 @@ const replace = require('replace-in-file');
 import { escapeFileContent } from './escapeFileContent';
 import { StoryTabFileMeta } from '../../../types';
 
-export const replaceStoryTabTemplateContent = async (storyTabFileMeta: StoryTabFileMeta) => {
+export const replaceStoryTabTemplateContentReact = async (storyTabFileMeta: StoryTabFileMeta) => {
   const replacePropStyle = storyTabFileMeta.style.path ? ` style={style}` : '';
   const replacePropCodeExt = ` codeExt="${storyTabFileMeta.code.filename.ext}"`;
   const replacePropStyleExt = storyTabFileMeta.style.filename.ext

@@ -3,7 +3,8 @@ const chalk = require('chalk');
 
 import { getStoryTabFilePaths } from '../pipeline/01-getStoryTabFilePaths/getStoryTabFilePaths';
 import { createStoryTabFilesMeta } from '../pipeline/02-createStoryTabFilesMeta/createStoryTabFilesMeta';
-import { createStoryTabComponents } from '../pipeline/03-createStoryTabComponents/createStoryTabComponents';
+import { createStoryTabTemplates } from '../pipeline/03-createStoryTabTemplates/createStoryTabTemplates';
+import { replaceStoryTabTemplatesContent } from '../pipeline/04-replaceStoryTabTemplatesContent/replaceStoryTabTemplatesContent';
 
 export default class Generate extends Command {
   static description = 'generate documentation';
@@ -29,6 +30,7 @@ export default class Generate extends Command {
 
     const frameworkCapitalize = args.framework[0].toUpperCase() + args.framework.slice(1);
     this.log(chalk.blue(`Generating Storytab for ${frameworkCapitalize}...`));
+
     const { storyTabCodeFilePaths, storyTabStyleFilePaths } = getStoryTabFilePaths();
     this.log(
       chalk.blue(
@@ -38,21 +40,39 @@ export default class Generate extends Command {
         }, style: ${storyTabStyleFilePaths.length})`,
       ),
     );
+
     const storyTabFilesInfo = createStoryTabFilesMeta(
       storyTabCodeFilePaths,
       storyTabStyleFilePaths,
       flags.prefix,
     );
+
     try {
-      const numOfCreatedStoryTabComponents = await createStoryTabComponents(
+      const numOfCreatedStoryTabTemplates = await createStoryTabTemplates(
         storyTabFilesInfo,
         args.framework,
       );
-      this.log(chalk.blue(`Created ${numOfCreatedStoryTabComponents} StoryTab components`));
+      this.log(chalk.blue(`Created ${numOfCreatedStoryTabTemplates} StoryTab templates`));
     } catch (err) {
       console.error('Error occurred:', err);
       this.exit();
     }
+
+    try {
+      const numOfReplacedStoryTabTemplatesContent = await replaceStoryTabTemplatesContent(
+        storyTabFilesInfo,
+        args.framework,
+      );
+      this.log(
+        chalk.blue(
+          `Content replaced in ${numOfReplacedStoryTabTemplatesContent} StoryTab templates`,
+        ),
+      );
+    } catch (err) {
+      console.error('Error occurred:', err);
+      this.exit();
+    }
+
     this.log(chalk.green('Completed!'));
   }
 }
