@@ -50,12 +50,12 @@ Import generated StoryTab components into Storybook. 🎉
   import React from 'react';
   import { storiesOf } from '@storybook/react';
 
-  import GreenButton from './_GreenButton';
-  import RedButton from './_RedButton';
+  import ButtonGreen from './_ButtonGreen';
+  import ButtonRed from './_ButtonRed';
 
   const stories = storiesOf('Button', module);
 
-  stories.add('Green Button', () => <GreenButton />).add('Red Button', () => <RedButton />);
+  stories.add('Green Button', () => <ButtonGreen />).add('Red Button', () => <ButtonRed />);
   ```
 
 ## Commands
