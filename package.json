@@ -13,6 +13,7 @@
     "lint-prettier": "prettier --config .prettierrc -l  src/**/*.ts{,x}",
     "prettier": "prettier --config .prettierrc --write src/**/*.ts{,x}",
     "validate": "npm run lint && npm run lint-prettier && npm run build",
+    "storybook": "start-storybook -p 9009 -s public --quiet",
     "test-storytab-react": "./bin/run generate react"
   },
   "bin": {
@@ -38,9 +39,11 @@
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.22.2",
+    "@storybook/react": "^5.2.8",
     "@types/node": "^10.17.9",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^5.16.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.1.0",
