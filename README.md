@@ -5,6 +5,8 @@ _Generate documentation in Storybook tab 📑_
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![npm version][npm-badge]][npm-url]
 [![TypeScript][typescript-badge]][typescript-url]
+![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)
+<img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true">
 
 ## Install
 
