@@ -2,11 +2,10 @@
 
 _Generate documentation in Storybook tab 📑_
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![npm version][npm-badge]][npm-url]
-[![TypeScript][typescript-badge]][typescript-url]
+[![Build Status][build-badge]][build-url]
+[![oclif][oclif-badge]](oclif-url)
 ![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)
-<img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true">
 
 ## Install
 
@@ -33,12 +32,14 @@ To generate StoryTab components in your project:
 Import generated StoryTab components into Storybook. 🎉
 
 ## Generated StoryTab Files
+
 - By default generated files will be prefixed with `_` for example:  
-`MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`  
+  `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
-`$ storytab generate react --prefix=CustomPrefix`
+  `$ storytab generate react --prefix=CustomPrefix`
 
 - Import generated StoryTab component and use it in story:
+
   ```jsx
   import React from 'react';
   import { storiesOf } from '@storybook/react';
@@ -48,9 +49,7 @@ Import generated StoryTab components into Storybook. 🎉
 
   const stories = storiesOf('Button', module);
 
-  stories
-    .add('Green Button', () => <GreenButton />)
-    .add('Red Button', () => <RedButton />);
+  stories.add('Green Button', () => <GreenButton />).add('Red Button', () => <RedButton />);
   ```
 
 <!-- GIF -->
@@ -66,7 +65,9 @@ Import generated StoryTab components into Storybook. 🎉
   $ storytab help [name of command]
   ```
 
-[npm-url]: https://www.npmjs.com/package/story-tab
 [npm-badge]: https://img.shields.io/npm/v/story-tab.svg
-[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
-[typescript-url]: https://github.com/microsoft/TypeScript
+[npm-url]: https://www.npmjs.com/package/story-tab
+[build-badge]: https://travis-ci.com/mkosir/story-tab.svg
+[build-url]: https://travis-ci.com/mkosir/story-tab
+[oclif-badge]: https://img.shields.io/badge/cli-oclif-brightgreen.svg
+[oclif-url]: https://oclif.io
