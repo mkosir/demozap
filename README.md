@@ -19,6 +19,10 @@ Install:
   &nbsp;&nbsp;npm `npm install story-tab-template-react --save-dev`  
   &nbsp;&nbsp;yarn `yarn add story-tab-template-react --dev`
 
+## Demo
+
+**[StoryTab live demo](https://mkosir.github.io/story-tab)**
+
 ## Usage
 
 To generate StoryTab components in your project:
