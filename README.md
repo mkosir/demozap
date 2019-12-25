@@ -1,11 +1,13 @@
 # StoryTab 📑
 
-_Generate documentation in Storybook tab 📑_
-
 [![npm version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
 [![oclif][oclif-badge]][oclif-url]
 [![storybook][storybook-badge]][storybook-url]
+
+_Generate documentation in Storybook tab 📑_
+
+<!-- GIF -->
 
 ## Install
 
@@ -56,8 +58,6 @@ Import generated StoryTab components into Storybook. 🎉
   stories.add('Green Button', () => <GreenButton />).add('Red Button', () => <RedButton />);
   ```
 
-<!-- GIF -->
-
 ## Commands
 
 - list StoryTab possible commands
@@ -68,6 +68,10 @@ Import generated StoryTab components into Storybook. 🎉
   ```console
   $ storytab help [name of command]
   ```
+
+## License
+
+[MIT](LICENSE)
 
 [npm-badge]: https://img.shields.io/npm/v/story-tab.svg
 [npm-url]: https://www.npmjs.com/package/story-tab
