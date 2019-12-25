@@ -13,8 +13,8 @@ _Generate documentation in Storybook tab 📑_
 Install:
 
 - StoryTab  
-  &nbsp;&nbsp;npm `npm install story-tab --save-dev`  
-  &nbsp;&nbsp;yarn `yarn add story-tab --dev`
+  &nbsp;&nbsp;npm `npm install story-tab --save-dev` or globally `npm install story-tab -g`  
+  &nbsp;&nbsp;yarn `yarn add story-tab --dev` or globally `yarn global add story-tab`
 - StoryTab Template for intended _framework_:  
   &nbsp;&nbsp;_React_  
   &nbsp;&nbsp;npm `npm install story-tab-template-react --save-dev`  
@@ -24,59 +24,47 @@ Install:
 
 To generate StoryTab components in your project:
 
-- name files as **`[file name].storytab.[ext]`**
-- from your terminal cd into your project and run **`$ storytab generate react`**
+- default export component and name file as:
+  - **`[filename].storytab.[ext]`**
+- from your terminal:
+  - cd into your project
+  - run **`$ storytab generate react`**
 
 Import generated StoryTab components into Storybook. 🎉
 
-**Generated StoryTab Files**  
-By default generated files will be prefixed with `_` for example:  
+## Generated StoryTab Files
+- By default generated files will be prefixed with `_` for example:  
 `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`  
-You can set custom prefix with `--prefix` flag:  
+- You can set custom prefix with `--prefix` flag:  
 `$ storytab generate react --prefix=CustomPrefix`
 
-# Commands
+- Import generated StoryTab component and use it in story:
+  ```jsx
+  import React from 'react';
+  import { storiesOf } from '@storybook/react';
 
-<!-- commands -->
+  import GreenButton from './_GreenButton';
+  import RedButton from './_RedButton';
 
-- [`storytab generate FRAMEWORK`](#storytab-generate-framework)
-- [`storytab help [COMMAND]`](#storytab-help-command)
+  const stories = storiesOf('Button', module);
 
-## `storytab generate FRAMEWORK`
+  stories
+    .add('Green Button', () => <GreenButton />)
+    .add('Red Button', () => <RedButton />);
+  ```
 
-generate documentation
+<!-- GIF -->
 
-```
-USAGE
-  $ storytab generate FRAMEWORK
+## Commands
 
-ARGUMENTS
-  FRAMEWORK  (react) generate StoryTab for desired framework
-
-OPTIONS
-  --prefix=prefix  [default: _] generate StoryTab components with filename prefix
-```
-
-_See code: [src/commands/generate.ts](https://github.com/mkosir/story-tab/blob/v1.0.11/src/commands/generate.ts)_
-
-## `storytab help [COMMAND]`
-
-display help for storytab
-
-```
-USAGE
-  $ storytab help [COMMAND]
-
-ARGUMENTS
-  COMMAND  command to show help for
-
-OPTIONS
-  --all  see all commands in CLI
-```
-
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.2/src/commands/help.ts)_
-
-<!-- commandsstop -->
+- list StoryTab possible commands
+  ```console
+  $ storytab help
+  ```
+- list StoryTab command details
+  ```console
+  $ storytab help [name of command]
+  ```
 
 [npm-url]: https://www.npmjs.com/package/story-tab
 [npm-badge]: https://img.shields.io/npm/v/story-tab.svg
