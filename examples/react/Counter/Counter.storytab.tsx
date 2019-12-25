@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-class EscapeStringComponent extends PureComponent {
+class Counter extends PureComponent {
   state = {
     count: 0,
   };
@@ -14,14 +14,20 @@ class EscapeStringComponent extends PureComponent {
   render() {
     const { count } = this.state;
     const msg = `Button clicked ${count} ${count > 1 ? 'times' : 'time'}`;
+    const marginBottom = 10;
 
     return (
       <>
-        <button onClick={this.onClickHandler}>Click</button>
+        <button
+          style={{ fontSize: 16, padding: '5px 15px', marginBottom: `${marginBottom}px` }}
+          onClick={this.onClickHandler}
+        >
+          Click
+        </button>
         <div>{msg}</div>
       </>
     );
   }
 }
 
-export default EscapeStringComponent;
+export default Counter;

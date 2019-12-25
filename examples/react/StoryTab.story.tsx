@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Default from './Default/_Default';
 import ButtonGreen from './ButtonGreen/_ButtonGreen';
 import ButtonRed from './ButtonRed/_ButtonRed';
-import EscapeStringComponent from './EscapeStringComponent/_EscapeStringComponent';
+import Counter from './Counter/_Counter';
 
 import './StoryTab.scss';
 
@@ -14,4 +14,4 @@ stories
   .add('Default', () => <Default />)
   .add('Button Green - .jsx/.css', () => <ButtonGreen />)
   .add('Button Red - .tsx/.scss', () => <ButtonRed />)
-  .add('Escape String Component', () => <EscapeStringComponent />);
+  .add('Counter', () => <Counter />);
