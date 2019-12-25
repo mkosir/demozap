@@ -14,6 +14,7 @@
     "prettier": "prettier --config .prettierrc --write src/**/*.ts{,x}",
     "validate": "npm run lint && npm run lint-prettier && npm run build",
     "storybook": "start-storybook -p 9009 -s public --quiet",
+    "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
     "generate-examples-react": "./bin/run generate react"
   },
   "bin": {
