@@ -4,6 +4,7 @@ import theme from './config-theme';
 addParameters({
   options: {
     theme: theme,
+    storySort: (a, b) => a[1].id.localeCompare(b[1].id),
     /**
      * display panel that shows addon configurations
      * @type {Boolean}
