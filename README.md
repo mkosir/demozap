@@ -4,8 +4,8 @@ _Generate documentation in Storybook tab 📑_
 
 [![npm version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
-[![oclif][oclif-badge]](oclif-url)
-[![storybook][storybook-badge]](storybook-url)
+[![oclif][oclif-badge]][oclif-url]
+[![storybook][storybook-badge]][storybook-url]
 
 ## Install
 
