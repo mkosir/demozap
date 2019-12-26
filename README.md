@@ -16,10 +16,10 @@ Install:
 - StoryTab  
   &nbsp;&nbsp;npm `npm install story-tab --save-dev` or globally `npm install story-tab -g`  
   &nbsp;&nbsp;yarn `yarn add story-tab --dev` or globally `yarn global add story-tab`
-- StoryTab Template for intended _framework_:  
+- StoryTab for _framework_ that you are using:  
   &nbsp;&nbsp;_React_  
-  &nbsp;&nbsp;npm `npm install story-tab-template-react --save-dev`  
-  &nbsp;&nbsp;yarn `yarn add story-tab-template-react --dev`
+  &nbsp;&nbsp;npm `npm install story-tab-react --save-dev`  
+  &nbsp;&nbsp;yarn `yarn add story-tab-react --dev`
 
 ## Demo
 
