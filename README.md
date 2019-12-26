@@ -6,8 +6,7 @@
 [![storybook][storybook-badge]][storybook-url]
 
 _Generate documentation in Storybook tab 📑_
-
-<!-- GIF -->
+![](demo.gif)
 
 ## Install
 
