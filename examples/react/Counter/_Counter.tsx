@@ -38,8 +38,6 @@ class Counter extends PureComponent {
 export default Counter;
 `;
 
-
-
 const _Counter = () => (
   <StoryTabTemplate code={code} codeExt="tsx">
     <Demo />

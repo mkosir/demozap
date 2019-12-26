@@ -11,7 +11,7 @@
     "version": "oclif-dev readme && git add README.md",
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/",
     "lint-prettier": "prettier --config .prettierrc -l  src/**/*.ts{,x}",
-    "prettier": "prettier --config .prettierrc --write src/**/*.ts{,x}",
+    "prettier": "prettier --config .prettierrc --write {src,examples}/**/**/*",
     "validate": "npm run lint && npm run lint-prettier && npm run build",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
@@ -51,12 +51,25 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "globby": "^10.0.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",
     "story-tab-template-react": "^1.0.8",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "engines": {
     "node": ">=8.0.0"

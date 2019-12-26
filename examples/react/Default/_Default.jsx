@@ -10,8 +10,6 @@ const Default = () => <div>StoryTab 📑 - Default Example</div>;
 export default Default;
 `;
 
-
-
 const _Default = () => (
   <StoryTabTemplate code={code} codeExt="jsx">
     <Demo />
