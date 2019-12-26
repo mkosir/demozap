@@ -1,7 +1,7 @@
 {
   "name": "story-tab",
   "description": "Generate documentation in Storybook tab",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -15,7 +15,7 @@
     "validate": "npm run lint && npm run lint-prettier && npm run build",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
-    "generate-examples-react": "./bin/run generate react"
+    "generate-examples-react": "./bin/run generate react --prefix=_"
   },
   "bin": {
     "storytab": "./bin/run"
@@ -56,13 +56,13 @@
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",
-    "story-tab-template-react": "^1.0.8",
+    "story-tab-react": "^1.0.9",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "prettier --config .prettierrc --write",
+    "{src,examples}/**/**/*": [
+      "prettier --config .prettierrc --write ",
       "git add"
     ]
   },
