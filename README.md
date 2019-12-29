@@ -5,9 +5,13 @@
 [![oclif][oclif-badge]][oclif-url]
 [![storybook][storybook-badge]][storybook-url]
 
-_Generate documentation in Storybook tab 📑_
+_Generate component code as documentation in Storybook tab 📑_
 
 ![](demo.gif)
+
+Use StoryTab and keep your documentation up to date 💪  
+Maintaining code and documentation separately makes it painful 🙅  
+Code can't lie, documentation can. It's way too easy to get them out of sync 💥
 
 ## Install
 
