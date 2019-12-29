@@ -9,10 +9,10 @@ _Generate component code as documentation in Storybook tab 📑_
 
 ![](demo.gif)
 
-<p style="text-align: center;">Maintaining code and documentation separately makes it painful, it's easy to get them out of sync 🙅
+<p align="center">Maintaining code and documentation separately makes it painful, it's easy to get them out of sync 🙅
 </p>
-<p style="text-align: center;">Code can't lie, documentation can 💥</p>
-<p style="text-align: center;">StoryTab keeps your documentation up to date 💪</p>
+<p align="center">Code can't lie, documentation can 💥</p>
+<p align="center">StoryTab keeps your documentation up to date 💪</p>
 
 ## Install
 
