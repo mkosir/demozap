@@ -75,6 +75,12 @@ Import generated StoryTab components into Storybook. 🎉
   $ storytab help [name of command]
   ```
 
+## Example Projects Utilizing StoryTab
+
+- React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [StoryTab](https://mkosir.github.io/react-parallax-tilt)
+- Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [StoryTab](https://mkosir.github.io/react-hook-mighty-mouse)
+- Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [StoryTab](https://mkosir.github.io/react-magnetic-board)
+
 ## License
 
 [MIT](LICENSE)
