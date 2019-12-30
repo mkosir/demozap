@@ -7,12 +7,12 @@ import { createStoryTabTemplates } from '../pipeline/03-createStoryTabTemplates/
 import { replaceStoryTabTemplatesContent } from '../pipeline/04-replaceStoryTabTemplatesContent/replaceStoryTabTemplatesContent';
 
 export default class Generate extends Command {
-  static description = 'generate documentation';
+  static description = 'generate component code as documentation with StoryTab';
 
   static args = [
     {
       name: 'framework',
-      description: 'generate StoryTab for desired framework',
+      description: 'generate StoryTab component for desired framework',
       required: true,
       options: ['react'],
     },
