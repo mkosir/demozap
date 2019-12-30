@@ -66,11 +66,32 @@ Import generated StoryTab components into Storybook. 🎉
 
 ## Commands
 
-- list StoryTab possible commands
+- Generate component code as documentation in Storybook tab
+
+  ```console
+  $ storytab generate [framework]
+  ```
+
+  Arguments:  
+  `framework` - generate StoryTab component for desired framework ['react']  
+  Options:  
+  `--prefix` - generate StoryTab components with filename prefix (default `'_'`)
+
+  ```
+  $ storytab generate [framework]
+
+  Arguments:
+  `framework` - generate StoryTab component for desired framework ['react']
+  Options:
+  `--prefix` - generate StoryTab components with filename prefix (default `'_'`)
+  ```
+
+* List StoryTab possible commands
   ```console
   $ storytab help
   ```
-- list StoryTab command details
+* List StoryTab command details
+
   ```console
   $ storytab help [name of command]
   ```
