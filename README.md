@@ -15,17 +15,15 @@ Code can't lie, documentation can 💥
 
 StoryTab keeps your documentation up to date 💪
 
-## Install
+## Installation
 
-Install:
+```bash
+# Instal StoryTab
+$ npm install story-tab --save-dev
 
-- StoryTab  
-  &nbsp;&nbsp;npm `npm install story-tab --save-dev` or globally `npm install story-tab -g`  
-  &nbsp;&nbsp;yarn `yarn add story-tab --dev` or globally `yarn global add story-tab`
-- StoryTab for _framework_ that you are using:  
-  &nbsp;&nbsp;_React_  
-  &nbsp;&nbsp;npm `npm install story-tab-react --save-dev`  
-  &nbsp;&nbsp;yarn `yarn add story-tab-react --dev`
+# And one of the following (depending on the used framework):
+$ npm install story-tab-react --save-dev # React
+```
 
 ## Demo
 
@@ -35,7 +33,7 @@ Install:
 
 To generate StoryTab components in your project:
 
-- default export component and name file as:
+- default export component and name files as:
   - **`[filename].storytab.[ext]`**
 - from your terminal:
   - cd into your project
