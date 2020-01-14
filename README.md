@@ -1,11 +1,11 @@
-# StoryTab 📑
+# React DocTab 📑
 
 [![npm version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
 [![oclif][oclif-badge]][oclif-url]
 [![storybook][storybook-badge]][storybook-url]
 
-_Generate component code as documentation in Storybook tab 📑_
+_Generate React component code as documentation tabs 📑_
 
 ![](demo.gif)
 
@@ -27,11 +27,11 @@ $ npm install story-tab-react --save-dev # React
 
 ## Demo
 
-**[StoryTab live demo](https://mkosir.github.io/story-tab)**
+**[DocTab live demo](https://mkosir.github.io/story-tab)**
 
 ## Usage
 
-To generate StoryTab components in your project:
+To generate DocTab components in your project:
 
 - default export component and name files as:
   - **`[filename].storytab.[ext]`**
@@ -41,10 +41,10 @@ To generate StoryTab components in your project:
 
 Import generated StoryTab components into Storybook. 🎉
 
-## Generated StoryTab Files
+## Generated DocTab Files
 
 - By default generated files will be prefixed with `_` for example:  
-  `MyComponent.storytab.jsx` & `MyComponent.storytab.css` -> `_MyComponent.jsx`
+  `MyComponent.doctab.jsx` & `MyComponent.doctab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
   `$ storytab generate react --prefix=CustomPrefix`
 
@@ -64,7 +64,7 @@ Import generated StoryTab components into Storybook. 🎉
 
 ## Commands
 
-- Generate component code as documentation in Storybook tab
+- Generate component code as documentation tabs
 
   ```
   $ storytab generate [framework]
@@ -85,11 +85,11 @@ Import generated StoryTab components into Storybook. 🎉
   $ storytab help [name of command]
   ```
 
-## Built with StoryTab
+## Built with DocTab
 
-- React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [StoryTab](https://mkosir.github.io/react-parallax-tilt)
-- Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [StoryTab](https://mkosir.github.io/react-hook-mighty-mouse)
-- Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [StoryTab](https://mkosir.github.io/react-magnetic-board)
+- React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [DocTab](https://mkosir.github.io/react-parallax-tilt)
+- Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [DocTab](https://mkosir.github.io/react-hook-mighty-mouse)
+- Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [DocTab](https://mkosir.github.io/react-magnetic-board)
 
 ## License
 
