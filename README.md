@@ -18,11 +18,8 @@ StoryTab keeps your documentation up to date 💪
 ## Installation
 
 ```bash
-# Instal StoryTab
-$ npm install story-tab --save-dev
-
-# And one of the following (depending on the used framework):
-$ npm install story-tab-react --save-dev # React
+$ npm install doc-tab --save-dev
+$ npm install doc-tab-react --save-dev
 ```
 
 ## Demo
@@ -37,52 +34,36 @@ To generate DocTab components in your project:
   - **`[filename].storytab.[ext]`**
 - from your terminal:
   - cd into your project
-  - run **`$ storytab generate react`**
+  - run **`$ doctab generate`**
 
-Import generated StoryTab components into Storybook. 🎉
+Import generated DocTab components. 🎉
 
 ## Generated DocTab Files
 
 - By default generated files will be prefixed with `_` for example:  
   `MyComponent.doctab.jsx` & `MyComponent.doctab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
-  `$ storytab generate react --prefix=CustomPrefix`
-
-- Import generated StoryTab component and use it in story:
-
-  ```jsx
-  import React from 'react';
-  import { storiesOf } from '@storybook/react';
-
-  import ButtonGreen from './_ButtonGreen';
-  import ButtonRed from './_ButtonRed';
-
-  const stories = storiesOf('Button', module);
-
-  stories.add('Green Button', () => <ButtonGreen />).add('Red Button', () => <ButtonRed />);
-  ```
+  `$ storytab generate --prefix=CustomPrefix`
 
 ## Commands
 
 - Generate component code as documentation tabs
 
   ```
-  $ storytab generate [framework]
+  $ storytab generate
   ```
-
-  Arguments:  
-  `framework` - generate StoryTab component for desired framework ['react']  
+  
   Options:  
   `--prefix` - generate StoryTab components with filename prefix (default `'_'`)
 
-- List StoryTab possible commands
+- List DocTab possible commands
   ```
-  $ storytab help
+  $ doctab help
   ```
-- List StoryTab command details
+- List DocTab command details
 
   ```
-  $ storytab help [name of command]
+  $ doctab help [name of command]
   ```
 
 ## Built with DocTab
