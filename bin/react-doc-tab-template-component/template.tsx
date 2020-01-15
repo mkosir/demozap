@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './@FILENAME.storytab';
+import Demo from './@FILENAME.doctab';
 
 const code = `@CODE`;
 
