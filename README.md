@@ -3,7 +3,7 @@
 [![npm version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
 [![oclif][oclif-badge]][oclif-url]
-[![storybook][storybook-badge]][storybook-url]
+[![prettier][prettier-badge]][prettier-url]
 
 _Generate React component code as documentation tabs 📑_
 
@@ -13,25 +13,27 @@ Maintaining code and documentation separately makes it painful, it's easy to get
 
 Code can't lie, documentation can 💥
 
-StoryTab keeps your documentation up to date 💪
+DocTab keeps your documentation up to date 💪
 
-## Installation
+## Install
 
-```bash
-$ npm install doc-tab --save-dev
-$ npm install doc-tab-react --save-dev
-```
+- npm  
+  `npm install react-doc-tab --save-dev`  
+  `npm install react-doc-tab-template --save-dev`
+- yarn  
+  `yarn add react-doc-tab --save-dev`  
+  `yarn add react-doc-tab-template --save-dev`
 
 ## Demo
 
-**[DocTab live demo](https://mkosir.github.io/story-tab)**
+**[DocTab live demo](https://mkosir.github.io/react-doc-tab)**
 
 ## Usage
 
 To generate DocTab components in your project:
 
 - default export component and name files as:
-  - **`[filename].storytab.[ext]`**
+  - **`[filename].doctab.[ext]`**
 - from your terminal:
   - cd into your project
   - run **`$ doctab generate`**
@@ -43,28 +45,7 @@ Import generated DocTab components. 🎉
 - By default generated files will be prefixed with `_` for example:  
   `MyComponent.doctab.jsx` & `MyComponent.doctab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
-  `$ storytab generate --prefix=CustomPrefix`
-
-## Commands
-
-- Generate component code as documentation tabs
-
-  ```
-  $ storytab generate
-  ```
-  
-  Options:  
-  `--prefix` - generate StoryTab components with filename prefix (default `'_'`)
-
-- List DocTab possible commands
-  ```
-  $ doctab help
-  ```
-- List DocTab command details
-
-  ```
-  $ doctab help [name of command]
-  ```
+  `$ doctab generate --prefix=CustomPrefix`
 
 ## Built with DocTab
 
@@ -76,11 +57,11 @@ Import generated DocTab components. 🎉
 
 [MIT](LICENSE)
 
-[npm-badge]: https://img.shields.io/npm/v/story-tab.svg
-[npm-url]: https://www.npmjs.com/package/story-tab
-[build-badge]: https://travis-ci.com/mkosir/story-tab.svg
-[build-url]: https://travis-ci.com/mkosir/story-tab
+[npm-badge]: https://img.shields.io/npm/v/react-doc-tab.svg
+[npm-url]: https://www.npmjs.com/package/react-doc-tab
+[build-badge]: https://travis-ci.com/mkosir/react-doc-tab.svg
+[build-url]: https://travis-ci.com/mkosir/react-doc-tab
 [oclif-badge]: https://img.shields.io/badge/cli-oclif-brightgreen.svg
 [oclif-url]: https://oclif.io
-[storybook-badge]: https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg
-[storybook-url]: https://github.com/storybookjs/storybook
+[prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[prettier-url]: https://github.com/prettier/prettier
