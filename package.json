@@ -1,7 +1,7 @@
 {
-  "name": "story-tab",
-  "description": "Generate documentation in Storybook tab",
-  "version": "1.0.21",
+  "name": "react-doc-tab",
+  "description": "Generate React component code as documentation tabs",
+  "version": "1.0.22",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -15,7 +15,7 @@
     "validate": "npm run lint && npm run lint-prettier && npm run build",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
-    "generate-examples-react": "./bin/run generate react --prefix=_"
+    "generate-examples": "./bin/run generate --prefix=_"
   },
   "bin": {
     "storytab": "./bin/run"
@@ -55,8 +55,8 @@
     "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
+    "react-doc-tab-template": "^1.0.12",
     "sass-loader": "^8.0.0",
-    "story-tab-react": "^1.0.9",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   },
@@ -80,15 +80,15 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/mkosir/story-tab",
-  "bugs": "https://github.com/mkosir/story-tab/issues",
+  "homepage": "https://github.com/mkosir/react-doc-tab",
+  "bugs": "https://github.com/mkosir/react-doc-tab/issues",
   "license": "MIT",
   "author": "Marko Kosir <kosir.mar@gmail.com>",
-  "repository": "mkosir/story-tab",
+  "repository": "mkosir/react-doc-tab",
   "keywords": [
-    "story-tab",
-    "storytab",
-    "storybook",
+    "react-doc-tab",
+    "doc-tab",
+    "doctab",
     "cli",
     "cli-tool",
     "documentation",
