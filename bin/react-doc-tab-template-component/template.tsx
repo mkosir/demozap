@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
+import DocTabTemplate from 'react-doc-tab-template';
 import Demo from './@FILENAME.storytab';
 
 const code = `@CODE`;
@@ -8,9 +8,9 @@ const code = `@CODE`;
 @STYLE
 
 const @COMPONENT_NAME = () => (
-  <StoryTabTemplate code={code}@PROP_STYLE@PROP_CODE_EXT@PROP_STYLE_EXT>
+  <DocTabTemplate code={code}@PROP_STYLE@PROP_CODE_EXT@PROP_STYLE_EXT>
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default @COMPONENT_NAME;
