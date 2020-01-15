@@ -1,7 +1,7 @@
 import React from 'react';
 
 import StoryTabTemplate from 'story-tab-react';
-import Demo from './Counter.storytab';
+import Demo from './Counter.doctab';
 
 const code = `import React, { PureComponent } from 'react';
 

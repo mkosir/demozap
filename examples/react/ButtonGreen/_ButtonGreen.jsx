@@ -1,7 +1,7 @@
 import React from 'react';
 
 import StoryTabTemplate from 'story-tab-react';
-import Demo from './ButtonGreen.storytab';
+import Demo from './ButtonGreen.doctab';
 
 const code = `import React from 'react';
 

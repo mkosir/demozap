@@ -6,9 +6,9 @@ import ButtonGreen from './ButtonGreen/_ButtonGreen';
 import ButtonRed from './ButtonRed/_ButtonRed';
 import Counter from './Counter/_Counter';
 
-import './StoryTab.scss';
+import './DocTab.scss';
 
-const stories = storiesOf('StoryTab 📑 - React', module);
+const stories = storiesOf('DocTab 📑 Examples', module);
 
 stories
   .add('Default', () => <Default />)
