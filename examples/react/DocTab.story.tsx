@@ -8,7 +8,7 @@ import Counter from './Counter/_Counter';
 
 import './DocTab.scss';
 
-const stories = storiesOf('DocTab 📑 Examples', module);
+const stories = storiesOf('React DocTab 📑 Examples', module);
 
 stories
   .add('Default', () => <Default />)
