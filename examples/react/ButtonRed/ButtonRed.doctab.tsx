@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ButtonRed.storytab.scss';
+import './ButtonRed.doctab.scss';
 
 const ButtonRed = () => <button className="btn-red">Red Button</button>;
 
