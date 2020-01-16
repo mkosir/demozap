@@ -15,7 +15,7 @@
     "validate": "npm run lint && npm run lint-prettier && npm run build",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
-    "generate-examples": "./bin/run generate --prefix=_"
+    "generate-examples": "./bin/run generate --prefix=_ && npm run prettier"
   },
   "bin": {
     "doctab": "./bin/run"
