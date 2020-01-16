@@ -1,6 +1,4 @@
-export type SupportedFrameworks = 'react';
-
-export type StoryTabFileMeta = {
+export type DocTabFileMeta = {
   path: string;
   filename: string;
   componentName: string;
