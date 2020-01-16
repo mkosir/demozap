@@ -18,11 +18,11 @@
     "generate-examples": "./bin/run generate --prefix=_"
   },
   "bin": {
-    "storytab": "./bin/run"
+    "doctab": "./bin/run"
   },
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "storytab",
+    "bin": "doctab",
     "plugins": [
       "@oclif/plugin-help"
     ]
