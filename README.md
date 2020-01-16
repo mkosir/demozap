@@ -5,7 +5,7 @@
 [![oclif][oclif-badge]][oclif-url]
 [![prettier][prettier-badge]][prettier-url]
 
-_Generate React component code as documentation tabs 📑_
+_Generate React components as documentation tabs 📑_
 
 ![](demo.gif)
 
