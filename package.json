@@ -1,6 +1,6 @@
 {
   "name": "react-doc-tab",
-  "description": "Generate React component code as documentation tabs",
+  "description": "Generate documentation tabs from React components",
   "version": "1.0.22",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
