@@ -37,10 +37,7 @@ export default class Generate extends Command {
     );
 
     try {
-      const numOfCreatedDocTabTemplates = await createDocTabTemplates(
-        docTabFilesInfo,
-        args.framework,
-      );
+      const numOfCreatedDocTabTemplates = await createDocTabTemplates(docTabFilesInfo);
       this.log(chalk.blue(`Created ${numOfCreatedDocTabTemplates} DocTab templates`));
     } catch (err) {
       console.error('Error occurred:', err);
@@ -50,7 +47,6 @@ export default class Generate extends Command {
     try {
       const numOfReplacedDocTabTemplatesContent = await replaceDocTabTemplatesContent(
         docTabFilesInfo,
-        args.framework,
       );
       this.log(
         chalk.blue(`Content replaced in ${numOfReplacedDocTabTemplatesContent} DocTab templates`),
