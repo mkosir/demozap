@@ -13,7 +13,7 @@ addParameters({
   },
 });
 
-const req = require.context('../examples/react', true, /.story.(tsx?|ts?)$/);
+const req = require.context('../examples', true, /.story.(tsx?|ts?)$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
