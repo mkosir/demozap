@@ -17,12 +17,7 @@ DocTab keeps your documentation up to date 💪
 
 ## Install
 
-- npm  
-  `npm install react-doc-tab --save-dev`  
-  `npm install react-doc-tab-template --save-dev`
-- yarn  
-  `yarn add react-doc-tab --save-dev`  
-  `yarn add react-doc-tab-template --save-dev`
+`npm install -D react-doc-tab react-doc-tab-template`
 
 ## Demo
 
