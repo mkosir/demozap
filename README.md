@@ -17,7 +17,8 @@ DocTab keeps your documentation up to date 💪
 
 ## Install
 
-`npm install -D react-doc-tab react-doc-tab-template`
+Locally &nbsp;&nbsp;`npm install -D react-doc-tab react-doc-tab-template`  
+Globally `npm install -g react-doc-tab react-doc-tab-template`
 
 ## Demo
 
