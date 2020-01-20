@@ -26,10 +26,10 @@ Globally `npm install -g react-doc-tab react-doc-tab-template`
 
 ## Usage
 
-To generate DocTab components in your project:
+To use DocTab in your project:
 
 - default export component 
-- name files as **`[filename].doctab.[ext]`**
+- name file as **`[filename].doctab.[ext]`**
 - run **`$ doctab generate`**
 
 Import generated DocTab components. 🎉
