@@ -5,7 +5,7 @@
 [![oclif][oclif-badge]][oclif-url]
 [![prettier][prettier-badge]][prettier-url]
 
-_Generate React component as **Live Demo** with up to date **Code Example**_
+_Generate React component as **Live Demo & Code Example**_
 
 ![](demo.gif)
 
