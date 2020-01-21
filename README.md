@@ -5,15 +5,15 @@
 [![oclif][oclif-badge]][oclif-url]
 [![prettier][prettier-badge]][prettier-url]
 
-_Generate React components as documentation tabs 📑_
+_Generate React component as **Live Demo** with up to date **Code Example**_
 
 ![](demo.gif)
 
-Maintaining code and documentation separately makes it painful, it's easy to get them out of sync 🙅
+Maintaining example code and live demo separately makes it painful, it's easy to get them out of sync 🙅
 
-Code can't lie, documentation can 💥
+Code can't lie, example code can 💥
 
-DocTab keeps your documentation up to date 💪
+DocTab keeps your example code up to date with live demo 💪
 
 ## Install
 
