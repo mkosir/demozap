@@ -30,7 +30,7 @@ To use DocTab in your project:
 
 - default export component 
 - name file as **`[filename].doctab.[ext]`**
-- run **`$ doctab generate`**
+- run **`$ npx doctab generate`**
 
 Import generated DocTab components. 🎉
 
