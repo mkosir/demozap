@@ -17,8 +17,7 @@ DocTab keeps your example code up to date with live demo 💪
 
 ## Install
 
-Locally &nbsp;&nbsp;`npm install -D react-doc-tab react-doc-tab-template`  
-Globally `npm install -g react-doc-tab react-doc-tab-template`
+`npm install -D react-doc-tab react-doc-tab-template`
 
 ## Demo
 
