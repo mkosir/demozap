@@ -1,5 +1,5 @@
-import { extractDocTabFilePathInfo } from '../02-extractDocTabFilePathInfo/extractDocTabFilePathInfo';
-import { findAssociateDocTabFilesByName } from '../03-findAssociateDocTabFilesByName/findAssociateDocTabFilesByName';
+import { extractDocTabFilePathInfo } from '../02-extractDemoTabFilePathInfo/extractDemoTabFilePathInfo';
+import { findAssociateDocTabFilesByName } from '../03-findAssociateDemoTabFilesByName/findAssociateDemoTabFilesByName';
 
 import { DemoTabFileMeta } from '../../../types';
 

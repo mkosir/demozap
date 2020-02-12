@@ -1,4 +1,4 @@
-import { replaceDocTabTemplateContent } from './01-replaceDocTabTemplateContent/replaceDocTabTemplateContent';
+import { replaceDocTabTemplateContent } from './01-replaceDemoTabTemplateContent/replaceDemoTabTemplateContent';
 import { DemoTabFileMeta } from '../../types';
 
 export const replaceDocTabTemplatesContent = async (

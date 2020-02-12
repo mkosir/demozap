@@ -3,8 +3,8 @@ const chalk = require('chalk');
 
 import { getDocTabFilePaths } from '../pipeline/01-getDocTabFilePaths/getDocTabFilePaths';
 import { createDocTabFilesMeta } from '../pipeline/02-createDocTabFilesMeta/createDocTabFilesMeta';
-import { createDocTabTemplates } from '../pipeline/03-createDocTabTemplates/createDocTabTemplates';
-import { replaceDocTabTemplatesContent } from '../pipeline/04-replaceDocTabTemplatesContent/replaceDocTabTemplatesContent';
+import { createDocTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
+import { replaceDocTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
 
 export default class Generate extends Command {
   static description = 'generate demos with DemoTab';
