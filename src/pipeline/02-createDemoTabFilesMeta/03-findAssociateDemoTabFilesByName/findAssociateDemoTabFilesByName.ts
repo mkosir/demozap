@@ -1,6 +1,6 @@
 const path = require('path');
 
-export const findAssociateDocTabFilesByName = (
+export const findAssociateDemoTabFilesByName = (
   docTabFilePaths: string[],
   filename: string,
 ): string[] | null => {

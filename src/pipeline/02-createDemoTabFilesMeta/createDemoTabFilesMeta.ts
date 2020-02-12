@@ -2,7 +2,7 @@ import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabF
 
 import { DemoTabFileMeta } from '../../types';
 
-export const createDocTabFilesMeta = (
+export const createDemoTabFilesMeta = (
   docTabCodeFilePaths: string[],
   docTabStyleFilePaths: string[],
   prefix: string,

@@ -3,7 +3,7 @@ const glob = require('glob');
 const supportedCodeExt = ['jsx', 'tsx'];
 const supportedStyleExt = ['css', 'scss'];
 
-export const getDocTabFilePaths = (): {
+export const getDemoTabFilePaths = (): {
   docTabCodeFilePaths: string[];
   docTabStyleFilePaths: string[];
 } => {

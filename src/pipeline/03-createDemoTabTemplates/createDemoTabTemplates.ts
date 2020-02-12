@@ -1,10 +1,10 @@
 const fsExtra = require('fs-extra');
 import { DemoTabFileMeta } from '../../types';
 
-export const createDocTabTemplates = async (
+export const createDemoTabTemplates = async (
   docTabFilesMeta: DemoTabFileMeta[],
 ): Promise<number> => {
-  let numOfCreatedDocTabTemplates = 0;
+  let numOfCreatedDemoTabTemplates = 0;
 
   const docTabTemplatePath = __dirname + '/../../../bin/react-doc-tab-template-component/template';
 
@@ -12,9 +12,9 @@ export const createDocTabTemplates = async (
     docTabFilesMeta.map(async DemoTabFileMeta => {
       const docTabTemplate = `${docTabTemplatePath}.${DemoTabFileMeta.code.filename.ext}`;
       await fsExtra.copy(docTabTemplate, DemoTabFileMeta.path);
-      numOfCreatedDocTabTemplates++;
+      numOfCreatedDemoTabTemplates++;
     }),
   );
 
-  return numOfCreatedDocTabTemplates;
+  return numOfCreatedDemoTabTemplates;
 };

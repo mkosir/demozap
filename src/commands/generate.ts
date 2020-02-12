@@ -1,10 +1,10 @@
 import { Command, flags } from '@oclif/command';
 const chalk = require('chalk');
 
-import { getDocTabFilePaths } from '../pipeline/01-getDocTabFilePaths/getDocTabFilePaths';
-import { createDocTabFilesMeta } from '../pipeline/02-createDocTabFilesMeta/createDocTabFilesMeta';
-import { createDocTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
-import { replaceDocTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
+import { getDemoTabFilePaths } from '../pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
+import { createDemoTabFilesMeta } from '../pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
+import { createDemoTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
+import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
 
 export default class Generate extends Command {
   static description = 'generate demos with DemoTab';
@@ -21,7 +21,7 @@ export default class Generate extends Command {
 
     this.log(chalk.blue(`Generating demos...`));
 
-    const { docTabCodeFilePaths, docTabStyleFilePaths } = getDocTabFilePaths();
+    const { docTabCodeFilePaths, docTabStyleFilePaths } = getDemoTabFilePaths();
     this.log(
       chalk.blue(
         `Found ${docTabCodeFilePaths.length + docTabStyleFilePaths.length} DemoTab files (code: ${
@@ -30,26 +30,26 @@ export default class Generate extends Command {
       ),
     );
 
-    const docTabFilesInfo = createDocTabFilesMeta(
+    const docTabFilesInfo = createDemoTabFilesMeta(
       docTabCodeFilePaths,
       docTabStyleFilePaths,
       flags.prefix,
     );
 
     try {
-      const numOfCreatedDocTabTemplates = await createDocTabTemplates(docTabFilesInfo);
-      this.log(chalk.blue(`Created ${numOfCreatedDocTabTemplates} DemoTab templates`));
+      const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(docTabFilesInfo);
+      this.log(chalk.blue(`Created ${numOfCreatedDemoTabTemplates} DemoTab templates`));
     } catch (err) {
       console.error('Error occurred:', err);
       this.exit();
     }
 
     try {
-      const numOfReplacedDocTabTemplatesContent = await replaceDocTabTemplatesContent(
+      const numOfReplacedDemoTabTemplatesContent = await replaceDemoTabTemplatesContent(
         docTabFilesInfo,
       );
       this.log(
-        chalk.blue(`Content replaced in ${numOfReplacedDocTabTemplatesContent} DemoTab templates`),
+        chalk.blue(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoTab templates`),
       );
     } catch (err) {
       console.error('Error occurred:', err);
