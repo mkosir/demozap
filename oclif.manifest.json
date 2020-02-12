@@ -1,1 +1,0 @@
-{"version":"1.0.22","commands":{"generate":{"id":"generate","description":"generate documentation tabs from React components","pluginName":"react-doc-tab","pluginType":"core","aliases":[],"flags":{"prefix":{"name":"prefix","type":"option","description":"generate DocTab components with filename prefix","default":"_"}},"args":[]}}}
