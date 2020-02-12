@@ -2,56 +2,56 @@ const fsExtra = require('fs-extra');
 const replace = require('replace-in-file');
 
 import { escapeFileContent } from './escapeFileContent';
-import { DocTabFileMeta } from '../../../types';
+import { DemoTabFileMeta } from '../../../types';
 
-export const replaceDocTabTemplateContent = async (docTabFileMeta: DocTabFileMeta) => {
-  const replacePropStyle = docTabFileMeta.style.path ? ` style={style}` : '';
-  const replacePropCodeExt = ` codeExt="${docTabFileMeta.code.filename.ext}"`;
-  const replacePropStyleExt = docTabFileMeta.style.filename.ext
-    ? ` styleExt="${docTabFileMeta.style.filename.ext}"`
+export const replaceDocTabTemplateContent = async (DemoTabFileMeta: DemoTabFileMeta) => {
+  const replacePropStyle = DemoTabFileMeta.style.path ? ` style={style}` : '';
+  const replacePropCodeExt = ` codeExt="${DemoTabFileMeta.code.filename.ext}"`;
+  const replacePropStyleExt = DemoTabFileMeta.style.filename.ext
+    ? ` styleExt="${DemoTabFileMeta.style.filename.ext}"`
     : '';
 
-  const code = await fsExtra.readFile(docTabFileMeta.code.path, 'utf8');
+  const code = await fsExtra.readFile(DemoTabFileMeta.code.path, 'utf8');
   const codeEscaped = escapeFileContent(code);
   let replaceStyle = '';
-  if (docTabFileMeta.style.path) {
-    const style = await fsExtra.readFile(docTabFileMeta.style.path, 'utf8');
+  if (DemoTabFileMeta.style.path) {
+    const style = await fsExtra.readFile(DemoTabFileMeta.style.path, 'utf8');
     replaceStyle = `const style = \`${style}\`;`;
   }
 
   const options = [
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: '@FILENAME',
-      to: docTabFileMeta.code.filename.base,
+      to: DemoTabFileMeta.code.filename.base,
     },
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: '@CODE',
       to: codeEscaped,
     },
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: '@STYLE',
       to: replaceStyle,
     },
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: /@COMPONENT_NAME/g,
-      to: docTabFileMeta.componentName,
+      to: DemoTabFileMeta.componentName,
     },
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: '@PROP_STYLE',
       to: replacePropStyle,
     },
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: '@PROP_CODE_EXT',
       to: replacePropCodeExt,
     },
     {
-      files: docTabFileMeta.path,
+      files: DemoTabFileMeta.path,
       from: '@PROP_STYLE_EXT',
       to: replacePropStyleExt,
     },

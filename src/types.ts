@@ -1,4 +1,4 @@
-export type DocTabFileMeta = {
+export type DemoTabFileMeta = {
   path: string;
   filename: string;
   componentName: string;

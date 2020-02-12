@@ -1,14 +1,14 @@
-import { createDocTabFileMeta } from './01-createDocTabFileMeta/createDocTabFileMeta';
+import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabFileMeta';
 
-import { DocTabFileMeta } from '../../types';
+import { DemoTabFileMeta } from '../../types';
 
 export const createDocTabFilesMeta = (
   docTabCodeFilePaths: string[],
   docTabStyleFilePaths: string[],
   prefix: string,
-): DocTabFileMeta[] => {
+): DemoTabFileMeta[] => {
   const docTabFilesInfo = docTabCodeFilePaths.map(docTabCodeFilePath => {
-    return createDocTabFileMeta(docTabCodeFilePath, docTabStyleFilePaths, prefix);
+    return createDemoTabFileMeta(docTabCodeFilePath, docTabStyleFilePaths, prefix);
   });
 
   return docTabFilesInfo;

@@ -1,20 +1,20 @@
 import { extractDocTabFilePathInfo } from '../02-extractDocTabFilePathInfo/extractDocTabFilePathInfo';
 import { findAssociateDocTabFilesByName } from '../03-findAssociateDocTabFilesByName/findAssociateDocTabFilesByName';
 
-import { DocTabFileMeta } from '../../../types';
+import { DemoTabFileMeta } from '../../../types';
 
-export const createDocTabFileMeta = (
+export const createDemoTabFileMeta = (
   docTabCodeFilePath: string,
   docTabStyleFilePaths: string[],
   prefix: string,
-): DocTabFileMeta => {
+): DemoTabFileMeta => {
   const docTabCodeFilePathInfo = extractDocTabFilePathInfo(docTabCodeFilePath);
 
   const docTabComponentFilename = `${prefix}${docTabCodeFilePathInfo.filename.base}.${docTabCodeFilePathInfo.filename.ext}`;
   const docTabComponentName = `${prefix}${docTabCodeFilePathInfo.filename.base}`;
   const docTabComponentDestinationPath = `${docTabCodeFilePathInfo.dirname}/${docTabComponentFilename}`;
 
-  const docTabFileMeta: DocTabFileMeta = {
+  const DemoTabFileMeta: DemoTabFileMeta = {
     path: docTabComponentDestinationPath,
     filename: docTabComponentFilename,
     componentName: docTabComponentName,
@@ -31,16 +31,16 @@ export const createDocTabFileMeta = (
 
   const associateDocTabStyleFilePaths = findAssociateDocTabFilesByName(
     docTabStyleFilePaths,
-    docTabFileMeta.code.filename.base,
+    DemoTabFileMeta.code.filename.base,
   );
   if (associateDocTabStyleFilePaths) {
     // per one code file only one style file is possible
     const docTabStyleFilePathInfo = extractDocTabFilePathInfo(associateDocTabStyleFilePaths[0]);
-    docTabFileMeta.style.path = associateDocTabStyleFilePaths[0];
-    docTabFileMeta.style.dirname = docTabStyleFilePathInfo.dirname;
-    docTabFileMeta.style.filename.base = docTabStyleFilePathInfo.filename.base;
-    docTabFileMeta.style.filename.ext = docTabStyleFilePathInfo.filename.ext;
+    DemoTabFileMeta.style.path = associateDocTabStyleFilePaths[0];
+    DemoTabFileMeta.style.dirname = docTabStyleFilePathInfo.dirname;
+    DemoTabFileMeta.style.filename.base = docTabStyleFilePathInfo.filename.base;
+    DemoTabFileMeta.style.filename.ext = docTabStyleFilePathInfo.filename.ext;
   }
 
-  return docTabFileMeta;
+  return DemoTabFileMeta;
 };

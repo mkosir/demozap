@@ -7,11 +7,11 @@ import { createDocTabTemplates } from '../pipeline/03-createDocTabTemplates/crea
 import { replaceDocTabTemplatesContent } from '../pipeline/04-replaceDocTabTemplatesContent/replaceDocTabTemplatesContent';
 
 export default class Generate extends Command {
-  static description = 'generate documentation tabs from React components';
+  static description = 'generate demos with DemoTab';
 
   static flags = {
     prefix: flags.string({
-      description: 'generate DocTab components with filename prefix',
+      description: 'generate DemoTab components with filename prefix',
       default: '_',
     }),
   };
@@ -19,12 +19,12 @@ export default class Generate extends Command {
   async run() {
     const { flags } = this.parse(Generate);
 
-    this.log(chalk.blue(`Generating documentation tabs from React components...`));
+    this.log(chalk.blue(`Generating demos...`));
 
     const { docTabCodeFilePaths, docTabStyleFilePaths } = getDocTabFilePaths();
     this.log(
       chalk.blue(
-        `Found ${docTabCodeFilePaths.length + docTabStyleFilePaths.length} DocTab files (code: ${
+        `Found ${docTabCodeFilePaths.length + docTabStyleFilePaths.length} DemoTab files (code: ${
           docTabCodeFilePaths.length
         }, style: ${docTabStyleFilePaths.length})`,
       ),
@@ -38,7 +38,7 @@ export default class Generate extends Command {
 
     try {
       const numOfCreatedDocTabTemplates = await createDocTabTemplates(docTabFilesInfo);
-      this.log(chalk.blue(`Created ${numOfCreatedDocTabTemplates} DocTab templates`));
+      this.log(chalk.blue(`Created ${numOfCreatedDocTabTemplates} DemoTab templates`));
     } catch (err) {
       console.error('Error occurred:', err);
       this.exit();
@@ -49,7 +49,7 @@ export default class Generate extends Command {
         docTabFilesInfo,
       );
       this.log(
-        chalk.blue(`Content replaced in ${numOfReplacedDocTabTemplatesContent} DocTab templates`),
+        chalk.blue(`Content replaced in ${numOfReplacedDocTabTemplatesContent} DemoTab templates`),
       );
     } catch (err) {
       console.error('Error occurred:', err);

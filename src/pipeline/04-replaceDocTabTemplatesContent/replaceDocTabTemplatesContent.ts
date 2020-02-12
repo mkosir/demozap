@@ -1,14 +1,14 @@
 import { replaceDocTabTemplateContent } from './01-replaceDocTabTemplateContent/replaceDocTabTemplateContent';
-import { DocTabFileMeta } from '../../types';
+import { DemoTabFileMeta } from '../../types';
 
 export const replaceDocTabTemplatesContent = async (
-  docTabFilesMeta: DocTabFileMeta[],
+  docTabFilesMeta: DemoTabFileMeta[],
 ): Promise<number> => {
   let numOfReplacedDocTabTemplatesContent = 0;
 
   await Promise.all(
-    docTabFilesMeta.map(async docTabFileMeta => {
-      await replaceDocTabTemplateContent(docTabFileMeta);
+    docTabFilesMeta.map(async DemoTabFileMeta => {
+      await replaceDocTabTemplateContent(DemoTabFileMeta);
       numOfReplacedDocTabTemplatesContent++;
     }),
   );
