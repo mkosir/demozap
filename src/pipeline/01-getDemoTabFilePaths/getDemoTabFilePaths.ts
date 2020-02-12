@@ -7,7 +7,7 @@ export const getDemoTabFilePaths = (): {
   docTabCodeFilePaths: string[];
   docTabStyleFilePaths: string[];
 } => {
-  const docTabFilePaths = glob.sync(process.cwd() + '/**/*.doctab.*', {});
+  const docTabFilePaths = glob.sync(process.cwd() + '/**/*.demotab.*', {});
 
   const docTabCodeFilePaths = docTabFilePaths.filter(docTabFilePath =>
     supportedCodeExt.includes(docTabFilePath.split('.').pop()),
