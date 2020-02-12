@@ -1,16 +1,16 @@
 const path = require('path');
 
 export const findAssociateDemoTabFilesByName = (
-  docTabFilePaths: string[],
+  demoTabFilePaths: string[],
   filename: string,
 ): string[] | null => {
-  const docTabAssociateFilePaths = docTabFilePaths.filter(docTabStyleFilePath => {
-    const styleFilename = path.basename(docTabStyleFilePath);
+  const demoTabAssociateFilePaths = demoTabFilePaths.filter(demoTabStyleFilePath => {
+    const styleFilename = path.basename(demoTabStyleFilePath);
     const styleFilenameArray = styleFilename.split('.');
 
     if (styleFilenameArray[0] === filename) {
       return true;
     }
   });
-  return docTabAssociateFilePaths.length > 0 ? docTabAssociateFilePaths : null;
+  return demoTabAssociateFilePaths.length > 0 ? demoTabAssociateFilePaths : null;
 };

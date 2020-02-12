@@ -4,42 +4,42 @@ import { findAssociateDemoTabFilesByName } from '../03-findAssociateDemoTabFiles
 import { DemoTabFileMeta } from '../../../types';
 
 export const createDemoTabFileMeta = (
-  docTabCodeFilePath: string,
-  docTabStyleFilePaths: string[],
+  demoTabCodeFilePath: string,
+  demoTabStyleFilePaths: string[],
   prefix: string,
 ): DemoTabFileMeta => {
-  const docTabCodeFilePathInfo = extractDemoTabFilePathInfo(docTabCodeFilePath);
+  const demoTabCodeFilePathInfo = extractDemoTabFilePathInfo(demoTabCodeFilePath);
 
-  const docTabComponentFilename = `${prefix}${docTabCodeFilePathInfo.filename.base}.${docTabCodeFilePathInfo.filename.ext}`;
-  const docTabComponentName = `${prefix}${docTabCodeFilePathInfo.filename.base}`;
-  const docTabComponentDestinationPath = `${docTabCodeFilePathInfo.dirname}/${docTabComponentFilename}`;
+  const demoTabComponentFilename = `${prefix}${demoTabCodeFilePathInfo.filename.base}.${demoTabCodeFilePathInfo.filename.ext}`;
+  const demoTabComponentName = `${prefix}${demoTabCodeFilePathInfo.filename.base}`;
+  const demoTabComponentDestinationPath = `${demoTabCodeFilePathInfo.dirname}/${demoTabComponentFilename}`;
 
   const DemoTabFileMeta: DemoTabFileMeta = {
-    path: docTabComponentDestinationPath,
-    filename: docTabComponentFilename,
-    componentName: docTabComponentName,
+    path: demoTabComponentDestinationPath,
+    filename: demoTabComponentFilename,
+    componentName: demoTabComponentName,
     code: {
-      path: docTabCodeFilePath,
-      dirname: docTabCodeFilePathInfo.dirname,
+      path: demoTabCodeFilePath,
+      dirname: demoTabCodeFilePathInfo.dirname,
       filename: {
-        base: docTabCodeFilePathInfo.filename.base,
-        ext: docTabCodeFilePathInfo.filename.ext,
+        base: demoTabCodeFilePathInfo.filename.base,
+        ext: demoTabCodeFilePathInfo.filename.ext,
       },
     },
     style: { path: null, dirname: null, filename: { base: null, ext: null } },
   };
 
   const associateDemoTabStyleFilePaths = findAssociateDemoTabFilesByName(
-    docTabStyleFilePaths,
+    demoTabStyleFilePaths,
     DemoTabFileMeta.code.filename.base,
   );
   if (associateDemoTabStyleFilePaths) {
     // per one code file only one style file is possible
-    const docTabStyleFilePathInfo = extractDemoTabFilePathInfo(associateDemoTabStyleFilePaths[0]);
+    const demoTabStyleFilePathInfo = extractDemoTabFilePathInfo(associateDemoTabStyleFilePaths[0]);
     DemoTabFileMeta.style.path = associateDemoTabStyleFilePaths[0];
-    DemoTabFileMeta.style.dirname = docTabStyleFilePathInfo.dirname;
-    DemoTabFileMeta.style.filename.base = docTabStyleFilePathInfo.filename.base;
-    DemoTabFileMeta.style.filename.ext = docTabStyleFilePathInfo.filename.ext;
+    DemoTabFileMeta.style.dirname = demoTabStyleFilePathInfo.dirname;
+    DemoTabFileMeta.style.filename.base = demoTabStyleFilePathInfo.filename.base;
+    DemoTabFileMeta.style.filename.ext = demoTabStyleFilePathInfo.filename.ext;
   }
 
   return DemoTabFileMeta;

@@ -3,13 +3,13 @@ import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabF
 import { DemoTabFileMeta } from '../../types';
 
 export const createDemoTabFilesMeta = (
-  docTabCodeFilePaths: string[],
-  docTabStyleFilePaths: string[],
+  demoTabCodeFilePaths: string[],
+  demoTabStyleFilePaths: string[],
   prefix: string,
 ): DemoTabFileMeta[] => {
-  const docTabFilesInfo = docTabCodeFilePaths.map(docTabCodeFilePath => {
-    return createDemoTabFileMeta(docTabCodeFilePath, docTabStyleFilePaths, prefix);
+  const demoTabFilesInfo = demoTabCodeFilePaths.map(demoTabCodeFilePath => {
+    return createDemoTabFileMeta(demoTabCodeFilePath, demoTabStyleFilePaths, prefix);
   });
 
-  return docTabFilesInfo;
+  return demoTabFilesInfo;
 };

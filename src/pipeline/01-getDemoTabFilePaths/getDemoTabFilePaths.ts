@@ -4,17 +4,17 @@ const supportedCodeExt = ['jsx', 'tsx'];
 const supportedStyleExt = ['css', 'scss'];
 
 export const getDemoTabFilePaths = (): {
-  docTabCodeFilePaths: string[];
-  docTabStyleFilePaths: string[];
+  demoTabCodeFilePaths: string[];
+  demoTabStyleFilePaths: string[];
 } => {
-  const docTabFilePaths = glob.sync(process.cwd() + '/**/*.demotab.*', {});
+  const demoTabFilePaths = glob.sync(process.cwd() + '/**/*.demotab.*', {});
 
-  const docTabCodeFilePaths = docTabFilePaths.filter(docTabFilePath =>
-    supportedCodeExt.includes(docTabFilePath.split('.').pop()),
+  const demoTabCodeFilePaths = demoTabFilePaths.filter(demoTabFilePath =>
+    supportedCodeExt.includes(demoTabFilePath.split('.').pop()),
   );
-  const docTabStyleFilePaths = docTabFilePaths.filter(docTabFilePath =>
-    supportedStyleExt.includes(docTabFilePath.split('.').pop()),
+  const demoTabStyleFilePaths = demoTabFilePaths.filter(demoTabFilePath =>
+    supportedStyleExt.includes(demoTabFilePath.split('.').pop()),
   );
 
-  return { docTabCodeFilePaths, docTabStyleFilePaths };
+  return { demoTabCodeFilePaths, demoTabStyleFilePaths };
 };

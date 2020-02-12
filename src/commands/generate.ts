@@ -21,23 +21,23 @@ export default class Generate extends Command {
 
     this.log(chalk.blue(`Generating demos...`));
 
-    const { docTabCodeFilePaths, docTabStyleFilePaths } = getDemoTabFilePaths();
+    const { demoTabCodeFilePaths, demoTabStyleFilePaths } = getDemoTabFilePaths();
     this.log(
       chalk.blue(
-        `Found ${docTabCodeFilePaths.length + docTabStyleFilePaths.length} DemoTab files (code: ${
-          docTabCodeFilePaths.length
-        }, style: ${docTabStyleFilePaths.length})`,
+        `Found ${demoTabCodeFilePaths.length + demoTabStyleFilePaths.length} DemoTab files (code: ${
+          demoTabCodeFilePaths.length
+        }, style: ${demoTabStyleFilePaths.length})`,
       ),
     );
 
-    const docTabFilesInfo = createDemoTabFilesMeta(
-      docTabCodeFilePaths,
-      docTabStyleFilePaths,
+    const demoTabFilesInfo = createDemoTabFilesMeta(
+      demoTabCodeFilePaths,
+      demoTabStyleFilePaths,
       flags.prefix,
     );
 
     try {
-      const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(docTabFilesInfo);
+      const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(demoTabFilesInfo);
       this.log(chalk.blue(`Created ${numOfCreatedDemoTabTemplates} DemoTab templates`));
     } catch (err) {
       console.error('Error occurred:', err);
@@ -46,7 +46,7 @@ export default class Generate extends Command {
 
     try {
       const numOfReplacedDemoTabTemplatesContent = await replaceDemoTabTemplatesContent(
-        docTabFilesInfo,
+        demoTabFilesInfo,
       );
       this.log(
         chalk.blue(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoTab templates`),
