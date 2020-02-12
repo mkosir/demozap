@@ -6,7 +6,7 @@ export const createDemoTabTemplates = async (
 ): Promise<number> => {
   let numOfCreatedDemoTabTemplates = 0;
 
-  const docTabTemplatePath = __dirname + '/../../../bin/react-doc-tab-template-component/template';
+  const docTabTemplatePath = __dirname + '/../../../bin/react-demo-tab-template/template';
 
   await Promise.all(
     docTabFilesMeta.map(async DemoTabFileMeta => {
