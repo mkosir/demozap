@@ -13,7 +13,7 @@ Maintaining example code and live demo separately makes it painful, it's easy to
 
 Code can't lie, example code can 💥
 
-DocTab keeps your example code up to date with live demo 💪
+DemoTab keeps your example code up to date with live demo 💪
 
 ## Install
 
@@ -27,7 +27,7 @@ DocTab keeps your example code up to date with live demo 💪
 
 To use DemoTab CLI in your project:
 
-- default export component 
+- default export component
 - name file as **`[filename].demotab.[ext]`**
 - run **`$ npx demotab generate`**
 
@@ -36,24 +36,24 @@ Use created DemoTab components. 🎉
 ## Generated DemoTab Files
 
 - By default generated files will be prefixed with `_` for example:  
-  `MyComponent.doctab.jsx` & `MyComponent.doctab.css` -> `_MyComponent.jsx`
+  `MyComponent.demotab.jsx` & `MyComponent.demotab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
-  `$ doctab generate --prefix=CustomPrefix`
+  `$ demotab generate --prefix=CustomPrefix`
 
 ## Built with DemoTab
 
-- React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [DocTab](https://mkosir.github.io/react-parallax-tilt)
-- Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [DocTab](https://mkosir.github.io/react-hook-mighty-mouse)
-- Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [DocTab](https://mkosir.github.io/react-magnetic-board)
+- React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [DemoTab](https://mkosir.github.io/react-parallax-tilt)
+- Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [DemoTab](https://mkosir.github.io/react-hook-mighty-mouse)
+- Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [DemoTab](https://mkosir.github.io/react-magnetic-board)
 
 ## License
 
 [MIT](LICENSE)
 
-[npm-badge]: https://img.shields.io/npm/v/react-doc-tab.svg
-[npm-url]: https://www.npmjs.com/package/react-doc-tab
-[build-badge]: https://travis-ci.com/mkosir/react-doc-tab.svg
-[build-url]: https://travis-ci.com/mkosir/react-doc-tab
+[npm-badge]: https://img.shields.io/npm/v/react-demo-tab-cli.svg
+[npm-url]: https://www.npmjs.com/package/react-demo-tab-cli
+[build-badge]: https://travis-ci.com/mkosir/react-demo-tab-cli.svg
+[build-url]: https://travis-ci.com/mkosir/react-demo-tab-cli
 [oclif-badge]: https://img.shields.io/badge/cli-oclif-brightgreen.svg
 [oclif-url]: https://oclif.io
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
