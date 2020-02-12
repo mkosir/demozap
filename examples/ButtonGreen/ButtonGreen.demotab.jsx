@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ButtonGreen.doctab.css';
+import './ButtonGreen.demotab.css';
 
 const ButtonGreen = () => <button className="btn-green">Green Button</button>;
 
