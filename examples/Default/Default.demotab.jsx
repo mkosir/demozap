@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Default = () => <div>DocTab 📑 - Default Example</div>;
+const Default = () => <h3>DemoTab 📑</h3>;
 
 export default Default;
