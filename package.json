@@ -1,7 +1,7 @@
 {
-  "name": "react-doc-tab",
-  "description": "Generate documentation tabs from React components",
-  "version": "1.0.25",
+  "name": "react-demo-tab-cli",
+  "description": "CLI tool for creating demos of react components",
+  "version": "1.2.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -18,45 +18,45 @@
     "generate-examples": "./bin/run generate --prefix=_ && npm run prettier"
   },
   "bin": {
-    "doctab": "./bin/run"
+    "demotab": "./bin/run"
   },
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "doctab",
+    "bin": "demotab",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
   "dependencies": {
     "@oclif/command": "^1.5.19",
-    "@oclif/config": "^1.13.3",
+    "@oclif/config": "^1.14.0",
     "@oclif/plugin-help": "^2.2.3",
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
-    "inquirer": "^7.0.3",
+    "inquirer": "^7.0.4",
     "replace-in-file": "^5.0.2",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.22.2",
-    "@storybook/react": "^5.3.6",
-    "@types/node": "^13.1.8",
-    "@typescript-eslint/eslint-plugin": "^2.16.0",
-    "@typescript-eslint/parser": "^2.16.0",
+    "@storybook/react": "^5.3.13",
+    "@types/node": "^13.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
     "babel-loader": "^8.0.6",
-    "babel-preset-react-app": "^9.1.0",
+    "babel-preset-react-app": "^9.1.1",
     "eslint": "^6.8.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.1.0",
-    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "globby": "^11.0.0",
-    "husky": "^4.0.10",
-    "lint-staged": "^9.5.0",
+    "husky": "^4.2.2",
+    "lint-staged": "^10.0.7",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
-    "react-doc-tab-template": "^1.0.12",
+    "react-demo-tab": "^1.2.1",
     "sass-loader": "^8.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
@@ -81,19 +81,22 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/mkosir/react-doc-tab",
-  "bugs": "https://github.com/mkosir/react-doc-tab/issues",
+  "homepage": "https://github.com/mkosir/react-demo-tab-cli",
+  "bugs": "https://github.com/mkosir/react-demo-tab-cli/issues",
   "license": "MIT",
   "author": "Marko Kosir <kosir.mar@gmail.com>",
-  "repository": "mkosir/react-doc-tab",
+  "repository": "mkosir/react-demo-tab-cli",
   "keywords": [
-    "react-doc-tab",
-    "doc-tab",
-    "doctab",
+    "react-demo-tab-cli",
+    "demo-tab-cli",
+    "demotab",
+    "demo-tab",
     "cli",
     "cli-tool",
     "documentation",
     "documentation-tool",
-    "oclif"
+    "oclif",
+    "code-generator",
+    "code-example"
   ]
 }
