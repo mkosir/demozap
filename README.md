@@ -1,11 +1,11 @@
-# React DocTab 📑
+# React DemoTab CLI 📑
 
 [![npm version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
 [![oclif][oclif-badge]][oclif-url]
 [![prettier][prettier-badge]][prettier-url]
 
-_Generate React component as **Live Demo & Code Example**_
+Easily create demos of react components
 
 ![](demo.gif)
 
@@ -17,30 +17,30 @@ DocTab keeps your example code up to date with live demo 💪
 
 ## Install
 
-`npm install -D react-doc-tab react-doc-tab-template`
+`npm install -D react-demo-tab react-demo-tab-cli`
 
 ## Demo
 
-**[DocTab live demo](https://mkosir.github.io/react-doc-tab)**
+**[DemoTab live](https://mkosir.github.io/react-demo-tab-cli)**
 
 ## Usage
 
-To use DocTab in your project:
+To use DemoTab CLI in your project:
 
 - default export component 
-- name file as **`[filename].doctab.[ext]`**
-- run **`$ npx doctab generate`**
+- name file as **`[filename].demotab.[ext]`**
+- run **`$ npx demotab generate`**
 
-Import generated DocTab components. 🎉
+Use created DemoTab components. 🎉
 
-## Generated DocTab Files
+## Generated DemoTab Files
 
 - By default generated files will be prefixed with `_` for example:  
   `MyComponent.doctab.jsx` & `MyComponent.doctab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
   `$ doctab generate --prefix=CustomPrefix`
 
-## Built with DocTab
+## Built with DemoTab
 
 - React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [DocTab](https://mkosir.github.io/react-parallax-tilt)
 - Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [DocTab](https://mkosir.github.io/react-hook-mighty-mouse)
