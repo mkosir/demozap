@@ -4,5 +4,5 @@ export default create({
   base: 'light',
 
   brandTitle: 'React DemoTab 📑',
-  brandUrl: 'https://github.com/mkosir/react-doc-tab-cli',
+  brandUrl: 'https://github.com/mkosir/react-demo-tab-cli',
 });
