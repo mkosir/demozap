@@ -25,7 +25,7 @@ DemoTab CLI keeps your code up to date with demo 💪
 
 ## Usage
 
-To use DemoTab CLI in your project:
+To use CLI in your project:
 
 - default export react component that you wish to create demo of
 - name component file as **`[filename].demotab.[ext]`**
