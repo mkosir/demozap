@@ -9,7 +9,7 @@ Easily create demos of react components
 
 ![](demo.gif)
 
-Maintaining example code and live demo separately makes it painful, it's easy to get them out of sync 🙅
+Maintaining example code and demo separately makes it painful, it's easy to get them out of sync 🙅
 
 Code can't lie, demo code can 💥
 
@@ -31,11 +31,11 @@ To use DemoTab CLI in your project:
 - name file as **`[filename].demotab.[ext]`**
 - run **`$ npx demotab generate`**
 
-Use created DemoTab components. 🎉
+Use created demos 🎉
 
 ## Generated DemoTab Files
 
-- By default generated files will be prefixed with `_` for example:  
+- By default generated demos will be prefixed with `_` for example:  
   `MyComponent.demotab.jsx` & `MyComponent.demotab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
   `$ demotab generate --prefix=CustomPrefix`
