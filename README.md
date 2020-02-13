@@ -48,7 +48,7 @@ To use CLI in your project:
 
 ## Manually create demos
 
-If you wish to manually create demos instead of CLI, see [React DemoTab](https://github.com/mkosir/react-demo-tab).
+If you wish to manually create demos instead with CLI, see [React DemoTab](https://github.com/mkosir/react-demo-tab).
 
 ## License
 
