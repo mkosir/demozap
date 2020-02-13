@@ -46,6 +46,10 @@ To use CLI in your project:
 - Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [DemoTab](https://mkosir.github.io/react-hook-mighty-mouse)
 - Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [DemoTab](https://mkosir.github.io/react-magnetic-board)
 
+## Manually create demos
+
+If you wish to manually create demos instead with CLI, see [React DemoTab](https://github.com/mkosir/react-demo-tab).
+
 ## License
 
 [MIT](LICENSE)
