@@ -31,7 +31,7 @@ To use DemoTab CLI in your project:
 - name file as **`[filename].demotab.[ext]`**
 - run **`$ npx demotab generate`**
 
-Use created demos 🎉
+#### Use created demos 🎉
 
 ## Generated DemoTab Files
 
