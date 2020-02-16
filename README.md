@@ -23,7 +23,7 @@ DemoTab CLI keeps your code up to date with demo 💪
 
 **[DemoTab example](https://mkosir.github.io/react-demo-tab-cli)**
 
-## Usage
+## Usage (3 steps)
 
 To use CLI in your project:
 
