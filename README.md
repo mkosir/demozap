@@ -37,7 +37,7 @@ To use CLI in your project:
 
 ## Generated Demos
 
-- By default generated demos will be prefixed with `_` for example:  
+- By default generated demo files will be prefixed with `_` for example:  
   `MyComponent.demotab.jsx` & `MyComponent.demotab.css` -> `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
   `$ demotab generate --prefix=CustomPrefix`
