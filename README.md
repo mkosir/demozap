@@ -33,7 +33,7 @@ To use CLI in your project:
 1. name component file as **`[filename].demotab.[ext]`**
 1. run **`$ npx demotab generate`**
 
-#### Use created demos 🎉
+**Use created demos 🎉**
 
 ## Generated Demos
 
