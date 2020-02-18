@@ -17,7 +17,9 @@ DemoTab CLI keeps your code up to date with demo 💪
 
 ## Install
 
-`npm install -D react-demo-tab react-demo-tab-cli`
+```bash
+npm install -D react-demo-tab react-demo-tab-cli
+```
 
 ## Demo
 
