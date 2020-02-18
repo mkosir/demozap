@@ -35,7 +35,7 @@ To use CLI in your project:
 
 #### Use created demos 🎉
 
-## Generated DemoTab Files
+## Generated Demos
 
 - By default generated demos will be prefixed with `_` for example:  
   `MyComponent.demotab.jsx` & `MyComponent.demotab.css` -> `_MyComponent.jsx`
