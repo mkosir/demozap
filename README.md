@@ -5,7 +5,7 @@
 [![oclif][oclif-badge]][oclif-url]
 [![prettier][prettier-badge]][prettier-url]
 
-_Easily create demos of react components_
+_Easily create demos of React components_
 
 ![](demo.gif)
 
