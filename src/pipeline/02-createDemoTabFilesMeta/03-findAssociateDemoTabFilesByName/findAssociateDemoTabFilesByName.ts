@@ -4,7 +4,7 @@ export const findAssociateDemoTabFilesByName = (
   demoTabFilePaths: string[],
   filename: string,
 ): string[] | null => {
-  const demoTabAssociateFilePaths = demoTabFilePaths.filter(demoTabStyleFilePath => {
+  const demoTabAssociateFilePaths = demoTabFilePaths.filter((demoTabStyleFilePath) => {
     const styleFilename = path.basename(demoTabStyleFilePath);
     const styleFilenameArray = styleFilename.split('.');
 

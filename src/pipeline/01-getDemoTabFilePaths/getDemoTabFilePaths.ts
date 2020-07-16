@@ -9,10 +9,10 @@ export const getDemoTabFilePaths = (): {
 } => {
   const demoTabFilePaths = glob.sync(process.cwd() + '/**/*.demotab.*', {});
 
-  const demoTabCodeFilePaths = demoTabFilePaths.filter(demoTabFilePath =>
+  const demoTabCodeFilePaths = demoTabFilePaths.filter((demoTabFilePath) =>
     supportedCodeExt.includes(demoTabFilePath.split('.').pop()),
   );
-  const demoTabStyleFilePaths = demoTabFilePaths.filter(demoTabFilePath =>
+  const demoTabStyleFilePaths = demoTabFilePaths.filter((demoTabFilePath) =>
     supportedStyleExt.includes(demoTabFilePath.split('.').pop()),
   );
 

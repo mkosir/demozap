@@ -7,7 +7,7 @@ export const createDemoTabFilesMeta = (
   demoTabStyleFilePaths: string[],
   prefix: string,
 ): DemoTabFileMeta[] => {
-  const demoTabFilesInfo = demoTabCodeFilePaths.map(demoTabCodeFilePath => {
+  const demoTabFilesInfo = demoTabCodeFilePaths.map((demoTabCodeFilePath) => {
     return createDemoTabFileMeta(demoTabCodeFilePath, demoTabStyleFilePaths, prefix);
   });
 

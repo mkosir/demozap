@@ -9,7 +9,7 @@ export const createDemoTabTemplates = async (
   const demoTabTemplatePath = __dirname + '/../../../bin/react-demo-tab-template/template';
 
   await Promise.all(
-    demoTabFilesMeta.map(async DemoTabFileMeta => {
+    demoTabFilesMeta.map(async (DemoTabFileMeta) => {
       const demoTabTemplate = `${demoTabTemplatePath}.${DemoTabFileMeta.code.filename.ext}`;
       await fsExtra.copy(demoTabTemplate, DemoTabFileMeta.path);
       numOfCreatedDemoTabTemplates++;

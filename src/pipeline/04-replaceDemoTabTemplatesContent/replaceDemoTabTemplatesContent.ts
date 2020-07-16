@@ -7,7 +7,7 @@ export const replaceDemoTabTemplatesContent = async (
   let numOfReplacedDemoTabTemplatesContent = 0;
 
   await Promise.all(
-    demoTabFilesMeta.map(async DemoTabFileMeta => {
+    demoTabFilesMeta.map(async (DemoTabFileMeta) => {
       await replaceDemoTabTemplateContent(DemoTabFileMeta);
       numOfReplacedDemoTabTemplatesContent++;
     }),
