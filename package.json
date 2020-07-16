@@ -1,6 +1,6 @@
 {
   "name": "react-demo-tab-cli",
-  "description": "CLI tool for creating demos of react components",
+  "description": "CLI tool for creating demos of React components",
   "version": "1.2.50",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
