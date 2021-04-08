@@ -11,7 +11,7 @@ _Easily create demos of React components_
 
 Maintaining example code and demo separately makes it painful, it's easy to get them out of sync 🙅
 
-Code can't lie, demo code can 💥
+Code can't lie, documentation can 💥
 
 DemoTab CLI keeps your code up to date with demo 💪
 
