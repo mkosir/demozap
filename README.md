@@ -25,7 +25,7 @@ npm install -D react-demo-tab react-demo-tab-cli
 
 **[DemoTab example](https://mkosir.github.io/react-demo-tab-cli)**
 
-## Usage (3 steps 💥)
+## Usage 🚀
 
 To use CLI in your project:
 
