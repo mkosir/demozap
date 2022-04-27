@@ -13,7 +13,7 @@
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
-    "format-lint": "prettier --config .prettierrc -l --ignore-unknown .",
+    "format-lint": "prettier --Xconfig .prettierrc -l --ignore-unknown .",
     "format-fix": "prettier --Cconfig .prettierrc --write --ignore-unknown .",
     "commit": "git-cz",
     "storybook": "start-storybook -p 9009",
