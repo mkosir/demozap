@@ -11,6 +11,8 @@
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "version": "oclif-dev readme && git add README.md",
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/",
+    "lint-fix": "eslint --fix .",
+    "lint-staged-husky": "lint-staged",
     "lint-prettier": "prettier --config .prettierrc -l  '{src,examples}/**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "prettier": "prettier --config .prettierrc --write '{src,examples}/**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "storybook": "start-storybook -p 9009",
