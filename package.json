@@ -17,7 +17,7 @@
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown .",
     "storybook": "start-storybook -p 9009",
     "storybook-build": "build-storybook",
-    "demotab-examples": "./bin/run generate --prefix=_ && npm run prettier"
+    "demotab-examples": "./bin/run generate --prefix=_ && npm run format-fix"
   },
   "bin": {
     "demotab": "./bin/run"
