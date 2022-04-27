@@ -78,17 +78,6 @@
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
   },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx,css,scss,json,md}": [
-      "prettier --config .prettierrc --write ",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "engines": {
     "node": ">=8.0.0"
   },
