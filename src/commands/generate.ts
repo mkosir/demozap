@@ -30,11 +30,7 @@ export default class Generate extends Command {
       ),
     );
 
-    const demoTabFilesInfo = createDemoTabFilesMeta(
-      demoTabCodeFilePaths,
-      demoTabStyleFilePaths,
-      flags.prefix,
-    );
+    const demoTabFilesInfo = createDemoTabFilesMeta(demoTabCodeFilePaths, demoTabStyleFilePaths, flags.prefix);
 
     try {
       const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(demoTabFilesInfo);
@@ -45,12 +41,8 @@ export default class Generate extends Command {
     }
 
     try {
-      const numOfReplacedDemoTabTemplatesContent = await replaceDemoTabTemplatesContent(
-        demoTabFilesInfo,
-      );
-      this.log(
-        chalk.blue(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoTab templates`),
-      );
+      const numOfReplacedDemoTabTemplatesContent = await replaceDemoTabTemplatesContent(demoTabFilesInfo);
+      this.log(chalk.blue(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoTab templates`));
     } catch (err) {
       console.error('Error occurred:', err);
       this.exit();
