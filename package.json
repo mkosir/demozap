@@ -12,7 +12,7 @@
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/",
     "lint-prettier": "prettier --config .prettierrc -l  '{src,examples}/**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "prettier": "prettier --config .prettierrc --write '{src,examples}/**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
-    "storybook": "start-storybook -p 9009 -s public --quiet",
+    "storybook": "start-storybook -p 9009",
     "storybook-build": "build-storybook",
     "demotab-examples": "./bin/run generate --prefix=_ && npm run prettier"
   },
