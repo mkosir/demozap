@@ -1,6 +1,6 @@
 import React from 'react';
+import { DemoTab } from 'react-demo-tab';
 
-import DemoTab from 'react-demo-tab';
 import Demo from './Counter.demotab';
 
 const code = `import React, { PureComponent } from 'react';
