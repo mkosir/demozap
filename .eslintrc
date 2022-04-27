@@ -11,9 +11,35 @@
     "plugin:storybook/recommended"
   ],
 
+  "plugins": ["@typescript-eslint", "import"],
+
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    // Import
+    "import/no-default-export": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+
+  // ESlint default behaviour ignoring file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
+  // Lint files and folders starting with "." (.storybook, .commitlintrc.ts, etc.)
+  "ignorePatterns": ["!.*", "dist", "node_modules"],
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
