@@ -7,6 +7,7 @@ import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTem
 
 const chalk = require('chalk');
 
+// eslint-disable-next-line
 export default class Generate extends Command {
   static description = 'generate demos with DemoTab';
 
