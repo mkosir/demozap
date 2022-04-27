@@ -1,5 +1,6 @@
-const fsExtra = require('fs-extra');
 import { DemoTabFileMeta } from '../../types';
+
+const fsExtra = require('fs-extra');
 
 export const createDemoTabTemplates = async (demoTabFilesMeta: DemoTabFileMeta[]): Promise<number> => {
   let numOfCreatedDemoTabTemplates = 0;

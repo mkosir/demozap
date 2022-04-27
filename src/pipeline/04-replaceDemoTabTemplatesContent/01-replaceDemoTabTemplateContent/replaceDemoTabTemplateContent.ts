@@ -1,8 +1,9 @@
-const fsExtra = require('fs-extra');
-const replace = require('replace-in-file');
+import { DemoTabFileMeta } from '../../../types';
 
 import { escapeFileContent } from './escapeFileContent';
-import { DemoTabFileMeta } from '../../../types';
+
+const fsExtra = require('fs-extra');
+const replace = require('replace-in-file');
 
 export const replaceDemoTabTemplateContent = async (DemoTabFileMeta: DemoTabFileMeta) => {
   const replacePropStyle = DemoTabFileMeta.style.path ? ` style={style}` : '';

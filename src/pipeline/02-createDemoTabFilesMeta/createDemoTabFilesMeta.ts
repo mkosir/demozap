@@ -1,6 +1,6 @@
-import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabFileMeta';
-
 import { DemoTabFileMeta } from '../../types';
+
+import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabFileMeta';
 
 export const createDemoTabFilesMeta = (
   demoTabCodeFilePaths: string[],

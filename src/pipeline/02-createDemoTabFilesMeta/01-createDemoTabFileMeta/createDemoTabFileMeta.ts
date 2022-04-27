@@ -1,7 +1,6 @@
+import { DemoTabFileMeta } from '../../../types';
 import { extractDemoTabFilePathInfo } from '../02-extractDemoTabFilePathInfo/extractDemoTabFilePathInfo';
 import { findAssociateDemoTabFilesByName } from '../03-findAssociateDemoTabFilesByName/findAssociateDemoTabFilesByName';
-
-import { DemoTabFileMeta } from '../../../types';
 
 export const createDemoTabFileMeta = (
   demoTabCodeFilePath: string,

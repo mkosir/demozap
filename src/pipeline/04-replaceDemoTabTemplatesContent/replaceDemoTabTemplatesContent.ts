@@ -1,5 +1,6 @@
-import { replaceDemoTabTemplateContent } from './01-replaceDemoTabTemplateContent/replaceDemoTabTemplateContent';
 import { DemoTabFileMeta } from '../../types';
+
+import { replaceDemoTabTemplateContent } from './01-replaceDemoTabTemplateContent/replaceDemoTabTemplateContent';
 
 export const replaceDemoTabTemplatesContent = async (demoTabFilesMeta: DemoTabFileMeta[]): Promise<number> => {
   let numOfReplacedDemoTabTemplatesContent = 0;

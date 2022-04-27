@@ -1,10 +1,11 @@
 import { Command, flags } from '@oclif/command';
-const chalk = require('chalk');
 
 import { getDemoTabFilePaths } from '../pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
 import { createDemoTabFilesMeta } from '../pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
 import { createDemoTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
 import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
+
+const chalk = require('chalk');
 
 export default class Generate extends Command {
   static description = 'generate demos with DemoTab';
