@@ -7,10 +7,8 @@ const code = `@CODE`;
 
 @STYLE
 
-const @COMPONENT_NAME = () => (
+export const @COMPONENT_NAME = () => (
   <DemoTab code={code}@PROP_STYLE@PROP_CODE_EXT@PROP_STYLE_EXT>
     <Demo />
   </DemoTab>
 );
-
-export default @COMPONENT_NAME;
