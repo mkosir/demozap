@@ -13,8 +13,8 @@
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
-    "lint-prettier": "prettier --config .prettierrc -l  '{src,examples}/**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
-    "prettier": "prettier --config .prettierrc --write '{src,examples}/**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
+    "format-lint": "prettier --config .prettierrc -l --ignore-unknown .",
+    "format-fix": "prettier --config .prettierrc --write --ignore-unknown .",
     "storybook": "start-storybook -p 9009",
     "storybook-build": "build-storybook",
     "demotab-examples": "./bin/run generate --prefix=_ && npm run prettier"
