@@ -10,10 +10,8 @@ const Default = () => <h3>DemoTab 📑</h3>;
 export default Default;
 `;
 
-const _Default = () => (
+export const _Default = () => (
   <DemoTab code={code} codeExt="jsx">
     <Demo />
   </DemoTab>
 );
-
-export default _Default;

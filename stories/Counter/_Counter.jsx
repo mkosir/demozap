@@ -38,10 +38,8 @@ class Counter extends PureComponent {
 export default Counter;
 `;
 
-const _Counter = () => (
+export const _Counter = () => (
   <DemoTab code={code} codeExt="jsx">
     <Demo />
   </DemoTab>
 );
-
-export default _Counter;
