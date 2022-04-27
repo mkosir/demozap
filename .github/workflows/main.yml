@@ -93,7 +93,7 @@ jobs:
         run: npm ci
 
       - name: Build 🏗️
-        run: npm run prepack
+        run: npm run build
 
       - name: Release 🚀
         run: npm run semantic-release
