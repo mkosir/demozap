@@ -29,11 +29,10 @@ npm install -D react-demo-tab react-demo-tab-cli
 
 ## Usage 🚀
 
-To use CLI in your project:
+To create demos out of React components:
 
-1. default export react components that you wish to create demos of
-1. name component file as **`[filename].demotab.jsx`**
-1. run **`$ npx react-demo-tab-cli generate`**
+1. Name files as **`[component_name].demotab.jsx`**
+1. Run **`$ npx react-demo-tab-cli generate`**
 
 **Use created demos 🎉**
 
