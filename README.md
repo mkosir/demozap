@@ -52,11 +52,11 @@ To use CLI in your project:
 
 ## Manually create demos
 
-If you wish to manually create demos instead via CLI, see [React DemoTab](https://github.com/mkosir/react-demo-tab).
+To manually create demos instead via CLI just [React DemoTab](https://github.com/mkosir/react-demo-tab) component.
 
-## License
+## Contributing
 
-[MIT](LICENSE)
+All contributions are welcome!
 
 [npm-url]: https://www.npmjs.com/package/react-demo-tab-cli
 [npm-badge]: https://img.shields.io/npm/v/react-demo-tab-cli.svg
