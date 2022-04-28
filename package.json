@@ -38,7 +38,6 @@
     "chalk": "^4.1.0",
     "fs-extra": "^10.1.0",
     "glob": "^8.0.1",
-    "inquirer": "^8.2.3",
     "replace-in-file": "^6.3.2",
     "tslib": "^2.4.0"
   },
