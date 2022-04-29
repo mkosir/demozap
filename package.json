@@ -93,11 +93,11 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://mkosir.github.io/react-demo-tab-cli",
-  "bugs": "https://github.com/mkosir/react-demo-tab-cli/issues",
+  "homepage": "https://mkosir.github.io/demozap",
+  "bugs": "https://github.com/mkosir/demozap/issues",
   "license": "MIT",
   "author": "Marko Kosir <kosir.mar@gmail.com>",
-  "repository": "mkosir/react-demo-tab-cli",
+  "repository": "mkosir/demozap",
   "keywords": [
     "react",
     "react-component",
