@@ -1,5 +1,5 @@
 {
-  "name": "react-demo-tab-cli",
+  "name": "demox",
   "description": "CLI tool for creating demos of React components",
   "version": "0.0.0-development",
   "main": "lib/index.js",
@@ -102,17 +102,15 @@
     "react",
     "react-component",
     "demo-component",
+    "demo-generator",
     "demo",
-    "react-demo-tab-cli",
-    "demo-tab-cli",
-    "demotab",
-    "demo-tab",
+    "demox",
+    "demo-cli",
+    "demox-cli",
     "cli",
     "cli-tool",
     "documentation",
     "documentation-tool",
-    "oclif",
-    "code-generator",
-    "code-example"
+    "oclif"
   ]
 }
