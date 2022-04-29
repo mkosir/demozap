@@ -28,6 +28,8 @@ DemoZap CLI keeps your code up to date with demo 💪
 
 ## Install
 
+React
+
 ```bash
 npm install -D react-demo-tab
 ```
