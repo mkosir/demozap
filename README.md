@@ -17,28 +17,26 @@ Code can't lie, documentation can 💥
 
 DemoZap CLI keeps your code up to date with demo 💪
 
-## Install
-
-```bash
-npm install -D demozap react-demo-tab
-```
-
-## [Demo 💥](https://mkosir.github.io/demozap)
-
 ## Usage 🚀
 
-To create demos out of React components:
-
-1. Name files as **`[component_name].demozap.jsx`**
-1. Run **`$ npx demozap generate`**
+- Name component files as **`[component_name].demozap.jsx`**
+- Run **`$ npx demozap generate`**
 
 **Use created demos 🎉**
 
+## [Demo 💥](https://mkosir.github.io/demozap)
+
+## Install
+
+```bash
+npm install -D react-demo-tab
+```
+
 ## Generated Demos
 
-- By default generated demo files will be prefixed with `_`:  
+- Generated demo files are prefixed with `_`:  
   `MyComponent.demozap.jsx` → `_MyComponent.jsx`
-- You can set custom prefix with `--prefix` flag:  
+- or set custom prefix with `--prefix` flag:  
   `$ demozap generate --prefix=CustomPrefix`
 
 ## Built with DemoZap
