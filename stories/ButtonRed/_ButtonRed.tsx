@@ -1,11 +1,11 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './ButtonRed.demotab';
+import Demo from './ButtonRed.demozap';
 
 const code = `import React, { FC } from 'react';
 
-import './ButtonRed.demotab.scss';
+import './ButtonRed.demozap.scss';
 
 const ButtonRed: FC = () => <button className="btn-red">Red Button</button>;
 

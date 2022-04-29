@@ -6,7 +6,7 @@ import { _ButtonRed } from './ButtonRed/_ButtonRed';
 import { _Counter } from './Counter/_Counter';
 import { _Default } from './Default/_Default';
 
-import './DemoTab.scss';
+import './DemoZap.scss';
 
 const stories = storiesOf('Examples', module);
 

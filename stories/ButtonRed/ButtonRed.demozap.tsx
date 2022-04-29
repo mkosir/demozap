@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import './ButtonRed.demotab.scss';
+import './ButtonRed.demozap.scss';
 
 const ButtonRed: FC = () => <button className="btn-red">Red Button</button>;
 
