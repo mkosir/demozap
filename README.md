@@ -49,7 +49,7 @@ To create demos out of React components:
 
 ## Manually create demos
 
-To manually create demos instead via CLI use [DemoTabs](https://github.com/mkosir/react-demo-tab) component.
+To manually create demos instead via CLI use [DemoTab](https://github.com/mkosir/react-demo-tab) component.
 
 ## Contributing
 
