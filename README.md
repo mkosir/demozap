@@ -9,7 +9,7 @@
 
 _Easily create demos of React components_
 
-![](demo.gif)
+[![](misc/demo.gif)](https://mkosir.github.io/demozap/?path=/story/examples--button-green-jsx-css)
 
 Maintaining example code and demo separately makes it painful, it's easy to get them out of sync 🙅
 
