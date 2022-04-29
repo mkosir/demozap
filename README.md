@@ -9,15 +9,15 @@
 
 _Easily create demos of React components_
 
-[![](misc/demo.gif)](https://mkosir.github.io/demozap/?path=/story/examples--button-green-jsx-css)
-
 Maintaining example code and demo separately makes it painful, it's easy to get them out of sync 🙅
 
 Code can't lie, documentation can 💥
 
 DemoZap CLI keeps your code up to date with demo 💪
 
-## Usage 🚀
+[![](misc/demo.gif)](https://mkosir.github.io/demozap/?path=/story/examples--button-green-jsx-css)
+
+## Usage
 
 - Name component files as `[component_name].demozap.jsx`
 - Run `npx demozap generate`
