@@ -1,4 +1,4 @@
-# React DemoTab CLI 📑
+# DemoZap ⚡
 
 [![npm version][npm-badge]][npm-url]
 [![CI][build-badge]][build-url]
@@ -20,19 +20,17 @@ DemoTab CLI keeps your code up to date with demo 💪
 ## Install
 
 ```bash
-npm install -D react-demo-tab react-demo-tab-cli
+npm install -D demozap react-demo-tab
 ```
 
-## Demo
-
-**[DemoTab example](https://mkosir.github.io/react-demo-tab-cli)**
+## [Demo 💥](https://mkosir.github.io/demozap)
 
 ## Usage 🚀
 
 To create demos out of React components:
 
 1. Name files as **`[component_name].demotab.jsx`**
-1. Run **`$ npx react-demo-tab-cli generate`**
+1. Run **`$ npx demozap generate`**
 
 **Use created demos 🎉**
 
@@ -57,10 +55,10 @@ To manually create demos instead via CLI just [React DemoTab](https://github.com
 
 All contributions are welcome!
 
-[npm-url]: https://www.npmjs.com/package/react-demo-tab-cli
-[npm-badge]: https://img.shields.io/npm/v/react-demo-tab-cli.svg
-[build-badge]: https://github.com/mkosir/react-demo-tab-cli/actions/workflows/main.yml/badge.svg
-[build-url]: https://github.com/mkosir/react-demo-tab-cli/actions/workflows/main.yml
+[npm-url]: https://www.npmjs.com/package/demozap
+[npm-badge]: https://img.shields.io/npm/v/demozap.svg
+[build-badge]: https://github.com/mkosir/demozap/actions/workflows/main.yml/badge.svg
+[build-url]: https://github.com/mkosir/demozap/actions/workflows/main.yml
 [oclif-badge]: https://img.shields.io/badge/cli-oclif-brightgreen.svg
 [oclif-url]: https://oclif.io
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
