@@ -36,7 +36,7 @@ To create demos out of React components:
 
 ## Generated Demos
 
-- By default generated demo files will be prefixed with `_` for example:  
+- By default generated demo files will be prefixed with `_`:  
   `MyComponent.demozap.jsx` → `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
   `$ demozap generate --prefix=CustomPrefix`
