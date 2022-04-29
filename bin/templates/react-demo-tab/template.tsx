@@ -1,7 +1,7 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './@FILENAME.demotab';
+import Demo from './@FILENAME.demozap';
 
 const code = `@CODE`;
 
