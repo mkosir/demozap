@@ -15,7 +15,7 @@ Maintaining example code and demo separately makes it painful, it's easy to get 
 
 Code can't lie, documentation can 💥
 
-DemoTab CLI keeps your code up to date with demo 💪
+DemoZap CLI keeps your code up to date with demo 💪
 
 ## Install
 
@@ -29,7 +29,7 @@ npm install -D demozap react-demo-tab
 
 To create demos out of React components:
 
-1. Name files as **`[component_name].demotab.jsx`**
+1. Name files as **`[component_name].demozap.jsx`**
 1. Run **`$ npx demozap generate`**
 
 **Use created demos 🎉**
@@ -37,19 +37,19 @@ To create demos out of React components:
 ## Generated Demos
 
 - By default generated demo files will be prefixed with `_` for example:  
-  `MyComponent.demotab.jsx` → `_MyComponent.jsx`
+  `MyComponent.demozap.jsx` → `_MyComponent.jsx`
 - You can set custom prefix with `--prefix` flag:  
-  `$ demotab generate --prefix=CustomPrefix`
+  `$ demozap generate --prefix=CustomPrefix`
 
-## Built with DemoTab
+## Built with DemoZap
 
-- React Tilt - [Repo](https://github.com/mkosir/react-parallax-tilt) - [DemoTab](https://mkosir.github.io/react-parallax-tilt)
-- Mighty Mouse - [Repo](https://github.com/mkosir/react-hook-mighty-mouse) - [DemoTab](https://mkosir.github.io/react-hook-mighty-mouse)
-- Magnetic Board - [Repo](https://github.com/mkosir/react-magnetic-board) - [DemoTab](https://mkosir.github.io/react-magnetic-board)
+- [React Tilt](https://github.com/mkosir/react-parallax-tilt) - [DemoZap](https://mkosir.github.io/react-parallax-tilt)
+- [Mighty Mouse](https://github.com/mkosir/react-hook-mighty-mouse) - [DemoZap](https://mkosir.github.io/react-hook-mighty-mouse)
+- [Magnetic Board](https://github.com/mkosir/react-magnetic-board) - [DemoZap](https://mkosir.github.io/react-magnetic-board)
 
 ## Manually create demos
 
-To manually create demos instead via CLI just [React DemoTab](https://github.com/mkosir/react-demo-tab) component.
+To manually create demos instead via CLI use [DemoTabs](https://github.com/mkosir/react-demo-tab) component.
 
 ## Contributing
 
