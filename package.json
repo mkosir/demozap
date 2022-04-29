@@ -1,5 +1,5 @@
 {
-  "name": "demox",
+  "name": "demozap",
   "description": "CLI tool for creating demos of React components",
   "version": "0.0.0-development",
   "main": "lib/index.js",
@@ -104,9 +104,9 @@
     "demo-component",
     "demo-generator",
     "demo",
-    "demox",
+    "demozap",
     "demo-cli",
-    "demox-cli",
+    "demo-code",
     "cli",
     "cli-tool",
     "documentation",
