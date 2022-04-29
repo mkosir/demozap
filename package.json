@@ -22,11 +22,11 @@
     "semantic-release": "semantic-release --branches main"
   },
   "bin": {
-    "demotab": "./bin/run"
+    "demozap": "./bin/run"
   },
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "demotab",
+    "bin": "demozap",
     "plugins": [
       "@oclif/plugin-help"
     ]
