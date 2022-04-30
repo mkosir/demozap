@@ -10,6 +10,7 @@ const storybookConfig: StorybookConfig = {
     builder: 'webpack5',
   },
   webpackFinal: async (config) => {
+    // eslint-disable-next-line
     config.module!.rules!.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
@@ -17,6 +18,7 @@ const storybookConfig: StorybookConfig = {
     });
 
     // Resolve absolute imports
+    // eslint-disable-next-line
     config.resolve!.modules!.push(path.resolve(process.cwd(), 'src'));
 
     // Plugin 'TsconfigPathsPlugin' issue with Webpack v5 - https://github.com/dividab/tsconfig-paths-webpack-plugin/issues/60
