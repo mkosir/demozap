@@ -38,7 +38,7 @@ npm install -D react-demo-tab
 
 - Generated demo files are prefixed with `_`:  
   `MyComponent.demozap.jsx` → `_MyComponent.jsx`
-- or set custom prefix with `--prefix` flag:  
+- or set custom prefix:  
   `npx demozap generate --prefix=CustomPrefix`
 
 ## Built with DemoZap
