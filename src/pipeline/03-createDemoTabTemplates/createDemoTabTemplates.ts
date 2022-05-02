@@ -1,4 +1,4 @@
-import { DemoTabFileMeta } from '../../types';
+import { DemoTabFileMeta } from 'types';
 
 const fsExtra = require('fs-extra');
 

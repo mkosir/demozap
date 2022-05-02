@@ -1,9 +1,9 @@
 import { Command, Flags } from '@oclif/core';
 
-import { getDemoTabFilePaths } from '../pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
-import { createDemoTabFilesMeta } from '../pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
-import { createDemoTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
-import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
+import { getDemoTabFilePaths } from 'pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
+import { createDemoTabFilesMeta } from 'pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
+import { createDemoTabTemplates } from 'pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
+import { replaceDemoTabTemplatesContent } from 'pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
 
 const chalk = require('chalk');
 
