@@ -9,10 +9,12 @@ export const getDemoTabFilePaths = (): {
 } => {
   const demoTabFilePaths = glob.sync(process.cwd() + '/**/*.demozap.*', {});
 
-  const demoTabCodeFilePaths = demoTabFilePaths.filter((demoTabFilePath) =>
+  // eslint-disable-next-line
+  const demoTabCodeFilePaths = demoTabFilePaths.filter((demoTabFilePath: any) =>
     supportedCodeExt.includes(demoTabFilePath.split('.').pop()),
   );
-  const demoTabStyleFilePaths = demoTabFilePaths.filter((demoTabFilePath) =>
+  // eslint-disable-next-line
+  const demoTabStyleFilePaths = demoTabFilePaths.filter((demoTabFilePath: any) =>
     supportedStyleExt.includes(demoTabFilePath.split('.').pop()),
   );
 
