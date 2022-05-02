@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Storybook
+    "jsx": "react",
+    "allowJs": true,
+    "esModuleInterop": true
+  },
+  "include": ["."],
+  "exclude": ["dist", "bin"],
+  // Storybook
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
