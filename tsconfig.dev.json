@@ -1,12 +1,12 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "noEmit": true,
     // Storybook
     "jsx": "react",
     "allowJs": true
   },
   "include": ["."],
-  "exclude": ["dist", "bin"],
   // Storybook
   "ts-node": {
     "compilerOptions": {

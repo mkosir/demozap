@@ -9,5 +9,6 @@
     "esModuleInterop": true,
     "baseUrl": "src",
     "target": "es2019"
-  }
+  },
+  "exclude": ["dist", "bin"]
 }
