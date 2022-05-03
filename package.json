@@ -15,7 +15,6 @@
     "build": "shx rm -rf dist && tsc -b tsconfig.prod.json --verbose",
     "postpack": "shx rm -f oclif.manifest.json",
     "prepack": "npm run build && oclif manifest && oclif readme",
-    "version": "oclif readme && git add README.md",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
