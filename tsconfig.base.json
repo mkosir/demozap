@@ -10,6 +10,10 @@
     "noImplicitAny": true,
     "esModuleInterop": true,
     "baseUrl": "src",
+    "paths": {
+      "commands/*": ["commands/*"],
+      "pipeline/*": ["pipeline/*"]
+    },
     "target": "ES2020"
   },
   "exclude": ["dist", "bin"]
