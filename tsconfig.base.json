@@ -2,6 +2,11 @@
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
+    "baseUrl": "src",
+    "paths": {
+      "commands/*": ["commands/*"],
+      "pipeline/*": ["pipeline/*"]
+    },
     "importHelpers": true,
     "module": "commonjs",
     "resolveJsonModule": true,
@@ -9,11 +14,6 @@
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "baseUrl": "src",
-    "paths": {
-      "commands/*": ["commands/*"],
-      "pipeline/*": ["pipeline/*"]
-    },
     "target": "ES2020"
   },
   "exclude": ["dist", "bin"]
