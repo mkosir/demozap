@@ -55,7 +55,7 @@
     "fs-extra": "^10.1.0",
     "glob": "^8.0.1",
     "replace-in-file": "^6.3.2",
-    "tsconfig-paths": "^3.14.1"
+    "tsconfig-paths": "^4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
