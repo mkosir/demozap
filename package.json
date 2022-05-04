@@ -7,6 +7,7 @@
   "files": [
     "/bin",
     "/dist",
+    "/tsconfig.base.json",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
