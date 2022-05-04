@@ -4,8 +4,7 @@
     "declaration": true,
     "baseUrl": "src",
     "paths": {
-      "commands/*": ["commands/*"],
-      "pipeline/*": ["pipeline/*"]
+      "./*": ["./*"]
     },
     "importHelpers": true,
     "module": "commonjs",
