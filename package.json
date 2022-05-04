@@ -13,7 +13,8 @@
   "scripts": {
     "prepare": "husky install",
     "build": "shx rm -rf dist && tsc -b tsconfig.prod.json --verbose",
-    "prepack": "npm run build && oclif manifest && oclif readme",
+    "oclif-paths": "ts-node --project tsconfig.base.json -r tsconfig-paths/register node_modules/.bin/oclif",
+    "prepack": "npm run build && npm run oclif-paths manifest && npm run oclif-paths readme",
     "postpack": "shx rm -f oclif.manifest.json",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
