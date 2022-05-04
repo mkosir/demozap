@@ -24,7 +24,7 @@
     "commit": "git-cz",
     "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009",
     "storybook-build": "build-storybook",
-    "demozap": "./bin/run generate --prefix=_ && npm run format-fix",
+    "demozap": "./bin/dev generate --prefix=_ && npm run format-fix",
     "semantic-release": "semantic-release --branches main"
   },
   "bin": {
@@ -96,6 +96,7 @@
     "semantic-release": "^19.0.2",
     "shx": "^0.3.4",
     "ts-node": "^10.2.1",
+    "tsconfig-paths": "^4.0.0",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
