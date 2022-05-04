@@ -116,7 +116,6 @@
     "cli",
     "cli-tool",
     "documentation",
-    "documentation-tool",
-    "oclif"
+    "documentation-tool"
   ]
 }
