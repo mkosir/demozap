@@ -1,4 +1,11 @@
 #!/usr/bin/env node
+const tsConfig = require('../tsconfig.base.json');
+const tsConfigPaths = require('tsconfig-paths');
+
+tsConfigPaths.register({
+  baseUrl: './dist',
+  paths: tsConfig.compilerOptions.paths,
+});
 
 const oclif = require('@oclif/core');
 
