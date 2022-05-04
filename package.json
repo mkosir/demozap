@@ -11,7 +11,7 @@
     "/oclif.manifest.json"
   ],
   "scripts": {
-    "prepare": "husky inXstall",
+    "prepare": "husky install",
     "build": "shx rm -rf dist && tsc -b tsconfig.prod.json --verbose",
     "postpack": "shx rm -f oclif.manifest.json",
     "prepack": "npm run build && oclif manifest && oclif readme",
