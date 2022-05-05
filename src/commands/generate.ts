@@ -1,5 +1,14 @@
 import { Command, Flags } from '@oclif/core';
-console.log('🔎 Log ~ Flags', Flags);
+
+// eslint-disable-next-line
+const tsConfigPaths = require('tsconfig-paths');
+// eslint-disable-next-line
+const tsConfig = require('../../tsconfig.base.json');
+
+tsConfigPaths.register({
+  baseUrl: './dist',
+  paths: tsConfig.compilerOptions.paths,
+});
 
 import { getDemoTabFilePaths } from 'pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
 import { createDemoTabFilesMeta } from 'pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
