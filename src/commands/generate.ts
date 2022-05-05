@@ -1,4 +1,5 @@
 import { Command, Flags } from '@oclif/core';
+console.log('🔎 Log ~ Flags', Flags);
 
 import { getDemoTabFilePaths } from 'pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
 import { createDemoTabFilesMeta } from 'pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
