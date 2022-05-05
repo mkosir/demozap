@@ -12,6 +12,7 @@
     "pretty": true,
     "strict": true,
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "target": "ES2020"
   },
