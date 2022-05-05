@@ -53,8 +53,7 @@
     "chalk": "^4.1.2",
     "fs-extra": "^10.1.0",
     "glob": "^8.0.1",
-    "replace-in-file": "^6.3.2",
-    "tsconfig-paths": "^4.0.0"
+    "replace-in-file": "^6.3.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
