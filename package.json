@@ -26,7 +26,7 @@
     "commit": "git-cz",
     "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009",
     "storybook-build": "build-storybook",
-    "demozap": "./bin/dev generate --prefix=_ && npm run format-fix",
+    "demozap": "npm run build && ./bin/dev generate --prefix=_ && npm run format-fix",
     "semantic-release": "semantic-release --branches main"
   },
   "bin": {
