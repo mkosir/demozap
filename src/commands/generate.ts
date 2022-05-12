@@ -7,14 +7,21 @@ import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTem
 
 const chalk = require('chalk');
 
+type SupportedFramework = 'react' | 'vue' | 'svelte';
+
 // eslint-disable-next-line
 export default class Generate extends Command {
-  static description = 'generate demos with DemoZap';
+  static description = 'Generate React|Vue|Svelte components demos in a zap';
 
   static flags = {
     prefix: Flags.string({
-      description: 'generate DemoZap components with filename prefix',
+      description: 'Generate demos with filename prefix',
       default: '_',
+    }),
+    framework: Flags.enum<SupportedFramework>({
+      options: ['react', 'vue', 'svelte'],
+      description: 'Generate demos for preferred framework',
+      default: 'react',
     }),
   };
 
