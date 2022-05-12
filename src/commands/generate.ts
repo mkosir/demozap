@@ -28,6 +28,18 @@ export default class Generate extends Command {
   async run(): Promise<void> {
     const { flags } = await this.parse(Generate);
 
+    switch (flags.framework) {
+      case 'react':
+        break;
+      case 'vue':
+        break;
+      case 'svelte':
+        break;
+
+      default:
+        throw Error(`Framework ${flags.framework} not supported`);
+    }
+
     this.log(chalk.blue(`Generating demos...`));
 
     const { demoTabCodeFilePaths, demoTabStyleFilePaths } = getDemoTabFilePaths();
