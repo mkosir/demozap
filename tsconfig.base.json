@@ -11,7 +11,11 @@
     "resolveJsonModule": true,
     "pretty": true,
     "strict": true,
+    "strictNullChecks": true,
     "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "target": "ES2020"
