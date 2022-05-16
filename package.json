@@ -1,6 +1,6 @@
 {
   "name": "demozap",
-  "description": "1CLI tool for creating demos of React|Vue|Svelte components",
+  "description": "CLI tool for creating demos of React|Vue|Svelte components",
   "version": "0.0.0-development",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
