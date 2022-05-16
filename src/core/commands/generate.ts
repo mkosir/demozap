@@ -1,8 +1,8 @@
 import { SupportedFramework } from 'core/types';
 
-import { getDemoZapFilePaths } from '../pipeline/01-getDemoZapFilePaths/getDemoZapFilePaths';
-import { createDemoZapFilesMeta } from '../pipeline/02-createDemoZapFilesMeta/createDemoZapFilesMeta';
-import { createDemoZapTemplates } from '../pipeline/03-createDemoZapTemplates/createDemoZapTemplates';
+import { getDemoZapFilePaths } from '../pipeline/01-getDemoZapFilePaths';
+import { createDemoZapFilesMeta } from '../pipeline/02-createDemoZapFilesMeta';
+import { createDemoZapTemplates } from '../pipeline/03-createDemoZapTemplates';
 import { replaceDemoZapTemplatesContent } from '../pipeline/04-replaceDemoZapTemplatesContent/replaceDemoZapTemplatesContent';
 import { logInfo, logSuccess, logError } from '../utils/log';
 
