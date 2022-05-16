@@ -1,13 +1,8 @@
 import { Command, Flags } from '@oclif/core';
 
-import { getDemoTabFilePaths } from '../core/pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
-import { createDemoTabFilesMeta } from '../core/pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
-import { createDemoTabTemplates } from '../core/pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
-import { replaceDemoTabTemplatesContent } from '../core/pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
+import { SupportedFramework } from 'core/types';
 
-const chalk = require('chalk');
-
-type SupportedFramework = 'react' | 'vue' | 'svelte';
+import { generateRun } from '../core/commands/generate';
 
 // eslint-disable-next-line
 export default class Generate extends Command {
@@ -26,49 +21,12 @@ export default class Generate extends Command {
   };
 
   async run(): Promise<void> {
-    const { flags } = await this.parse(Generate);
+    const {
+      flags: { framework, prefix },
+    } = await this.parse(Generate);
 
-    switch (flags.framework) {
-      case 'react':
-        break;
-      case 'vue':
-        break;
-      case 'svelte':
-        break;
-
-      default:
-        throw Error(`Framework ${flags.framework} not supported`);
-    }
-
-    this.log(chalk.blue(`Generating demos...`));
-
-    const { demoTabCodeFilePaths, demoTabStyleFilePaths } = getDemoTabFilePaths();
-    this.log(
-      chalk.blue(
-        `Found ${demoTabCodeFilePaths.length + demoTabStyleFilePaths.length} DemoZap files (code: ${
-          demoTabCodeFilePaths.length
-        }, style: ${demoTabStyleFilePaths.length})`,
-      ),
-    );
-
-    const demoTabFilesInfo = createDemoTabFilesMeta(demoTabCodeFilePaths, demoTabStyleFilePaths, flags.prefix);
-
-    try {
-      const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(demoTabFilesInfo);
-      this.log(chalk.blue(`Created ${numOfCreatedDemoTabTemplates} DemoZap templates`));
-    } catch (err) {
-      console.error('Error occurred:', err);
-      this.exit();
-    }
-
-    try {
-      const numOfReplacedDemoTabTemplatesContent = await replaceDemoTabTemplatesContent(demoTabFilesInfo);
-      this.log(chalk.blue(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoZap templates`));
-    } catch (err) {
-      console.error('Error occurred:', err);
-      this.exit();
-    }
-
-    this.log(chalk.green('Completed!'));
+    generateRun({
+      flags: { framework, prefix },
+    });
   }
 }

@@ -9,3 +9,5 @@ export type DemoTabFileMeta = {
     filename: { base: string | null; ext: string | null };
   };
 };
+
+export type SupportedFramework = 'react' | 'vue' | 'svelte';

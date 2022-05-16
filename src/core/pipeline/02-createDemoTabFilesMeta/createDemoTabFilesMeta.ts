@@ -1,4 +1,4 @@
-import { DemoTabFileMeta } from 'types';
+import { DemoTabFileMeta } from 'core/types';
 
 import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabFileMeta';
 

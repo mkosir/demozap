@@ -1,4 +1,4 @@
-import { DemoTabFileMeta } from 'types';
+import { DemoTabFileMeta } from 'core/types';
 
 import { extractDemoTabFilePathInfo } from '../02-extractDemoTabFilePathInfo/extractDemoTabFilePathInfo';
 import { findAssociateDemoTabFilesByName } from '../03-findAssociateDemoTabFilesByName/findAssociateDemoTabFilesByName';
