@@ -2,7 +2,7 @@ import { DemoTabFileMeta } from 'core/types';
 
 const fsExtra = require('fs-extra');
 
-export const createDemoTabTemplates = async (demoTabFilesMeta: DemoTabFileMeta[]): Promise<number> => {
+export const createDemoZapTemplates = async (demoTabFilesMeta: DemoTabFileMeta[]): Promise<number> => {
   let numOfCreatedDemoTabTemplates = 0;
 
   const demoTabTemplatePath = __dirname + '/../../../../bin/templates/react-demo-tab/template';

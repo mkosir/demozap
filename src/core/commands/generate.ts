@@ -2,8 +2,8 @@ import { SupportedFramework } from 'core/types';
 
 import { getDemoZapFilePaths } from '../pipeline/01-getDemoZapFilePaths/getDemoZapFilePaths';
 import { createDemoZapFilesMeta } from '../pipeline/02-createDemoZapFilesMeta/createDemoZapFilesMeta';
-import { createDemoTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
-import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
+import { createDemoZapTemplates } from '../pipeline/03-createDemoZapTemplates/createDemoZapTemplates';
+import { replaceDemoZapTemplatesContent } from '../pipeline/04-replaceDemoZapTemplatesContent/replaceDemoZapTemplatesContent';
 import { logInfo, logSuccess, logError } from '../utils/log';
 
 type GenerateRunParams = {
@@ -37,7 +37,7 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
   const demoTabFilesInfo = createDemoZapFilesMeta({ demoZapCodeFilePaths, demoZapStyleFilePaths, prefix });
 
   try {
-    const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(demoTabFilesInfo);
+    const numOfCreatedDemoTabTemplates = await createDemoZapTemplates(demoTabFilesInfo);
     logInfo(`Created ${numOfCreatedDemoTabTemplates} DemoZap templates`);
   } catch (err) {
     logError(`Error occurred: ${err}`);
@@ -45,7 +45,7 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
   }
 
   try {
-    const numOfReplacedDemoTabTemplatesContent = await replaceDemoTabTemplatesContent(demoTabFilesInfo);
+    const numOfReplacedDemoTabTemplatesContent = await replaceDemoZapTemplatesContent(demoTabFilesInfo);
     logInfo(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoZap templates`);
   } catch (err) {
     logError(`Error occurred: ${err}`);
