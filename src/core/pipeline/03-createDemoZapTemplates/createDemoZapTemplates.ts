@@ -1,6 +1,6 @@
-import { DemoTabFileMeta } from 'core/types';
+import fsExtra from 'fs-extra';
 
-const fsExtra = require('fs-extra');
+import { DemoTabFileMeta } from 'core/types';
 
 export const createDemoZapTemplates = async (demoTabFilesMeta: DemoTabFileMeta[]): Promise<number> => {
   let numOfCreatedDemoTabTemplates = 0;
