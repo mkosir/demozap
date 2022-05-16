@@ -1,9 +1,9 @@
+import { readFile } from 'fs-extra';
+import { replaceInFile } from 'replace-in-file';
+
 import { DemoTabFileMeta } from 'core/types';
 
 import { escapeFileContent } from './escapeFileContent';
-
-const fsExtra = require('fs-extra');
-const replace = require('replace-in-file');
 
 export const replaceDemoTabTemplateContent = async (DemoTabFileMeta: DemoTabFileMeta) => {
   const replacePropStyle = DemoTabFileMeta.style.path ? ` style={style}` : '';
@@ -12,11 +12,11 @@ export const replaceDemoTabTemplateContent = async (DemoTabFileMeta: DemoTabFile
     ? ` styleExt="${DemoTabFileMeta.style.filename.ext}"`
     : '';
 
-  const code = await fsExtra.readFile(DemoTabFileMeta.code.path, 'utf8');
+  const code = await readFile(DemoTabFileMeta.code.path, 'utf8');
   const codeEscaped = escapeFileContent(code);
   let replaceStyle = '';
   if (DemoTabFileMeta.style.path) {
-    const style = await fsExtra.readFile(DemoTabFileMeta.style.path, 'utf8');
+    const style = await readFile(DemoTabFileMeta.style.path, 'utf8');
     replaceStyle = `const style = \`${style}\`;`;
   }
 
@@ -57,7 +57,8 @@ export const replaceDemoTabTemplateContent = async (DemoTabFileMeta: DemoTabFile
       to: replacePropStyleExt,
     },
   ];
+
   for (const option of options) {
-    await replace(option);
+    await replaceInFile(option);
   }
 };

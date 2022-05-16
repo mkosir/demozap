@@ -1,4 +1,4 @@
-import fsExtra from 'fs-extra';
+import { copy } from 'fs-extra';
 
 import { DemoTabFileMeta } from 'core/types';
 
@@ -10,7 +10,7 @@ export const createDemoZapTemplates = async (demoTabFilesMeta: DemoTabFileMeta[]
   await Promise.all(
     demoTabFilesMeta.map(async (DemoTabFileMeta) => {
       const demoTabTemplate = `${demoTabTemplatePath}.${DemoTabFileMeta.code.filename.ext}`;
-      await fsExtra.copy(demoTabTemplate, DemoTabFileMeta.path);
+      await copy(demoTabTemplate, DemoTabFileMeta.path);
       numOfCreatedDemoTabTemplates++;
     }),
   );
