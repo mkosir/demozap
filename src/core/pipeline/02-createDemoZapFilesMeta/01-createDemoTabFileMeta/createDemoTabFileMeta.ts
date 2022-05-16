@@ -5,7 +5,7 @@ import { findAssociateDemoTabFilesByName } from '../03-findAssociateDemoTabFiles
 
 export const createDemoTabFileMeta = (
   demoTabCodeFilePath: string,
-  demoTabStyleFilePaths: string[],
+  demoTabStyleFilePaths: ReadonlyArray<string>,
   prefix: string,
 ): DemoTabFileMeta => {
   const demoTabCodeFilePathInfo = extractDemoTabFilePathInfo(demoTabCodeFilePath);

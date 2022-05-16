@@ -1,7 +1,7 @@
 import { SupportedFramework } from 'core/types';
 
 import { getDemoZapFilePaths } from '../pipeline/01-getDemoZapFilePaths/getDemoZapFilePaths';
-import { createDemoTabFilesMeta } from '../pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
+import { createDemoZapFilesMeta } from '../pipeline/02-createDemoZapFilesMeta/createDemoZapFilesMeta';
 import { createDemoTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
 import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
 import { logInfo, logSuccess, logError } from '../utils/log';
@@ -34,7 +34,7 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
     }, style: ${demoZapStyleFilePaths.length})`,
   );
 
-  const demoTabFilesInfo = createDemoTabFilesMeta(demoZapCodeFilePaths, demoZapStyleFilePaths, prefix);
+  const demoTabFilesInfo = createDemoZapFilesMeta({ demoZapCodeFilePaths, demoZapStyleFilePaths, prefix });
 
   try {
     const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(demoTabFilesInfo);
