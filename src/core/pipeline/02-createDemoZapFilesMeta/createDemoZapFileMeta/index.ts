@@ -3,12 +3,20 @@ import { DemoTabFileMeta } from 'core/types';
 import { extractDemoZapFilePathInfo } from './extractDemoZapFilePathInfo';
 import { findAssociateDemoZapFilesByName } from './findAssociateDemoZapFilesByName';
 
-export const createDemoZapFileMeta = (
-  demoTabCodeFilePath: string,
-  demoTabStyleFilePaths: ReadonlyArray<string>,
-  prefix: string,
-): DemoTabFileMeta => {
-  const demoTabCodeFilePathInfo = extractDemoZapFilePathInfo(demoTabCodeFilePath);
+type CreateDemoZapFileMetaParams = {
+  demoZapCodeFilePath: Readonly<string>;
+  demoZapStyleFilePaths: ReadonlyArray<string>;
+  prefix: Readonly<string>;
+};
+
+type CreateDemoZapFileMeta = (createDemoZapFileMetaParams: CreateDemoZapFileMetaParams) => DemoTabFileMeta;
+
+export const createDemoZapFileMeta: CreateDemoZapFileMeta = ({
+  demoZapCodeFilePath,
+  demoZapStyleFilePaths,
+  prefix,
+}): DemoTabFileMeta => {
+  const demoTabCodeFilePathInfo = extractDemoZapFilePathInfo({ demoZapCodeFilePath });
 
   const demoTabComponentFilename = `${prefix}${demoTabCodeFilePathInfo.filename.base}.${demoTabCodeFilePathInfo.filename.ext}`;
   const demoTabComponentName = `${prefix}${demoTabCodeFilePathInfo.filename.base}`;
@@ -19,7 +27,7 @@ export const createDemoZapFileMeta = (
     filename: demoTabComponentFilename,
     componentName: demoTabComponentName,
     code: {
-      path: demoTabCodeFilePath,
+      path: demoZapCodeFilePath,
       dirname: demoTabCodeFilePathInfo.dirname,
       filename: {
         base: demoTabCodeFilePathInfo.filename.base,
@@ -30,12 +38,14 @@ export const createDemoZapFileMeta = (
   };
 
   const associateDemoTabStyleFilePaths = findAssociateDemoZapFilesByName(
-    demoTabStyleFilePaths,
+    demoZapStyleFilePaths,
     DemoTabFileMeta.code.filename.base,
   );
   if (associateDemoTabStyleFilePaths) {
     // per one code file only one style file is possible
-    const demoTabStyleFilePathInfo = extractDemoZapFilePathInfo(associateDemoTabStyleFilePaths[0]);
+    const demoTabStyleFilePathInfo = extractDemoZapFilePathInfo({
+      demoZapCodeFilePath: associateDemoTabStyleFilePaths[0],
+    });
     DemoTabFileMeta.style.path = associateDemoTabStyleFilePaths[0];
     DemoTabFileMeta.style.dirname = demoTabStyleFilePathInfo.dirname;
     DemoTabFileMeta.style.filename.base = demoTabStyleFilePathInfo.filename.base;

@@ -16,7 +16,7 @@ export const createDemoZapFilesMeta: CreateDemoZapFilesMeta = ({
   prefix,
 }) => {
   const demoTabFilesInfo = demoZapCodeFilePaths.map((demoZapCodeFilePath) => {
-    return createDemoZapFileMeta(demoZapCodeFilePath, demoZapStyleFilePaths, prefix);
+    return createDemoZapFileMeta({ demoZapCodeFilePath, demoZapStyleFilePaths, prefix });
   });
 
   return demoTabFilesInfo;
