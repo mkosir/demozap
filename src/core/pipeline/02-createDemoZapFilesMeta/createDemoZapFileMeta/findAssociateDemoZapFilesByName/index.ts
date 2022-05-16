@@ -1,6 +1,6 @@
 const path = require('path');
 
-export const findAssociateDemoTabFilesByName = (
+export const findAssociateDemoZapFilesByName = (
   demoTabFilePaths: ReadonlyArray<string>,
   filename: string,
 ): string[] | null => {

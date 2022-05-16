@@ -1,6 +1,6 @@
 const path = require('path');
 
-export const extractDemoTabFilePathInfo = (
+export const extractDemoZapFilePathInfo = (
   demoTabCodeFilePath: string,
 ): { dirname: string; filename: { base: string; ext: string } } => {
   const dirname = path.dirname(demoTabCodeFilePath);

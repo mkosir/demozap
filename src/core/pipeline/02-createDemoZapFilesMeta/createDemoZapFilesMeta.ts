@@ -1,6 +1,6 @@
 import { DemoTabFileMeta } from 'core/types';
 
-import { createDemoTabFileMeta } from './01-createDemoTabFileMeta/createDemoTabFileMeta';
+import { createDemoZapFileMeta } from './createDemoZapFileMeta';
 
 type CreateDemoZapFilesMetaParams = {
   demoZapCodeFilePaths: ReadonlyArray<string>;
@@ -16,7 +16,7 @@ export const createDemoZapFilesMeta: CreateDemoZapFilesMeta = ({
   prefix,
 }) => {
   const demoTabFilesInfo = demoZapCodeFilePaths.map((demoZapCodeFilePath) => {
-    return createDemoTabFileMeta(demoZapCodeFilePath, demoZapStyleFilePaths, prefix);
+    return createDemoZapFileMeta(demoZapCodeFilePath, demoZapStyleFilePaths, prefix);
   });
 
   return demoTabFilesInfo;
