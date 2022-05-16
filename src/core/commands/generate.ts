@@ -1,6 +1,6 @@
 import { SupportedFramework } from 'core/types';
 
-import { getDemoTabFilePaths } from '../pipeline/01-getDemoTabFilePaths/getDemoTabFilePaths';
+import { getDemoZapFilePaths } from '../pipeline/01-getDemoZapFilePaths/getDemoZapFilePaths';
 import { createDemoTabFilesMeta } from '../pipeline/02-createDemoTabFilesMeta/createDemoTabFilesMeta';
 import { createDemoTabTemplates } from '../pipeline/03-createDemoTabTemplates/createDemoTabTemplates';
 import { replaceDemoTabTemplatesContent } from '../pipeline/04-replaceDemoTabTemplatesContent/replaceDemoTabTemplatesContent';
@@ -27,14 +27,14 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
 
   logInfo('Generating demos...');
 
-  const { demoTabCodeFilePaths, demoTabStyleFilePaths } = getDemoTabFilePaths();
+  const { demoZapCodeFilePaths, demoZapStyleFilePaths } = getDemoZapFilePaths();
   logInfo(
-    `Found ${demoTabCodeFilePaths.length + demoTabStyleFilePaths.length} DemoZap files (code: ${
-      demoTabCodeFilePaths.length
-    }, style: ${demoTabStyleFilePaths.length})`,
+    `Found ${demoZapCodeFilePaths.length + demoZapStyleFilePaths.length} DemoZap files (code: ${
+      demoZapCodeFilePaths.length
+    }, style: ${demoZapStyleFilePaths.length})`,
   );
 
-  const demoTabFilesInfo = createDemoTabFilesMeta(demoTabCodeFilePaths, demoTabStyleFilePaths, prefix);
+  const demoTabFilesInfo = createDemoTabFilesMeta(demoZapCodeFilePaths, demoZapStyleFilePaths, prefix);
 
   try {
     const numOfCreatedDemoTabTemplates = await createDemoTabTemplates(demoTabFilesInfo);
