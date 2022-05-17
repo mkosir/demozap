@@ -1,12 +1,9 @@
+import { GetDemoZapFilePaths } from './types';
+
 const glob = require('glob');
 
 const supportedCodeExt = ['jsx', 'tsx'];
 const supportedStyleExt = ['css', 'scss'];
-
-type GetDemoZapFilePaths = () => {
-  demoZapCodeFilePaths: ReadonlyArray<string>;
-  demoZapStyleFilePaths: ReadonlyArray<string>;
-};
 
 export const getDemoZapFilePaths: GetDemoZapFilePaths = () => {
   const demoTabFilePaths = glob.sync(`${process.cwd()}/**/*.demozap.*`, {}) as ReadonlyArray<string>;
