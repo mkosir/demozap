@@ -8,7 +8,7 @@ type CreateDemoZapFilesMetaParams = {
   prefix: string;
 };
 
-type CreateDemoZapFilesMeta = (createDemoZapFilesMetaParams: CreateDemoZapFilesMetaParams) => DemoTabFileMeta[];
+type CreateDemoZapFilesMeta = (createDemoZapFilesMetaParams: CreateDemoZapFilesMetaParams) => Array<DemoTabFileMeta>;
 
 export const createDemoZapFilesMeta: CreateDemoZapFilesMeta = ({
   demoZapCodeFilePaths,

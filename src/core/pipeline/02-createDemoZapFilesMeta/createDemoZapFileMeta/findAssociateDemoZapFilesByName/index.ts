@@ -3,7 +3,7 @@ import path from 'path';
 export const findAssociateDemoZapFilesByName = (
   demoTabFilePaths: ReadonlyArray<string>,
   filename: string,
-): string[] | null => {
+): Array<string> | null => {
   const demoTabAssociateFilePaths = demoTabFilePaths.filter((demoTabStyleFilePath) => {
     const styleFilename = path.basename(demoTabStyleFilePath);
     const styleFilenameArray = styleFilename.split('.');
