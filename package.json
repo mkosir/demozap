@@ -16,7 +16,7 @@
     "build": "shx rm -rf dist && tsc -b tsconfig.prod.json --verbose",
     "prepack": "npm run build && oclif manifest && oclif readme",
     "postpack": "shx rm -f oclif.manifest.json",
-    "lint": "eslint --max-warnings 0 .",
+    "lint": "eslint --max-warnings 0 . && npm run tsc",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
     "tsc": "tsc -p tsconfig.dev.json",
