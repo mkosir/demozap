@@ -28,7 +28,7 @@ const style = `.btn-red {
 `;
 
 export const _ButtonRed = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} codeExt="tsx" style={style} styleExt="scss">
     <Demo />
   </DemoTab>
 );

@@ -6,7 +6,7 @@
     "jsx": "react",
     "allowJs": true
   },
-  "include": ["."],
+  "include": [".", ".storybook/**/*", ".commitlintrc.ts"],
   // Storybook
   "ts-node": {
     "compilerOptions": {

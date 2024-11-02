@@ -5,7 +5,7 @@ import { DemoTabFileMeta } from 'core/types';
 export const createDemoZapTemplates = async (demoTabFilesMeta: Array<DemoTabFileMeta>): Promise<number> => {
   let numOfCreatedDemoTabTemplates = 0;
 
-  const demoTabTemplatePath = __dirname + '/../../../../bin/templates/react-demo-tab/template';
+  const demoTabTemplatePath = `${__dirname}/../../../../bin/templates/react-demo-tab/template`;
 
   await Promise.all(
     demoTabFilesMeta.map(async (DemoTabFileMeta) => {
