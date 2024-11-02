@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import React from 'react';
 
 import { _ButtonGreen } from './ButtonGreen/_ButtonGreen';
@@ -8,10 +8,18 @@ import { _Default } from './Default/_Default';
 
 import './DemoZap.scss';
 
-const stories = storiesOf('Examples', module);
+const meta: Meta = {
+  title: 'Examples',
+};
 
-stories
-  .add('Default', () => <_Default />)
-  .add('Button Green - .jsx/.css', () => <_ButtonGreen />)
-  .add('Button Red - .tsx/.scss', () => <_ButtonRed />)
-  .add('Counter', () => <_Counter />);
+export default meta;
+
+export const Default = () => <_Default />;
+
+export const ButtonGreen = () => <_ButtonGreen />;
+ButtonGreen.storyName = 'Button Green - .jsx/.css';
+
+export const ButtonRed = () => <_ButtonRed />;
+ButtonRed.storyName = 'Button Red - .tsx/.scss';
+
+export const Counter = () => <_Counter />;

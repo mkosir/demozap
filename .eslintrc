@@ -8,7 +8,6 @@
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:no-array-reduce/recommended",
-    "plugin:storybook/recommended"
   ],
 
   "plugins": ["@typescript-eslint", "import"],
@@ -26,19 +25,19 @@
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ]
+          "caseInsensitive": true,
+        },
+      },
+    ],
   },
 
   "overrides": [
     {
-      "files": ["stories/**/*.demozap.*"],
+      "files": ["stories/**/*"],
       "rules": {
-        "import/no-default-export": "off"
-      }
-    }
+        "import/no-default-export": "off",
+      },
+    },
   ],
 
   // ESlint default behaviour ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
@@ -46,10 +45,10 @@
 
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
     },
     "react": {
-      "version": "detect"
-    }
-  }
+      "version": "detect",
+    },
+  },
 }

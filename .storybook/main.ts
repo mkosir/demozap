@@ -1,35 +1,29 @@
 import path from 'path';
 
-import { StorybookConfig } from '@storybook/core-common';
-// import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import { StorybookConfig } from '@storybook/react-webpack5';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
-  typescript: { reactDocgen: 'react-docgen' },
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
   },
-  webpackFinal: async (config) => {
-    // eslint-disable-next-line
-    config.module!.rules!.push({
+
+  webpackFinal: (config) => {
+    config.module?.rules?.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
 
     // Resolve absolute imports
-    // eslint-disable-next-line
-    config.resolve!.modules!.push(path.resolve(process.cwd(), 'src'));
-
-    // Plugin 'TsconfigPathsPlugin' issue with Webpack v5 - https://github.com/dividab/tsconfig-paths-webpack-plugin/issues/60
-    // config.resolve!.plugins! = [
-    //   new TsconfigPathsPlugin({
-    //     configFile: path.resolve(__dirname, '../tsconfig.dev.json'),
-    //   }),
-    // ];
+    config.resolve?.modules?.push(path.resolve(process.cwd(), 'src'));
 
     return config;
   },
+
+  addons: ['@storybook/addon-webpack5-compiler-swc', '@storybook/addon-styling'],
 };
 
-module.exports = storybookConfig;
+// eslint-disable-next-line import/no-default-export
+export default storybookConfig;
