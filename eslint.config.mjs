@@ -34,7 +34,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*.{js,ts,tsx}'],
+    files: ['**/*.{js,ts,jsx,tsx}'],
 
     rules: {
       'react/jsx-sort-props': ['error', { callbacksLast: true, shorthandFirst: true }],

@@ -6,10 +6,10 @@ import { DemoTabFileMeta } from 'core/types';
 import { escapeFileContent } from './escapeFileContent';
 
 export const replaceDemoTabTemplateContent = async (DemoTabFileMeta: DemoTabFileMeta) => {
+  const replacePropCodeExt = ` codeExt="${DemoTabFileMeta.code.filename.ext}"` as const;
   const replacePropStyle = DemoTabFileMeta.style.path ? ` style={style}` : '';
-  const replacePropCodeExt = ` codeExt="${DemoTabFileMeta.code.filename.ext}"`;
   const replacePropStyleExt = DemoTabFileMeta.style.filename.ext
-    ? ` styleExt="${DemoTabFileMeta.style.filename.ext}"`
+    ? (` styleExt="${DemoTabFileMeta.style.filename.ext}"` as const)
     : '';
 
   const code = await readFile(DemoTabFileMeta.code.path, 'utf8');

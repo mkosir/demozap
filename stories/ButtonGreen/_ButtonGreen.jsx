@@ -28,7 +28,7 @@ const style = `.btn-green {
 `;
 
 export const _ButtonGreen = () => (
-  <DemoTab code={code} style={style} codeExt="jsx" styleExt="css">
+  <DemoTab code={code} codeExt="jsx" style={style} styleExt="css">
     <Demo />
   </DemoTab>
 );
