@@ -48,7 +48,7 @@
     "@oclif/plugin-plugins": "2.3.0",
     "chalk": "4.1.2",
     "fs-extra": "10.1.0",
-    "glob": "8.1.0",
+    "glob": "11.0.0",
     "replace-in-file": "6.3.5"
   },
   "devDependencies": {

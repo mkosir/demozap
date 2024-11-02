@@ -16,7 +16,7 @@ export default tseslint.config(
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintConfigPrettier,
   {
-    ignores: ['!.*', 'node_modules', 'dist', 'compiled', 'build'],
+    ignores: ['!.*', 'node_modules', 'bin', 'dist', 'compiled', 'build'],
   },
   {
     languageOptions: {

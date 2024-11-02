@@ -10,7 +10,7 @@ type GenerateRunParams = {
   flags: { framework?: SupportedFramework; prefix?: string };
 };
 
-type GenerateRun = (generateRunParams: GenerateRunParams) => void;
+type GenerateRun = (generateRunParams: GenerateRunParams) => Promise<void>;
 
 export const generateRun: GenerateRun = async ({ flags: { framework = 'react', prefix = '_' } }) => {
   switch (framework) {
@@ -22,6 +22,7 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
       break;
 
     default:
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw Error(`Framework ${framework} not supported`);
   }
 
@@ -29,25 +30,25 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
 
   const { demoZapCodeFilePaths, demoZapStyleFilePaths } = getDemoZapFilePaths();
   logInfo(
-    `Found ${demoZapCodeFilePaths.length + demoZapStyleFilePaths.length} DemoZap files (code: ${
-      demoZapCodeFilePaths.length
-    }, style: ${demoZapStyleFilePaths.length})`,
+    `Found ${demoZapCodeFilePaths.length.toString() + demoZapStyleFilePaths.length.toString()} DemoZap files (code: ${demoZapCodeFilePaths.length.toString()}, style: ${demoZapStyleFilePaths.length.toString()})`,
   );
 
   const demoTabFilesInfo = createDemoZapFilesMeta({ demoZapCodeFilePaths, demoZapStyleFilePaths, prefix });
 
   try {
     const numOfCreatedDemoTabTemplates = await createDemoZapTemplates(demoTabFilesInfo);
-    logInfo(`Created ${numOfCreatedDemoTabTemplates} DemoZap templates`);
+    logInfo(`Created ${numOfCreatedDemoTabTemplates.toString()} DemoZap templates`);
   } catch (err) {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     logError(`Error occurred: ${err}`);
     return;
   }
 
   try {
     const numOfReplacedDemoTabTemplatesContent = await replaceDemoZapTemplatesContent(demoTabFilesInfo);
-    logInfo(`Content replaced in ${numOfReplacedDemoTabTemplatesContent} DemoZap templates`);
+    logInfo(`Content replaced in ${numOfReplacedDemoTabTemplatesContent.toString()} DemoZap templates`);
   } catch (err) {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     logError(`Error occurred: ${err}`);
     return;
   }

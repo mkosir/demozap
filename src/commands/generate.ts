@@ -25,7 +25,7 @@ export default class Generate extends Command {
       flags: { framework, prefix },
     } = await this.parse(Generate);
 
-    generateRun({
+    await generateRun({
       flags: { framework, prefix },
     });
   }
