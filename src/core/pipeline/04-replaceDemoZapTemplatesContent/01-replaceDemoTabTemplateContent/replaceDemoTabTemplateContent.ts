@@ -56,7 +56,7 @@ export const replaceDemoTabTemplateContent = async (DemoTabFileMeta: DemoTabFile
       from: '@PROP_STYLE_EXT',
       to: replacePropStyleExt,
     },
-  ];
+  ] as const;
 
   for (const option of options) {
     await replaceInFile(option);
