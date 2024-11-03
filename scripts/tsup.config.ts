@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 const tsupConfig = defineConfig({
   entry: ['src/index.ts'],
-  outDir: 'dist',
+  outDir: './dist',
   format: ['esm'],
   clean: true,
   // dts: true,
