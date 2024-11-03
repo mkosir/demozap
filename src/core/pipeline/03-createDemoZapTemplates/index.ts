@@ -1,7 +1,6 @@
+import { cp } from 'node:fs/promises';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-
-import { copy } from 'fs-extra';
 
 import type { DemoTabFileMeta } from 'core/types';
 
@@ -16,7 +15,7 @@ export const createDemoZapTemplates = async (demoTabFilesMeta: Array<DemoTabFile
   await Promise.all(
     demoTabFilesMeta.map(async (DemoTabFileMeta) => {
       const demoTabTemplate = `${demoTabTemplatePath}.${DemoTabFileMeta.code.filename.ext}`;
-      await copy(demoTabTemplate, DemoTabFileMeta.path);
+      await cp(demoTabTemplate, DemoTabFileMeta.path, { recursive: true, force: true });
       numOfCreatedDemoTabTemplates++;
     }),
   );
