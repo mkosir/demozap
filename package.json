@@ -35,7 +35,7 @@
     "clean": "rm -rf node_modules coverage dist compiled build-storybook-static"
   },
   "bin": {
-    "demozap": "./bin/run.js"
+    "demozap": "bin/run.js"
   },
   "dependencies": {
     "cac": "6.7.14",
