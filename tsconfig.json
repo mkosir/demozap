@@ -22,7 +22,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "pretty": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "jsx": "react"
   },
   "include": [".", ".storybook/**/*", ".commitlintrc.ts"],
   "exclude": ["dist", "bin"]
