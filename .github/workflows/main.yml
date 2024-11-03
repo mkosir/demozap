@@ -183,6 +183,9 @@ jobs:
       - name: Build 🏗️
         run: npm run build
 
+      - name: List Directory for Debugging
+        run: ls -R
+
       - name: Release 🚀
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
