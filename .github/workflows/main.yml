@@ -170,15 +170,15 @@ jobs:
         if: steps.cache_dependencies.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Version Info 💉
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          VERSION_SPACES=$(npm run semantic-release --dry-run | grep -oP 'Published release \K.*? ')
-          VERSION="${VERSION_SPACES// /}"
-          echo "export const VERSION_INFO = 'v$VERSION';" > $FILE_PATH_VERSION_INFO
-          cat $FILE_PATH_VERSION_INFO
+      # - name: Version Info 💉
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: |
+      #     VERSION_SPACES=$(npm run semantic-release --dry-run | grep -oP 'Published release \K.*? ')
+      #     VERSION="${VERSION_SPACES// /}"
+      #     echo "export const VERSION_INFO = 'v$VERSION';" > $FILE_PATH_VERSION_INFO
+      #     cat $FILE_PATH_VERSION_INFO
 
       - name: Build 🏗️
         run: npm run build
