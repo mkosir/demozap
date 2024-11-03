@@ -44,9 +44,11 @@ export const createDemoZapFileMeta: CreateDemoZapFileMeta = ({
   if (associateDemoTabStyleFilePaths) {
     // per one code file only one style file is possible
     const demoTabStyleFilePathInfo = extractDemoZapFilePathInfo({
-      demoZapCodeFilePath: associateDemoTabStyleFilePaths[0],
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      demoZapCodeFilePath: associateDemoTabStyleFilePaths[0]!,
     });
-    DemoTabFileMeta.style.path = associateDemoTabStyleFilePaths[0];
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    DemoTabFileMeta.style.path = associateDemoTabStyleFilePaths[0]!;
     DemoTabFileMeta.style.dirname = demoTabStyleFilePathInfo.dirname;
     DemoTabFileMeta.style.filename.base = demoTabStyleFilePathInfo.filename.base;
     DemoTabFileMeta.style.filename.ext = demoTabStyleFilePathInfo.filename.ext;
