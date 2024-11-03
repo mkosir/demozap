@@ -2,8 +2,8 @@ import { globSync } from 'glob';
 
 import { GetDemoZapFilePaths } from './types';
 
-const supportedCodeExt = ['jsx', 'tsx'];
-const supportedStyleExt = ['css', 'scss'];
+const supportedCodeExt = ['jsx', 'tsx'] as const;
+const supportedStyleExt = ['css', 'scss'] as const;
 
 export const getDemoZapFilePaths: GetDemoZapFilePaths = () => {
   const demoTabFilePaths = globSync(`${process.cwd()}/**/*.demozap.*`, {});
