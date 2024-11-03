@@ -11,3 +11,5 @@ compiled
 /tmp
 /yarn.lock
 .DS_Store
+
+*.tsbuildinfo
