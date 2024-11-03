@@ -11,8 +11,8 @@
   },
   "sideEffects": false,
   "files": [
-    "/bin",
-    "/dist",
+    "bin",
+    "dist",
     "README.md"
   ],
   "scripts": {
