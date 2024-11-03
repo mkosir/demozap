@@ -174,8 +174,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        # --dry-run doesn't execute properly with npm, using npx instead
-        # VERSION_SPACES=$(npm run semantic-release --dry-run | grep -oP 'Published release \K.*? ')
         run: |
           VERSION_SPACES=$(npx semantic-release --dry-run | grep -oP 'Published release \K.*? ')
           VERSION="${VERSION_SPACES// /}"
