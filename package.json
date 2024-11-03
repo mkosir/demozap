@@ -90,7 +90,10 @@
   "license": "MIT",
   "author": "Marko Kosir <kosir.mar@gmail.com>",
   "homepage": "https://mkosir.github.io/demozap",
-  "repository": "mkosir/demozap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkosir/demozap.git"
+  },
   "bugs": "https://github.com/mkosir/demozap/issues",
   "keywords": [
     "react",
