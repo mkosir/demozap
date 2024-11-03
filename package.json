@@ -29,8 +29,8 @@
     "test-report": "vitest run --coverage",
     "storybook": "TS_NODE_PROJECT=tsconfig.json storybook dev -p 9009",
     "storybook-build": "storybook build -o build-storybook-static",
-    "demozap": "npm run build && ./bin/run.js generate --prefix=_ && npm run format-fix",
-    "demozap-vue": "npm run build && ./bin/run.js generate --prefix=_ --framework=vue && npm run format-fix",
+    "demozap": "npm run build && ./bin/run.js --prefix=_ && npm run format-fix",
+    "demozap-vue": "npm run build && ./bin/run.js --prefix=_ --framework=vue && npm run format-fix",
     "semantic-release": "semantic-release --branches main",
     "clean": "rm -rf node_modules coverage dist compiled build-storybook-static"
   },
