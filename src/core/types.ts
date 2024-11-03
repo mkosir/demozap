@@ -10,4 +10,5 @@ export type DemoTabFileMeta = {
   };
 };
 
-export type SupportedFramework = 'react' | 'vue' | 'svelte';
+export const SUPPORTED_FRAMEWORKS = ['react', 'vue', 'svelte'] as const;
+export type SupportedFramework = (typeof SUPPORTED_FRAMEWORKS)[number];

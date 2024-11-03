@@ -1,3 +1,29 @@
 {
-  "extends": "./tsconfig.dev.json"
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "baseUrl": "src",
+    "paths": {
+      ".": ["."]
+    },
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "types": ["vitest/globals"]
+  },
+  "include": [".", ".storybook/**/*", ".commitlintrc.ts"],
+  "exclude": ["dist", "bin"]
 }

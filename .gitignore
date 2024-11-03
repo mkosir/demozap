@@ -11,4 +11,3 @@ compiled
 /tmp
 /yarn.lock
 .DS_Store
-oclif.manifest.json

@@ -3,6 +3,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginReact from 'eslint-plugin-react';
+import eslintPluginVitest from '@vitest/eslint-plugin';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -12,6 +13,7 @@ export default tseslint.config(
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   eslintPluginReact.configs.flat.recommended,
+  eslintPluginVitest.configs.recommended,
   eslintPluginPrettierRecommended,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintConfigPrettier,
@@ -28,7 +30,7 @@ export default tseslint.config(
     },
     settings: {
       'import/resolver': {
-        typescript: { project: 'tsconfig.dev.json' },
+        typescript: { project: 'tsconfig.json' },
       },
       react: { version: 'detect' },
     },
@@ -80,6 +82,15 @@ export default tseslint.config(
           alphabetize: {
             order: 'asc',
             caseInsensitive: true,
+          },
+        },
+      ],
+
+      'vitest/valid-title': [
+        'error',
+        {
+          mustMatch: {
+            it: [/should.*when/u.source, "Test title must include 'should' and 'when'"],
           },
         },
       ],

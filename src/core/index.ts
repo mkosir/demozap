@@ -1,18 +1,20 @@
-import { SupportedFramework } from 'core/types';
+import { calculateTimeSpan, log } from 'common/utils';
 
-import { getDemoZapFilePaths } from '../pipeline/01-getDemoZapFilePaths';
-import { createDemoZapFilesMeta } from '../pipeline/02-createDemoZapFilesMeta';
-import { createDemoZapTemplates } from '../pipeline/03-createDemoZapTemplates';
-import { replaceDemoZapTemplatesContent } from '../pipeline/04-replaceDemoZapTemplatesContent/replaceDemoZapTemplatesContent';
-import { logInfo, logSuccess, logError } from '../utils/log';
+import { getDemoZapFilePaths } from './pipeline/01-getDemoZapFilePaths';
+import { createDemoZapFilesMeta } from './pipeline/02-createDemoZapFilesMeta';
+import { createDemoZapTemplates } from './pipeline/03-createDemoZapTemplates';
+import { replaceDemoZapTemplatesContent } from './pipeline/04-replaceDemoZapTemplatesContent/replaceDemoZapTemplatesContent';
+import { SupportedFramework } from './types';
 
-type GenerateRunParams = {
+type GenerateDemosParams = {
   flags: { framework?: SupportedFramework; prefix?: string };
 };
 
-type GenerateRun = (generateRunParams: GenerateRunParams) => Promise<void>;
+type GenerateDemos = (generateDemosParams: GenerateDemosParams) => Promise<void>;
 
-export const generateRun: GenerateRun = async ({ flags: { framework = 'react', prefix = '_' } }) => {
+export const generateDemos: GenerateDemos = async ({ flags: { framework = 'react', prefix = '_' } }) => {
+  const startTime = performance.now();
+
   switch (framework) {
     case 'react':
       break;
@@ -26,10 +28,10 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
       throw Error(`Framework ${framework} not supported`);
   }
 
-  logInfo('Generating demos...');
+  log.info('Generating demos...');
 
   const { demoZapCodeFilePaths, demoZapStyleFilePaths } = getDemoZapFilePaths();
-  logInfo(
+  log.info(
     `Found ${demoZapCodeFilePaths.length.toString() + demoZapStyleFilePaths.length.toString()} DemoZap files (code: ${demoZapCodeFilePaths.length.toString()}, style: ${demoZapStyleFilePaths.length.toString()})`,
   );
 
@@ -37,21 +39,22 @@ export const generateRun: GenerateRun = async ({ flags: { framework = 'react', p
 
   try {
     const numOfCreatedDemoTabTemplates = await createDemoZapTemplates(demoTabFilesInfo);
-    logInfo(`Created ${numOfCreatedDemoTabTemplates.toString()} DemoZap templates`);
+    log.info(`Created ${numOfCreatedDemoTabTemplates.toString()} DemoZap templates`);
   } catch (err) {
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    logError(`Error occurred: ${err}`);
+    log.error(`Error occurred: ${err}`);
     return;
   }
 
   try {
     const numOfReplacedDemoTabTemplatesContent = await replaceDemoZapTemplatesContent(demoTabFilesInfo);
-    logInfo(`Content replaced in ${numOfReplacedDemoTabTemplatesContent.toString()} DemoZap templates`);
+    log.info(`Content replaced in ${numOfReplacedDemoTabTemplatesContent.toString()} DemoZap templates`);
   } catch (err) {
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    logError(`Error occurred: ${err}`);
+    log.error(`Error occurred: ${err}`);
     return;
   }
 
-  logSuccess('Completed!');
+  const endTime = performance.now();
+  log.success(`Completed (${calculateTimeSpan({ startTime, endTime })})`);
 };
