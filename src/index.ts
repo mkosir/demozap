@@ -3,7 +3,7 @@ import { log, VERSION_INFO } from 'common/utils';
 import { generateDemos } from 'core';
 
 const execute = async () => {
-  log.info(`##### ⚡ DemoZap ${VERSION_INFO} ####3#`);
+  log.info(`##### ⚡ DemoZap ${VERSION_INFO} #####`);
 
   try {
     const { shouldExitCli, prefix, framework } = cliParse();
