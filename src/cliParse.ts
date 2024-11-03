@@ -38,9 +38,13 @@ type CliParseResult = {
 export const cliParse = (): CliParseResult => {
   const cli = cac('demozap');
 
-  cli.option(`-${CLI_OPTIONS.prefix.nameShort}, --${CLI_OPTIONS.prefix.nameLong}`, CLI_OPTIONS.prefix.description, {
-    default: CLI_OPTIONS.prefix.default,
-  });
+  cli.option(
+    `-${CLI_OPTIONS.prefix.nameShort}, --${CLI_OPTIONS.prefix.nameLong} <prefix>`,
+    CLI_OPTIONS.prefix.description,
+    {
+      default: CLI_OPTIONS.prefix.default,
+    },
+  );
 
   cli.option(`--${CLI_OPTIONS.framework.nameLong} <type>`, CLI_OPTIONS.framework.description, {
     default: CLI_OPTIONS.framework.default,
