@@ -32,7 +32,7 @@ export const generateDemos: GenerateDemos = async ({ flags: { framework = 'react
 
   const { demoZapCodeFilePaths, demoZapStyleFilePaths } = getDemoZapFilePaths();
   log.info(
-    `Found ${demoZapCodeFilePaths.length.toString() + demoZapStyleFilePaths.length.toString()} DemoZap files (code: ${demoZapCodeFilePaths.length.toString()}, style: ${demoZapStyleFilePaths.length.toString()})`,
+    `Found ${(demoZapCodeFilePaths.length + demoZapStyleFilePaths.length).toString()} DemoZap files (code: ${demoZapCodeFilePaths.length.toString()}, style: ${demoZapStyleFilePaths.length.toString()})`,
   );
 
   const demoTabFilesInfo = createDemoZapFilesMeta({ demoZapCodeFilePaths, demoZapStyleFilePaths, prefix });
