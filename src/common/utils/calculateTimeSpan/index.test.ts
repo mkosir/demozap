@@ -2,7 +2,7 @@ import { calculateTimeSpan } from '.';
 
 describe('utils', () => {
   describe('calculateTimeSpan', () => {
-    test('should calculate time span, wTTTTTTTTTTThen start and end time is passed', () => {
+    test('should calculate time span, when start and end time is passed', () => {
       const startTime = new Date('2024-01-01T00:00:00.000Z');
       const endTime = new Date('2024-01-01T00:07:05.000Z');
 
