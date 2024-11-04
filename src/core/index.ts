@@ -56,5 +56,5 @@ export const generateDemos: GenerateDemos = async ({ flags: { framework = 'react
   }
 
   const endTime = performance.now();
-  log.success(`Completed (${calculateTimeSpan({ startTime, endTime })})`);
+  log.success(`Completed (${calculateTimeSpan({ startTime, endTime, shouldCalculateMs: true })})`);
 };
