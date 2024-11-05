@@ -13,7 +13,7 @@ Code can't lie, documentation can 💥
 
 DemoZap CLI keeps your code up to date with demo 💪
 
-[![](misc/demo.gif)](https://mkosir.github.io/demozap/?path=/story/examples--button-green-jsx-css)
+[![](misc/demo.gif)](https://mkosir.github.io/demozap/?path=/story/examples--button-green)
 
 ## Usage
 

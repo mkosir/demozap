@@ -17,9 +17,9 @@ export default meta;
 export const Default = () => <_Default />;
 
 export const ButtonGreen = () => <_ButtonGreen />;
-ButtonGreen.storyName = 'Button Green - .jsx/.css';
+ButtonGreen.storyName = 'Button Green - css';
 
 export const ButtonRed = () => <_ButtonRed />;
-ButtonRed.storyName = 'Button Red - .tsx/.scss';
+ButtonRed.storyName = 'Button Red - scss';
 
 export const Counter = () => <_Counter />;
