@@ -1,29 +1,29 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Bundler",
-    "moduleDetection": "force",
-    "allowImportingTsExtensions": true,
     "noEmit": true,
-    "composite": true,
+    "outDir": "compiled",
     "baseUrl": "src",
     "paths": {
       ".": ["."]
     },
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "composite": true,
     "downlevelIteration": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "pretty": true,
     "types": ["vitest/globals"],
-    "jsx": "react"
+    "jsx": "react",
+    "allowJs": true
   },
   "include": [".", ".storybook/**/*", ".commitlintrc.ts"],
   "exclude": ["dist", "bin"]
