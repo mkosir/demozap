@@ -30,7 +30,7 @@ export default Counter;
 `;
 
 export const _Counter = () => (
-  <DemoTab code={code} codeExt="jsx">
+  <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
