@@ -8,9 +8,11 @@ env:
   FOLDER_PATH_STORYBOOK_BUILD: ./build-storybook-static
 
 jobs:
-  build:
-    name: Build 🏗️
+  setup:
+    name: Setup 🔧
     runs-on: ubuntu-latest
+    outputs:
+      cache-hit: ${{ steps.cache_dependencies.outputs.cache-hit }}
 
     steps:
       - name: Checkout 🛎️
@@ -31,92 +33,43 @@ jobs:
         if: steps.cache_dependencies.outputs.cache-hit != 'true'
         run: npm ci
 
+  build:
+    name: Build 🏗️
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
       - name: Build 🏗️
         run: npm run build
 
   lint:
     name: Lint ✅
     runs-on: ubuntu-latest
-
+    needs: setup
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Cache dependencies ⚡
-        id: cache_dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies 🔧
-        if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: npm ci
-
       - name: Lint ✅
         run: npm run lint
 
   tsc:
     name: TypeScript Compiler 🔎
     runs-on: ubuntu-latest
-
+    needs: setup
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Cache dependencies ⚡
-        id: cache_dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies 🔧
-        if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: npm ci
-
       - name: TypeScript Compiler 🔎
         run: npm run tsc
 
   test:
     name: Test 🧪
     runs-on: ubuntu-latest
-
+    needs: setup
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Cache dependencies ⚡
-        id: cache_dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies 🔧
-        if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: npm ci
-
       - name: Test 🧪
         run: npm run test-report
 
   storybook:
+    name: Deploy Storybook 🚀
     runs-on: ubuntu-latest
     needs: [build, lint, tsc, test]
     if: github.ref == 'refs/heads/main'
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -131,10 +84,6 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies 🔧
-        if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: npm ci
 
       - name: Build 🏗️
         run: npm run storybook-build
@@ -146,11 +95,11 @@ jobs:
           folder: ${{ env.FOLDER_PATH_STORYBOOK_BUILD }}
           clean: true
 
-  npm-release:
+  release-npm:
+    name: Release npm 🚀
     runs-on: ubuntu-latest
     needs: [build, lint, tsc, test]
     if: github.ref == 'refs/heads/main'
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -165,10 +114,6 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies 🔧
-        if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: npm ci
 
       - name: Version Info 💉
         env:
