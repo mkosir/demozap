@@ -7,7 +7,7 @@ const tsupConfig = defineConfig({
   clean: true,
   // dts: true,
   minify: true,
-  tsconfig: 'scripts/tsconfig.tsup.json',
+  tsconfig: 'scripts/tsconfig.build.json',
 });
 
 // eslint-disable-next-line
